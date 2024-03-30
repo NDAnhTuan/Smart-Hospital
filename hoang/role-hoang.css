@@ -49,21 +49,24 @@
 
 
 /* reset css */
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /*background chèn vào tới border*/
+    box-sizing: border-box;
+    /*background chèn vào tới border*/
 }
 
 
 /* *******SETUP********* */
-html{
+html {
     font-family: Arial, Helvetica, sans-serif;
 }
-:root{
+
+:root {
     --height-header: 80px;
 }
-.text-white{
+
+.text-white {
     color: #fff !important;
 }
 
@@ -71,56 +74,50 @@ html{
 
 
 /* ********HEADER******** */
-#header{
+#header {
     height: var(--height-header);
     width: 100%;
     position: fixed;
-    background-color: #0057D9;
+    background-color: #0058A0;
     top: 0px;
     z-index: 1;
 
+    display: inline-block;
 }
 
-#header > ul > li{
+#header > .MXH > p {
     display: inline-block;
     margin-right: -5px;
 }
 
-#header #logo{
+#header #logo {
     display: inline-block;
-    line-height: var(--height-header);
-} 
+    margin: 0 85px;
+    width: 200px;
+}
 
-#logo .hinh_logo{
+#logo img{
     position: absolute;
-    border-radius: 50%;
-    top: 5px;
-    left: 50px;
-    width: 70px;
-    height: 70px;
-    background: no-repeat  center/cover url('../image/toanthang_logo_1.png');
+    top: 10px;
+    width: 200px;
+    height: 60px;
 }
 
-#logo .ten_logo{
-    margin: 0 130px;
-    font-size: 16px;
-    text-transform: uppercase;
-}
-
-.ti-angle-down{
+.ti-angle-down {
     font-size: 12px;
 }
 
-#header .MXH{
+#header .MXH {
     display: inline-table;
     height: var(--height-header);
 }
-#header .MXH .icon-header{
+
+#header .MXH .icon-header {
     display: inline-block;
     vertical-align: middle;
     margin: auto 0 auto 16px;
 
-    background: rgb(255,0,0);
+    background: rgb(255, 0, 0);
     background-size: cover;
     width: 45px;
     height: 45px;
@@ -131,42 +128,54 @@ html{
     transition: opacity 0.5s ease;
     opacity: 0.8;
 }
-#header .icon-header:hover{
+
+#header .icon-header:hover {
     opacity: 1;
 }
 
+.MXH .js-login{
+    display: inline;
+    position: relative;
+}
+
+
 
 /* ******* HEADER-SECOND********* */
-.js-hide.hide{
+.js-hide.hide {
     display: none !important;
 }
+
 .js-right.right {
     float: right;
     display: flex !important;
     align-items: center;
+    margin-right: 30px;
 }
 
-.header-second{
+.header-second {
     background-color: #fff;
     display: none;
     border-radius: 20px;
 }
-.header-second.show{
+
+.header-second.show {
     display: inline-block;
+    margin: 20px 50px;
 }
 
-.header-second input{
-    padding: 8px 400px 8px 10px;
+.header-second input {
+    padding: 6px 400px 6px 10px;
     border-radius: 20px;
     font-size: 20px;
     border: none;
 }
-.header-second input:focus{
+
+.header-second input:focus {
     outline: none;
 }
 
-.ti-search{
-    font-size: 20px; 
+.ti-search {
+    font-size: 20px;
     text-align: center;
     justify-content: center;
     color: blue;
@@ -174,15 +183,18 @@ html{
 
 
 /* ******** NAVIGATION ******** */
-#navigation{
+#navigation {
     display: inline;
 }
-#navigation li{
+
+#navigation > li {
     position: relative;
+    display: inline-block;
+    margin-left: -5px;  /* làm cho thanh before sát vào */
 }
 
-#navigation, .subnav, li{
-    list-style: none; /* loại bỏ chấm tròn trước text */
+#navigation, .subnav, li {
+    list-style: none;/* loại bỏ chấm tròn trước text */
 }
 
 #navigation > li::before {
@@ -194,6 +206,7 @@ html{
     top: 10px;
     background-color: rgb(178, 178, 231);
 }
+
 #navigation .ti-angle-down::after {
     content: "";
     display: inline-block;
@@ -204,42 +217,42 @@ html{
     right: 0;
     background-color: rgb(178, 178, 231);
 }
-#navigation li a{
+
+#navigation li a {
     text-decoration: none;
     padding: 0 16px;
-    display: inline-block;
     line-height: var(--height-header);
 }
 
-#navigation > li > a{
+#navigation > li > a {
+    display: inline-block;
     color: white;
     text-transform: uppercase;
 }
 
-#navigation > li:hover > a{
+#navigation > li:hover > a {
     color: black;
-    background-color: rgba(255, 255, 255, 0.3); 
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* tạo block cho subnav */
-#navigation li:hover .subnav{
-    display:block;
+#navigation li:hover .subnav {
+    display: block;
     width: max-content;
 }
 
-#navigation .subnav{
+#navigation .subnav {
     display: none;
     position: absolute;
     background-color: white;
-    box-shadow: 0px 8px 10px rgba(250,30,140,0.5); /* ko hieu thi tra gg ve pe */
-
+    box-shadow: 0px 10px 10px rgba(98, 76, 87, 0.5);/* tạo viền bóng đổ*/
 }
 
-#navigation .subnav li:hover{
-    background-color: rgba(200,30,140,0.1);
+#navigation .subnav li:hover {
+    background-color: rgba(83, 73, 80, 0.1);
 }
 
-#navigation .subnav a{
+#navigation .subnav a {
     color: black;
     padding: 0 12px;
     line-height: 40px;
@@ -247,10 +260,11 @@ html{
 
 
 /* ******** LOG IN ******** */
-#modal-login.show{
+#modal-login.show {
     display: flex;
 }
-#modal-login{
+
+#modal-login {
     position: fixed;
     top: var(--height-header);
     bottom: 0;
@@ -261,15 +275,16 @@ html{
     justify-content: center;
     text-align: center;
     background-color: #fff;
-    
+
     font-size: 1.4em;
 }
 
-.log-in h1{
+.log-in h1 {
     margin: 50px 0 30px 0;
     color: #4696EB;
 }
-.icon-login{
+
+.icon-login {
     display: block;
     width: 70px;
     height: 70px;
@@ -281,13 +296,15 @@ html{
     border: 2px solid #000;
 }
 
-.modal-label{
+.modal-label {
     display: flex;
 }
-.modal-label i{
+
+.modal-label i {
     margin-right: 10px;
 }
-.modal-input{
+
+.modal-input {
     width: 100%;
     border-radius: 10px;
     margin: 10px 0 24px;
@@ -295,7 +312,7 @@ html{
     border: 2px solid #4696EB;
 }
 
-button.enter{
+button.enter {
     font-size: 22px;
     color: white;
     background-color: #4696EB;
@@ -305,26 +322,30 @@ button.enter{
     cursor: pointer;
     margin: 40px 30px 0 0;
 }
-button.enter:hover{
+
+button.enter:hover {
     background-color: rgba(255, 0, 0, 0.8);
 }
 
 
 
+
 /* ******* SLIDER ********* */
-#slider{
+#slider {
     position: relative;
     height: 500px;
     margin-top: var(--height-header);
-    padding-top: 50%; /* khi co man hinh web lại thì box vẫn có cao bằng 50% chiều ngang */
+    padding-top: 50%;
+    /* khi co man hinh web lại thì box vẫn có cao bằng 50% chiều ngang */
     background: no-repeat center/cover url(../image/hospital.jpg);
 }
-#slider .text-0{
+
+#slider .text-0 {
     position: absolute;
     bottom: 47px;
     background-color: blue;
     font-size: 40px;
-    color: rgb(255,255,255);
+    color: rgb(255, 255, 255);
     text-align: center;
     /* ! muốn có chữ ko background và gọn thì 
     width: 100%; 
@@ -335,26 +356,30 @@ button.enter:hover{
 }
 
 
+
 /* ******** CONTAINER ******** */
-#container{
+#container {
     margin-top: 50px;
     height: 2000px;
 }
-.content-1{
+
+.content-1 {
     width: 1000px;
     height: 500px;
     margin: 0 auto 0 auto;
-    background-color: rgba(0,30,140,0.1);
+    background-color: rgba(0, 30, 140, 0.1);
     border-radius: 10px;
 }
-.content-2{
+
+.content-2 {
     width: 1000px;
     height: 500px;
     margin: 40px auto 0 auto;
-    background-color: rgba(200,30,140,0.1);
+    background-color: rgba(200, 30, 140, 0.1);
     border-radius: 10px;
 }
-.content-3{
+
+.content-3 {
     width: 1000px;
     height: 500px;
     margin: 40px auto 0 auto;
@@ -362,59 +387,72 @@ button.enter:hover{
     border-radius: 10px;
 }
 
-.content-1 h1, .content-2 h1, .content-3 h1, .contact .lienhe, .leave-info h2{
+.content-1 h1, .content-2 h1, .content-3 h1, .contact .lienhe, .leave-info h2 {
     margin: 20px 0;
     padding-top: 10px;
     text-align: center;
     color: red;
-    letter-spacing: 2px; /* khoang cach ki tu */
-}
-.content-1 h2, .content-2 h2, .content-3 h2{
-    text-align: justify; /* căn đều text */
-    line-height: 1.6; /* line-spacing*/
+    letter-spacing: 2px;
+    /* khoang cach ki tu */
 }
 
-#container .member{
+.content-1 h2,
+.content-2 h2,
+.content-3 h2 {
+    text-align: justify;
+    /* căn đều text */
+    line-height: 1.6;
+    /* line-spacing*/
+}
+
+#container .member {
     float: left;
     width: calc(100%/3);
     text-align: center;
 }
 
-#container .name-doctor{
+#container .name-doctor {
     margin: 30px 0 10px 0;
     font-size: 20px;
 }
-#container .content-2 img{
+
+#container .content-2 img {
     width: 300px;
-    border-radius: 8px; /* bo góc */
+    border-radius: 8px;
+    /* bo góc */
 }
 
 #container .content-3 {
     text-align: center;
 }
-.content-3 img{
+
+.content-3 img {
     border-radius: 8px;
     width: 80%;
 }
 
 
-/* *********BANNER******* */
-#banner-left{
-    
-}
-#banner-right{
 
+/* *********BANNER******* */
+#banner-left {
+    display: none;
+}
+
+#banner-right {
+
+    display: none;
 }
 
 
 
 /* ******* CONTACT  ********* */
-#container .contact{
+#container .contact {
     background-color: black;
     text-align: center;
 }
 
-.contact .lienhe::after{/* tạo đường line kẻ ở dưới */
+.contact .lienhe::after {
+    /* tạo đường line kẻ ở dưới */
     content: "";
     display: block;
     width: 100px;
@@ -424,20 +462,22 @@ button.enter:hover{
     background-color: #fff;
 }
 
-#container .chi-nhanh{
+#container .chi-nhanh {
     float: left;
     width: 50%;
     text-align: center;
     position: relative;
 }
-.clear{
+
+.clear {
     clear: both;
 }
 
-.chi-nhanh img{
+.chi-nhanh img {
     width: 100%;
 }
-.chi-nhanh p{
+
+.chi-nhanh p {
     font-size: 30px;
 
     position: absolute;
@@ -447,15 +487,16 @@ button.enter:hover{
 
     width: 100%;
     height: 100%;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.3);
 }
 
 
+
 /* ********SENT INFOR TO MAKE APPOINTMENT******** */
-.leave-info{
+.leave-info {
     margin: 20px auto;
     width: 70%;
     height: 300px;
@@ -463,50 +504,121 @@ button.enter:hover{
 }
 
 
+
 /* ******* FOOTER ********* */
-#footer{
+#footer {
     height: 600px;
 }
 
 
+
 /* ******* show-info && logout ********* */
-#login-logout{
+.MXH #info {
+    height: 368px;
+    width: 338px;
+    position: absolute;
+    right: 0;
+    background-color: #eee;
+}
+
+#info img {
+    width: 90px;
+    height: 100px;
+    margin: 10px  0;
+}
+
+#info div {
+    display: flex;
+    justify-content: center;
+}
+
+#info .text {
+    display: block;
+    margin-top: 10px;
+}
+
+#info .text p {
+    line-height: 30px;
+    font-size: 16px;
+}
+
+#info .logout {
+    height: 78px;
+    width: 338px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#info .logout p {
+    font-size: 16px;
+    color: #000;
+    position: absolute;
+    top: 30px;
+    left: 100px;
+}
+
+#info .logout a {
+    text-decoration: none;
+}
+
+#info .logout img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 55px;
+}
+
+#info .text div {
+    height: 29px;
+    width: 338px;
+}
+
+#info .text .line {
+    height: 1px;
+    width: 300px;
+    background-color: #B4B4B4;
+    margin-left: 16.9px;
+}
+
+#info .logout div {
+    height: 77px;
+    width: 100%;
+}
+
+.logout .line {
+    flex: 1;
+    height: 1px;
+    background-color: #B4B4B4;
+}
+
+#info #none {
+    height: 16px;
+    width: 338px;
+    background-color: #0058A0;
+    position: relative;
+}
+#info #none .triangle {
+    border-left: 14.14px solid transparent; 
+    border-right: 14.14px solid transparent; 
+    border-bottom: 20px solid #eee;
+    position: absolute;
+    right: 13px;
+}
+.js-login:hover #info {
+    display: block;
+}
+#info {
     display: none;
 }
 
-.js-login:hover #login-logout{
-    display: block;
-    position: absolute;
-    top: 80px;
-    right: 40px;
-    background-color: white;
-    box-shadow: 0px 8px 10px rgba(250,30,140,0.5); /* ko hieu thi tra gg ve pe */
 
-    width: 300px;
-    height: 300px;
-}
-
-#login-logout .anh-the{
-    background-image: url(../image/toanthang_logo_1.png);
-    background-size: cover;
-    width: 2cm;
-    height: 2.5cm;
-    margin: 0 auto;
-}
-
-.two-info li{
-    margin: 20px 16px;
-    border-bottom:  solid  rgb(203, 193, 193);
-}
-
-.two-info .login-info{
-    margin-top: 60px;
-}
 /* ******* info-personal ********* */
-#info-personal.show{
+#info-personal.show {
     display: flex;
 }
-#info-personal{
+
+#info-personal {
     position: fixed;
     top: var(--height-header);
     bottom: 0;
@@ -519,7 +631,7 @@ button.enter:hover{
     justify-content: center;
 }
 
-#info-personal #back-home{
+#info-personal #back-home {
     position: relative;
     top: -270px;
     left: -140px;
@@ -527,26 +639,27 @@ button.enter:hover{
     font-size: 15px;
 }
 
-#info-personal .ti-home{
+#info-personal .ti-home {
     background-color: #4696EB;
     border-radius: 50%;
-    
+
     text-decoration: none;
     color: #fff;
     text-align: center;
     padding: 25px 20px 25px 70px;
     width: 90px;
 }
-#info-personal #back-home:hover div{
+
+#info-personal #back-home:hover div {
     display: block;
 }
 
-#back-home:hover{
+#back-home:hover {
     height: 19px;
     left: -125px !important;
 }
 
-#back-home div{
+#back-home div {
     display: none;
     position: relative;
     top: -18px;
@@ -556,19 +669,19 @@ button.enter:hover{
 }
 
 
-#info-personal .background-info{
+#info-personal .background-info {
     background-color: #C4C4C4;
     border-radius: 10px;
     width: 1200px;
     height: 600px;
 }
 
-.background-info h1{
+.background-info h1 {
     margin: 20px 0 10px 500px;
     justify-content: center;
 }
 
-.background-info .table{
+.background-info .table {
     float: left;
     width: 50%;
     height: 450px;
@@ -577,26 +690,26 @@ button.enter:hover{
     justify-content: center;
 }
 
-.background-info img{
+.background-info img {
     position: relative;
     top: 20px;
     right: 40px;
-    
+
     width: 3cm;
     height: 4cm;
 }
 
-.background-info label{
+.background-info label {
     display: flex;
     margin: 16px auto 4px;
 }
 
-.background-info input{
+.background-info input {
     width: 360px;
     padding: 5px;
     border-radius: 3px;
 }
 
-.background-info .save{
+.background-info .save {
     margin: 0 565px;
 }

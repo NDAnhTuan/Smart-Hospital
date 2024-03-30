@@ -15,10 +15,9 @@
 <body>
     <div id="main">
         <div id="header">
-            <ul id="logo">
-                <li class="hinh_logo"></li>
-                <li class="ten_logo text-white">Bệnh viện HH</li>
-            </ul>
+            <div id="logo">
+                <img src="../image/Benh vien Phu Yen logo-02 1.png" alt="">
+            </div>
             <ul id="navigation" class="js-hide">
                 <li><a href="http://127.0.0.1:5500/FE/role-hoang.html#">Giới thiệu</a></li>
                 <li><a href="http://127.0.0.1:5500/FE/role-hoang.html#">Thành Tựu</a></li>
@@ -31,37 +30,60 @@
                     <ul class="subnav">
                         <li><a href="#">Hotline - Chi nhánh Hà Nội: 0900 000 000</a></li>
                         <li><a href="#">Hotline - Chi nhánh TP.HCM: 0900 000 000</a></li>
-                        <li><a href="https://fullstack.edu.vn/">Để lại thông tin liên hệ</a></li>
+                        <li><a href="#">Để lại thông tin liên hệ</a></li>
                     </ul>
                 </li>
             </ul>
-            <ul class="MXH js-right">
-                <button class="icon-header js-login" style="background-image: url(../image/login.png);">    
-                    <div id="login-logout">
-                        <div class="anh-the"></div>
-                        <ul class="two-info">
-                            <li class="login-name">Lê trần thanh phong</li>
-                            <li class="login-work">Trưởng khoa khám bệnh, Phó giám đốc</li>
-                            <li class="login-info">
-                                <i class="ti-agenda"></i>
-                                Trang cá nhân
-                            </li>
-                            <li class="logout">
-                                <i class="ti-share"></i>
-                                Đăng xuất
-                            </li>
-                        </ul>
+            <div class="MXH js-right">
+                <div class="js-login">
+                    <button class="icon-header js-hide" style="background-image: url(../image/login.png);"><i style="font-size: 0;">.</i></button>
+                    <div id = "info">
+                        <div id="none">
+                            <div class="triangle"></div>
+                        </div>
+                        <div>
+                            <img src="../image/Image.png" alt="">
+                        </div>
+                        <div class = "text">
+                            <div>
+                                <p>TS - Bác sĩ: Lê Trần Thanh Phong</p>
+                            </div>
+                            <div class = "line"></div>
+                        </div>
+                        <div class = "text">
+                            <div>
+                                <p>Trưởng khoa khám bệnh, Phó giám đốc</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class = "logout js-info">
+                            <img src="../image/notebook.png" alt="login">
+                            <div>
+                                <a href="#">
+                                    <p>Trang cá nhân</p>
+                                </a>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="logout js-logout">
+                            <img src="../image/logout.png" alt="logout">
+                            <a href="#">
+                                <p>Đăng xuất</p>
+                            </a>
+                        </div>
                     </div>
-                </button>
+                </div>
                 <button class="icon-header js-call js-hide" style="background-image: url(../image/call.jpg);"><i style="font-size: 0;">.</i></button>
-                <li class="text-white js-hide" style="margin: auto 0 auto 16px; position: relative; top: 8px;">
+                
+                <p class="text-white js-hide" style="margin: auto 0 auto 16px; position: relative; top: 8px;">
                     Hotline:<br>
-                    84+ 01 023 045
-                </li>
+                    +84 00 000 000
+                </p>
+
                 <button class="icon-header js-hide" style="background-image: url(../image/facebook.png);"><i style="font-size: 0;">.</i></button>
                 <button class="icon-header js-hide" style="background-image: url(../image/Logo-Zalo.png);"><i style="font-size: 0;">.</i></button>
                 <button class="icon-header ti-search"><i style="font-size: 0;">.</i></button>
-            </ul>
+            </div>
 
             <div class="header-second js-show-search">
                 <label for="ti-search" class="search-header">
@@ -136,7 +158,6 @@
         </div>
 
         <div id="footer">
-
         </div>
 
         <div id="modal-login">
