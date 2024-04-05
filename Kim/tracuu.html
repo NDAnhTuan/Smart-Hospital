@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Center</title>
+</head>
+
+<link rel="stylesheet" href="kim.css">
+<script src = "./kim.js"></script>
+
+<body>
+    <header class="header">
+        <h1>BỆNH VIỆN BÁCH KHOA</h1>
+        <a href="#"> &nbsp; Kính lúp &nbsp;</a>
+    </header>
+
+    <div class="form-group">
+        <label for="chuyenkhoa">Chuyên Khoa:</label>
+        <select id="chuyenkhoa">
+          <option value="khoa-noi">Khoa Nội</option>
+          <option value="khoa-ngoai">Khoa Ngoại</option>
+          <option value="khoa-nhi">Khoa Nhi</option>
+          <option value="khoa-phu-san">Khoa Phụ Sản</option>
+          <option value="khoa-truyen-nhiem">Khoa Truyền Nhiễm</option>
+          <option value="khoa-cap-cuu">Khoa Cấp Cứu/Hồi Sức Tích Cực</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="chucvu">Chức Vụ:</label>
+        <select id="chucvu">
+          <option value="PGD">Phó Giám Đốc</option>
+          <option value="GD">Giám Đốc</option>
+          <option value="bacsi">Bác Sĩ</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="tenbacsi">Tìm theo tên Bác Sĩ:</label>
+        <input type="text" id="tenbacsi">
+      </div>
+      <button onclick="timBacSi()">Tìm</button>
+      <div id="ketqua"></div>
+    </div>
+  
+    <!-- <nav class="main-nav">
+        <a href="#">Chuyên khoa</a>
+        <a href="#">Chức vụ</a>
+        <a href="#">Tim tên bác sĩ</a>
+    </nav> -->
+    <section>
+        <h2>DANH SÁCH NHÂN SỰ</h2>
+        <div class="doctors-list">
+            <div class="doctor-item">
+                <img src="D:\Photos\giai tri\FB_IMG_1616733881470.jpg" alt="Hình ảnh của Bác sĩ A" width="20" height="10">
+                <h3>NGUYỄN VĂN A</h3>
+                <p>Chuyên Khoa Răng Hàm Mặt</p>
+                <p>Trưởng khoa khám bệnh</p>
+                <button>Đặt lịch</button>
+                <p>Phú Yên</p>
+            </div>
+            <div class="doctor-item">
+                <img src="D:\Photos\giai tri\FB_IMG_1616733881470.jpg" alt="Hình ảnh của Bác sĩ B">
+                <h3>NGUYỄN THỊ B</h3>
+                <p>Chuyên Khoa Ngoại</p>
+                <p>Thạc sĩ, Bác sĩ</p>
+                <button>Đặt lịch</button>
+                <p>Phú Yên</p>
+            </div>
+
+            <div class="doctor-item">
+                <img src="D:\Photos\giai tri\FB_IMG_1616733881470.jpg" alt="Hình ảnh của Bác sĩ B">
+                <h3>NGUYỄN THỊ K</h3>
+                <p>Chuyên Khoa Nội</p>
+                <p>Bác sĩ</p>
+                <button>Đặt lịch</button>
+                <p>Phú Yên</p>
+            </div>
+            <div class="doctor-item

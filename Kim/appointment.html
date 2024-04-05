@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách bệnh nhân</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<link rel="stylesheet" href="kim.css">
+<script src = "./kim.js"></script>
+
+<body>
+    <header class="header">
+        <h1>BỆNH VIỆN BÁCH KHOA</h1>
+    </header>
+    <div class="container">
+        <div class="left">
+            <h2>Danh sách bệnh nhân</h2>
+            <ul class="patient-list" id="patient-list">
+                <li>
+                    <strong>Tên bệnh nhân:</strong> Nguyễn Văn A
+                    <br>
+                    <strong>Mã bệnh ICD 10:</strong> ABC123
+                    <br>
+                    <strong>Ngày tháng năm sinh:</strong> 01/01/1990
+                    <br>
+                    <strong>Giới tính:</strong> Nam
+                    <br>
+                    <strong>Mã số BHYT:</strong> 00000000
+                    <br>
+                    <strong>Địa chỉ nhà:</strong> Khu B ĐHQG
+                    <br>
+                    <strong>Số điện thoại:</strong> 0123456789
+                    <br>
+                    <button onclick="acceptPatient('Nguyễn Văn A')">Duyệt</button>
+                </li>
+                <!-- bệnh nhân khác -->
+            </ul>
+        </div>
+        <div class="right">
+            <h2>Danh sách bệnh nhân đã duyệt</h2>
+            <ul class="accepted-list" id="accepted-list">
+                <!-- Danh sách bệnh nhân được aco\p -->
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
