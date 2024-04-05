@@ -3,8 +3,9 @@
 import {doctorController} from './controllers/doctorController.js';
 
 
-
-const myPromise = await doctorController.getUsers();
+const app = new doctorController();
+const myPromise = await app.getPatient();
 console.log(myPromise);
+
   
 
