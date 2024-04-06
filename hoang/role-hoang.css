@@ -23,18 +23,21 @@ html {
 }
 
 .clear {
+    content: "";
+    display: block;
     clear: both;
 }
 
 
-/* ********HEADER******** */
+
+/* ******** HEADER ******** */
 #header {
     height: var(--height-header);
     width: 100%;
     position: fixed;
     background-color: #0058A0;
     top: 0px;
-    z-index: 1;
+    z-index: 99;
 
     display: inline-block;
 }
@@ -46,7 +49,7 @@ html {
 
 #header #logo {
     display: inline-block;
-    margin: 0 85px;
+    margin: 0 8%;
     width: 200px;
 }
 
@@ -353,11 +356,11 @@ li {
 
 #content-2 {
     margin: 40px auto 0 auto;
+    padding-bottom: 100px;
 }
 
 #content-3 {
     background-color: #F0F2F1;
-    height: 850px;
 }
 
 #content-1 h1,
@@ -382,61 +385,67 @@ h1.js-after {
     /* căn đều text */
     line-height: 1.6;
     /* line-spacing*/
-    margin: 0 40px;
+    margin: 0 30px;
     text-indent: 40px;
 }
 
-#content-1 h2 {
-    width: 700px;
-    margin-right: 90px;
+.Introduce.hide {
+    display: none;   
+}
+.Introduce{
+    display: block;
 }
 
-#content-1 .member {
+.Introduce .member {
+    width: 50%;
     float: left;
     padding-bottom: 180px;
 }
 
-#content-2 .member {
-    margin-top: 50px;
-    float: left;
-    width: calc(100%/3);
-    text-align: center;
-}
+
 
 
 .Achievements.hide {
     display: none;
 }
-.Achievements p{
-    margin: 30px auto;
+
+.Achievements p {
+    margin: 12px auto;
     font-size: 20px;
-    width: 400px;
+    width: 88%;
     text-align: justify;
 }
 
+#content-2 .member {
+    float: left;
+    margin-top: 30px;
+    width: calc(100%/3);
+    text-align: center;
+}
+
 #content-2 img {
-    width: 400px;
-    height: 300px;
+    width: 88%;
+    height: 320px;
     border-radius: 8px;
     /* bo góc */
 }
 
 
+
 #content-3 .line {
     background-color: #B4B4B4;
-    width: 1230px;
+    width: 79%;
     height: 1px;
-    margin: 10px 0 10px 134px;
+    margin: 0 0 10px 8%;
 }
 
 #content-3>div {
-    padding: 0 0 0 140px;
+    margin: 0 20px 10px 8%;
 }
 
 #content-3 .member {
     float: right;
-    display: block;
-    margin: 40px 150px 0 0;
+    margin: 5% 15% 0 0;
 }
 
 #content-3 li {
@@ -490,14 +499,61 @@ h1.js-after {
 
 
 
-/* ******** DOCTOR ******** */
+/* ******** LIST DOCTOR ******** */
+.Doctors.show {
+    display: block;
+}
+.Doctors {
+    display: none;
+    padding-bottom: 100px;
+}
+
+.Doctors .row-container{
+    overflow-y: scroll; /* Cho phép cuộn dọc */
+    height: 490px; /* Hoặc bất kỳ chiều cao nào bạn muốn cho box */
+    scroll-behavior: smooth;
+    width: 80%;
+    margin: auto;
+    background-color: #F0F2F1;
+    border-radius: 20px;
+    border: solid #F0F2F1 20px;
+}
 
 
+.Doctors li{
+    float: left;
+    width: calc(100%/3);
+}
 
+.Doctors li img {
+    display: block;
+    width: 70% !important;
+    margin: auto;
+    border-radius: 20px !important;
+}
 
+.Doctors li p {
+    color: white;
+    font-size: 170%;
+    position: relative;
+    background-color: rgba(0, 88, 160, 0.8);
+    top: -94px;
+    left: 15%;
 
+    padding: 2%;
+    height: 94px;
+    width: 70%;
+    border-radius: 20px;
+}
 
-
+.Doctors .row-container::-webkit-scrollbar  {
+    background: #F0F2F1; /* Màu nền của track thanh cuộn */
+    width: 10px ;
+}
+.Doctors .row-container::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 10px;
+}
 
 
 
@@ -505,65 +561,74 @@ h1.js-after {
 .Services.show {
     display: block;
 }
-.Services {
-display: none;
 
-padding-bottom: 170px;
+.Services {
+    display: none;
 }
 
 .Services .row-serv {
-    height: 400px;
+    padding-top: 40px;
+    overflow: hidden;
+    height: 600px;
     position: relative;
 }
 
 .row-serv .icon {
     position: absolute;
-    padding: 10px;
     font-size: 40px;
-    cursor: pointer;
-    top: 0px; 
-    bottom: 80px;
     border: none;
+    z-index: 1;
+    background-color: #F0F2F1;
+    width: 10%;
+    height: 70%;
 }
 
 .Services .row-1,
 .Services .row-2 {
     width: 80%;
-    margin: auto;
+    margin-left: 12%;
 }
 
 .Services li {
     float: left;
     width: calc(80%/3);
-    margin-left: 60px;
-    
+    margin-left: 4%;
 }
 
-.Services img {
+.Services li img {
     display: block;
     margin: auto;
-    height: 60px !important;
-    width: 60px !important;
+    width: 19% !important;
+    height: 10% !important;
 }
 
 .Services li h3 {
     margin: 20px 0;
 }
+
 .Services li p {
     text-align: justify;
 }
+
 .Services li a {
     color: #000;
-    text-decoration: none ;
+    text-decoration: none;
 }
 
 
-.Services .row-2.show{
-    display: block;
+/* CSS for smooth transition */
+.row {
+    width: 100%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out;
 }
-.Services .row-2,
-.Services .row-1.hide {
-    display: none;
+
+.row-1 {
+    transform: translateX(0);
+}
+
+.row-2 {
+    transform: translateX(100%);
 }
 
 
@@ -609,9 +674,6 @@ padding-bottom: 170px;
     padding: 5px;
 }
 
-.info-cus #en {
-    width: max-content;
-}
 
 .info-cus #Vấn\ đề\ hiện\ tại {
     padding: 5px 0 100px 5px;
@@ -648,8 +710,8 @@ padding-bottom: 170px;
 
 #footer ul .img-footer {
     background: no-repeat center url(../image/Benh\ vien\ Phu\ Yen\ logo-02\ 1.png);
-    background-size: 300px;
-    height: 376px;
+    background-size: 70%;
+    height: 200px;
 }
 
 
@@ -671,6 +733,9 @@ padding-bottom: 170px;
     text-decoration: none;
 }
 
+.intro-company {
+    margin-left: 50px;
+}
 
 .logo-kiemdinh {
     display: inline-block;
@@ -679,7 +744,7 @@ padding-bottom: 170px;
 .logo-kiemdinh img {
     width: 150px;
     height: 50px;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 
@@ -817,18 +882,11 @@ padding-bottom: 170px;
     justify-content: center;
 }
 
-#info-personal #back-home {
-    position: relative;
-    top: -270px;
-    left: -140px;
-    border: none;
-    font-size: 15px;
-}
-
 #info-personal .ti-home {
     background-color: #4696EB;
     border-radius: 50%;
 
+    font-size: 20px;
     text-decoration: none;
     color: #fff;
     text-align: center;
@@ -836,13 +894,20 @@ padding-bottom: 170px;
     width: 90px;
 }
 
-#info-personal #back-home:hover div {
-    display: block;
-}
 
 #back-home:hover {
     height: 19px;
-    left: -125px !important;
+    left: -205px !important;
+}
+#info-personal #back-home {
+    position: relative;
+    top: -270px;
+    left: -220px;
+    border: none;
+    font-size: 15px;
+}
+#info-personal #back-home:hover div {
+    display: block;
 }
 
 #back-home div {
@@ -853,6 +918,7 @@ padding-bottom: 170px;
     right: 0;
     bottom: 0;
 }
+
 
 
 #info-personal .background-info {
@@ -902,4 +968,44 @@ padding-bottom: 170px;
     margin: 0 450px;
     border-radius: 20px;
     border: none;
+}
+
+
+
+
+
+/* ******** DESIGN FOR DIVICE ******** */
+@media (min-width: 1469px) {}
+
+@media (max-width: 1469px) and (min-width: 740px) {
+    .MXH {
+        display: none !important;
+    }
+
+    #footer li {
+        margin: auto;
+        width: 60% !important;
+    }
+
+    #content-3 .member {
+        float: right;
+        width: 45%;
+    }
+
+}
+
+@media (max-width: 740px) {
+    .MXH {
+        display: none !important;
+    }
+
+    #footer li {
+        float: none !important;
+        width: 60%;
+        margin: auto;
+    }
+
+    #contact p {
+        font-size: 16px;
+    }
 }

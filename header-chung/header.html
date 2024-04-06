@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bệnh viện</title>
+</head>
+
+<!-- ket noi voi file css, js-->
+<link rel="stylesheet" href="../icons_font/themify-icons.css">
+
+<style>/* reset css */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /*background chèn vào tới border*/
+  }
+  
+  /* *******SETUP********* */
+  html {
+      font-family: Arial, Helvetica, sans-serif;
+  
+      scroll-behavior: smooth;
+  }
+  
+  :root {
+      --height-header: 80px;
+  }
+  
+  /* ******** HEADER ******** */
+  #header {
+      height: var(--height-header);
+      width: 100%;
+      position: fixed;
+      background-color: #0058A0;
+      top: 0px;
+      z-index: 1;
+  
+      display: inline-block;
+  }
+  
+  #header #logo {
+      display: inline-block;
+      margin: 0 85px;
+      width: 200px;
+  }
+  
+  #logo img {
+      position: absolute;
+      top: 10px;
+      width: 200px;
+      height: 60px;
+  }
+
+  #header .MXH {
+      display: inline-table;
+      height: var(--height-header);
+  }
+  
+  #header .MXH .icon-header {
+      display: inline-block;
+      vertical-align: middle;
+      margin: auto 0 auto 16px;
+  
+      background: rgb(255, 0, 0);
+      background-size: cover;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: none;
+  
+      cursor: pointer;
+      transition: opacity 0.5s ease;
+      opacity: 0.8;
+  }
+  
+  #header .icon-header:hover {
+      opacity: 1;
+  }
+  
+  .MXH>div {
+      display: inline;
+      position: relative;
+  }
+  
+  
+  
+  /* ******* HEADER-SECOND********* */
+
+  .js-right.right {
+      float: right;
+      display: flex !important;
+      align-items: center;
+      margin-right: 30px;
+  }
+  
+  .header-second {
+      background-color: #fff;
+      display: none;
+      border-radius: 20px;
+  }
+  
+  .header-second.show {
+      display: inline-block;
+      margin: 20px 0 0 120px;
+  }
+  
+  .header-second input {
+      padding: 6px 400px 6px 10px;
+      border-radius: 20px;
+      font-size: 20px;
+      border: none;
+  }
+  
+  .header-second input:focus {
+      outline: none;
+  }
+  
+  .ti-search {
+      font-size: 20px;
+      text-align: center;
+      justify-content: center;
+      color: blue;
+  }
+ 
+
+  /* ******* show-info && logout ********* */
+  .MXH #info-summary {
+      height: 368px;
+      width: 338px;
+      position: absolute;
+      right: 0;
+      background-color: #eee;
+  }
+  
+  #info-summary img {
+      width: 90px;
+      height: 100px;
+      margin: 10px 0;
+  }
+  
+  #info-summary div {
+      display: flex;
+      justify-content: center;
+  }
+  
+  #info-summary .text {
+      display: block;
+      margin-top: 10px;
+  }
+  
+  #info-summary .text p {
+      line-height: 30px;
+      font-size: 16px;
+  }
+  
+  #info-summary .logout {
+      height: 78px;
+      width: 338px;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+  }
+  
+  #info-summary .logout p {
+      font-size: 16px;
+      color: #000;
+      position: absolute;
+      top: 30px;
+      left: 100px;
+  }
+  
+  #info-summary .logout a {
+      text-decoration: none;
+  }
+  
+  #info-summary .logout img {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 55px;
+  }
+  
+  #info-summary .text div {
+      height: 29px;
+      width: 338px;
+  }
+  
+  #info-summary .text .line {
+      height: 1px;
+      width: 300px;
+      background-color: #B4B4B4;
+      margin-left: 16.9px;
+  }
+  
+  #info-summary .logout div {
+      height: 77px;
+      width: 100%;
+  }
+  
+  .logout .line {
+      flex: 1;
+      height: 1px;
+      background-color: #B4B4B4;
+  }
+  
+  #info-summary #none {
+      height: 16px;
+      width: 338px;
+      background-color: #0058A0;
+      position: relative;
+  }
+  
+  #info-summary #none .triangle {
+      border-left: 14.14px solid transparent;
+      border-right: 14.14px solid transparent;
+      border-bottom: 20px solid #eee;
+      position: absolute;
+      right: 13px;
+  }
+  
+  .js-login:hover #info-summary {
+      display: block;
+  }
+  
+  #info-summary {
+      display: none;
+  }
+  
+/* ******* info-personal ********* */
+#info-personal.show {
+    display: flex;
+}
+
+#info-personal {
+    position: fixed;
+    top: var(--height-header);
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#info-personal .ti-home {
+    background-color: #4696EB;
+    border-radius: 50%;
+
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    padding: 25px 20px 25px 70px;
+    width: 90px;
+}
+
+
+#back-home:hover {
+    height: 19px;
+    left: -810px !important;
+}
+#info-personal #back-home {
+    position: relative;
+    top: -270px;
+    left: -830px;
+    border: none;
+    font-size: 15px;
+}
+#info-personal #back-home:hover div {
+    display: block;
+}
+
+#back-home div {
+    display: none;
+    position: relative;
+    top: -18px;
+    left: 100px;
+    right: 0;
+    bottom: 0;
+}
+</style>
+
+
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="logo">
+                <img src="../image/Benh vien Phu Yen logo-02 1.png" alt="">
+            </div>
+            <div class="MXH js-right right">
+                <div class="js-login">
+                    <button class="icon-header js-hide" style="background-image: url(../image/login.png);"><i style="font-size: 0;">.</i></button>
+                    <div id = "info-summary">
+                        <div id="none">
+                            <div class="triangle"></div>
+                        </div>
+                        <div>
+                            <img src="../image/Image.png" alt="">
+                        </div>
+                        <div class = "text">
+                            <div>
+                                <p>TS - Bác sĩ: Lê Trần Thanh Phong</p>
+                            </div>
+                            <div class = "line"></div>
+                        </div>
+                        <div class = "text">
+                            <div>
+                                <p>Trưởng khoa khám bệnh, Phó giám đốc</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class = "logout js-info">
+                            <img src="../image/notebook.png" alt="login">
+                            <div>
+                                <a href="#">
+                                    <p>Trang cá nhân</p>
+                                </a>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="logout js-logout">
+                            <img src="../image/logout.png" alt="logout">
+                            <a href="#">
+                                <p>Đăng xuất</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-second js-show-search show">
+                <label for="ti-search" class="search-header">
+                    <i class="ti-search" style="padding-left: 10px;"></i>
+                    <input id="ti-search" type="text" placeholder="Tìm kiếm">
+                </label>
+            </div>        
+        </div>
+
+    </div>
+
+    <div id="info-personal" class="show">
+        <button id="back-home">
+            <i class="ti-home"></i>
+            <div>Về trang chủ</div>
+        </button>
+    </div>
+</body> 
+
+<script src = "./role-hoang.js"></script>
+</html>
