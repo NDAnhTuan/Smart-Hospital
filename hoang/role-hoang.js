@@ -31,11 +31,6 @@ const clickSent = document.querySelector('.js-sent')
 const clickForgetMK = document.querySelector('.js-forgetmk')
 
 
-const clickService = document.querySelector('.js-service')
-const jsService = document.querySelector('.Services')
-const jsAchievement = document.querySelector('.Achievements')
-const clickAchievement = document.querySelector('.js-achievement')
-
 
 
 
@@ -126,18 +121,57 @@ clickSent.addEventListener('click', function(){
 })
 
 
-clickService.addEventListener('click', function(){
-    jsService.classList.add('show')
-    jsAchievement.classList.add('hide')
+document.querySelector('.js-service').addEventListener('click', function(){
+    document.querySelector('.Services').classList.add('show')
+    document.querySelector('.Introduce').classList.add('hide')
 })
-clickAchievement.addEventListener('click', function(){
-    jsService.classList.remove('show')
-    jsAchievement.classList.remove('hide')
+document.querySelector('.js-introduce').addEventListener('click', function(){
+    document.querySelector('.Services').classList.remove('show')
+    document.querySelector('.Introduce').classList.remove('hide')
+})
+document.querySelector('.js-doctor').addEventListener('click', function(){
+    document.querySelector('.Doctors').classList.add('show')
+    document.querySelector('.Achievements').classList.add('hide')
+})
+document.querySelector('.js-achievement').addEventListener('click', function(){
+    document.querySelector('.Doctors').classList.remove('show')
+    document.querySelector('.Achievements').classList.remove('hide')
 })
 
 
 
+// JavaScript for button click handling
+// Giả sử có 2 thẻ, bạn có thể điều chỉnh số lượng tùy ý
+var totalRows = 2;
+var currentRow = 1; // Bắt đầu từ thẻ đầu tiên
 
+document.getElementById('nextSv').addEventListener('click', function() {
+  if (currentRow < totalRows) {
+    document.querySelector('.row-' + currentRow).style.transform = 'translateX(-100%)';
+    currentRow++;
+    document.querySelector('.row-' + currentRow).style.transform = 'translateX(0)';
+  } else {
+    // Quay về thẻ đầu tiên
+    document.querySelector('.row-' + currentRow).style.transform = 'translateX(-100%)';
+    currentRow = 1;
+    document.querySelector('.row-' + currentRow).style.transform = 'translateX(0)';
+  }
+});
+
+document.getElementById('prevSv').addEventListener('click', function() {
+  if (currentRow > 1) {
+    document.querySelector('.row-' + currentRow).style.transform = 'translateX(100%)';
+    currentRow--;
+    document.querySelector('.row-' + currentRow).style.transform = 'translateX(0)';
+  } else {
+    // Quay về thẻ cuối cùng
+    document.querySelector('.row-' + currentRow).style.transform = 'translateX(100%)';
+    currentRow = totalRows;
+    document.querySelector('.row-' + currentRow).style.transform = 'translateX(0)';
+  }
+});
+
+  
 
 
 

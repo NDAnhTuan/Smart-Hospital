@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoang learn Full-stack</title>
+    <title>Bệnh viện</title>
 </head>
 
 <!-- ket noi voi file css, js-->
@@ -18,10 +18,10 @@
                 <img src="../image/Benh vien Phu Yen logo-02 1.png" alt="">
             </div>
             <ul id="navigation" class="js-hide">
-                <li><a href="#content-1">Giới thiệu</a></li>
+                <li class="js-introduce"><a href="#content-1">Giới thiệu</a></li>
                 <li class="js-achievement"><a href="#content-2">Thành Tựu</a></li>
-                <li class="js-doctor"><a href="http://127.0.0.1:5500/FE/role-hoang.html#">Chuyên Gia - Bác Sĩ</a></li>
-                <li class="js-service"><a href="#content-2">Dịch Vụ</a></li>
+                <li class="js-doctor"><a href="#content-2">Chuyên Gia - Bác Sĩ</a></li>
+                <li class="js-service"><a href="#content-1">Dịch Vụ</a></li>
                 <li class="js-contact">
                     <a href="#">Liên Hệ
                         <i class="icon-header ti-angle-down"></i>
@@ -112,31 +112,14 @@
     
             </div>
             <div id="content-1">
-                <h1 class="js-after">Introduce</h1>
-                <div class="member">
-                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima placeat eius reprehenderit rerum repellendus magnam dolores quia minus, facilis, vitae officiis deleniti dolorum natus. Illum labore quas similique pariatur rem.</h2>
-                    <h2> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum magni quaerat hic distinctio mollitia dicta incidunt asperiores autem ipsam! Quas laudantium blanditiis facere animi est, fuga vitae cupiditate quisquam ad?</h2>
-                </div>
-                <div class="member">
-                    <iframe width="600" height="400" src="https://www.youtube.com/embed/wMzujWoVs_M?si=3FkZ-5szwzhqPP5D&amp;start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div id="content-2">
-                <div class="Achievements">
-                    <h1 class="js-after">Achievement</h1>
-                    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui reiciendis quo quisquam debitis odio, assumenda excepturi cupiditate iste ipsum at nam eos, officiis consequuntur distinctio fugiat facere minima quia blanditiis?</h2>
+                <div class="Introduce">
+                    <h1 class="js-after">Introduce</h1>
                     <div class="member">
-                        <img src="../image/TTT.jpg" alt="NHH">
-                        <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel doloremque esse culpa expedita. pariatur repellat cupiditate nemo corrupti sed? Nulla quidem ex quos ipsa libero tenetur iure eveniet magnam. Ut?</p>
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima placeat eius reprehenderit rerum repellendus magnam dolores quia minus, facilis, vitae officiis deleniti dolorum natus. Illum labore quas similique pariatur rem.</h2>
+                        <h2> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum magni quaerat hic distinctio mollitia dicta incidunt asperiores autem ipsam! Quas laudantium blanditiis facere animi est, fuga vitae cupiditate quisquam ad?</h2>
                     </div>
                     <div class="member">
-                        <img src="../image/Robot-ykhoa.png" alt="TTT">
-                        <p class="achievement">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel doloremque esse culpa expedita. pariatur repellat cupiditate nemo corrupti sed? Nulla quidem ex quos ipsa libero tenetur iure eveniet magnam. Ut?</p>
-                    </div>
-                    <div class="member">
-                        <img src="../image/OIP.jpg" alt="LLLT">
-                        <p class="achievement">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel doloremque esse culpa expedita. pariatur repellat cupiditate nemo corrupti sed? Nulla quidem ex quos ipsa libero tenetur iure eveniet magnam. Ut?</p>
+                        <iframe width="95%" height="400px" src="https://www.youtube.com/embed/wMzujWoVs_M?si=3FkZ-5szwzhqPP5D&amp;start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -144,8 +127,9 @@
                 <div class="Services">
                     <h1 class="js-after">Services</h1>
                     <div class="row-serv">
-                        <button class="icon ti-angle-left" style="left: 100px;"><i style="font-size: 0;">.</i></button>
-                        <ul class="row-1">
+                      <button class="icon ti-angle-left" id="prevSv"><i style="font-size: 0;">.</i></button>
+                      <div class="row-container">
+                        <ul class="row row-1">
                             <li>
                                 <a href="#" >
                                     <img src="https://tamanhhospital.vn/wp-content/uploads/2021/10/icon-tim-bam-sinh.png" alt="tim">
@@ -169,7 +153,7 @@
                                 </a> 
                             </li>
                         </ul>
-                        <ul class="row-2">
+                        <ul class="row row-2">
                             <li>
                                 <a href="#" title="">
                                     <img src="https://tamanhhospital.vn/wp-content/uploads/2020/11/dvdb_vosinh_hiemmuon.png" alt="thu thai">
@@ -192,14 +176,69 @@
                                 </a> 
                             </li>
                         </ul>
-                        <button class="icon ti-angle-right" style="right: 100px;"><i style="font-size: 0;">.</i></button>
+                      </div>
+                      <button class="icon ti-angle-right" id="nextSv" style="left: 90%;"><i style="font-size: 0;">.</i></button>
+                    </div>
+                </div>
+            </div>
+            <div id="content-2">
+                <div class="Achievements">
+                    <h1 class="js-after">Achievements</h1>
+                    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui reiciendis quo quisquam debitis odio, assumenda excepturi cupiditate iste ipsum at nam eos, officiis consequuntur distinctio fugiat facere minima quia blanditiis?</h2>
+                    <div class="member">
+                        <img src="../image/TTT.jpg" alt="NHH">
+                        <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel doloremque esse culpa expedita. pariatur repellat cupiditate nemo corrupti sed? Nulla quidem ex quos ipsa libero tenetur iure eveniet magnam. Ut?</p>
+                    </div>
+                    <div class="member">
+                        <img src="../image/Robot-ykhoa.png" alt="TTT">
+                        <p class="achievement">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel doloremque esse culpa expedita. pariatur repellat cupiditate nemo corrupti sed? Nulla quidem ex quos ipsa libero tenetur iure eveniet magnam. Ut?</p>
+                    </div>
+                    <div class="member">
+                        <img src="../image/OIP.jpg" alt="LLLT">
+                        <p class="achievement">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel doloremque esse culpa expedita. pariatur repellat cupiditate nemo corrupti sed? Nulla quidem ex quos ipsa libero tenetur iure eveniet magnam. Ut?</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                
+                <div class="Doctors">
+                    <h1 class="js-after">List Doctor</h1>
+                    <div class="row-container">
+                        <ul class="column">
+                            <li>
+                                <img src="https://i.pinimg.com/originals/97/85/77/978577fb311779d618a23739fa8dd420.jpg" alt="ảnh thẻ bác sĩ">
+                                <p>BS.<br> Lê Trần Thanh Phong</p>
+                            </img>
+                            </li>
+                            <li>
+                                <img src="https://i.pinimg.com/originals/97/85/77/978577fb311779d618a23739fa8dd420.jpg" alt="ảnh thẻ bác sĩ">
+                                <p>BS.<br> Lê Trần Thanh Phong</p>
+                            </li>
+                            <li>
+                                <img src="https://i.pinimg.com/originals/97/85/77/978577fb311779d618a23739fa8dd420.jpg" alt="ảnh thẻ bác sĩ">
+                                <p>BS.<br> Lê Trần Thanh Phong</p>
+                            </li>
+                        </ul>
+                        <ul class="column">
+                            <li>
+                                <img src="https://i.pinimg.com/originals/97/85/77/978577fb311779d618a23739fa8dd420.jpg" alt="ảnh thẻ bác sĩ">
+                                <p>BS.<br> Lê Trần Thanh Phong</p>
+                            </li>
+                            <li>
+                                <img src="https://i.pinimg.com/originals/97/85/77/978577fb311779d618a23739fa8dd420.jpg" alt="ảnh thẻ bác sĩ">
+                                <p>BS.<br> Lê Trần Thanh Phong</p>
+                            </li>
+                            <li>
+                                <img src="https://i.pinimg.com/originals/97/85/77/978577fb311779d618a23739fa8dd420.jpg" alt="ảnh thẻ bác sĩ">
+                                <p>BS.<br> Lê Trần Thanh Phong</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <div id="content-3">
-                <h1 class="js-after">Place</h1>
+                <h1 class="js-after">Places</h1>
                 <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10314.301327360568!2d106.65351349880461!3d10.758106344239573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ef09222b00b%3A0xb02f0a86479b4d8f!2zxJDhuqFpIEjhu41jIFkgRMaw4bujYyBUaMOgbmggUGjhu5EgSOG7kyBDaMOtIE1pbmggKFVNUCk!5e0!3m2!1svi!2sus!4v1712127165574!5m2!1svi!2sus" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10314.301327360568!2d106.65351349880461!3d10.758106344239573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ef09222b00b%3A0xb02f0a86479b4d8f!2zxJDhuqFpIEjhu41jIFkgRMaw4bujYyBUaMOgbmggUGjhu5EgSOG7kyBDaMOtIE1pbmggKFVNUCk!5e0!3m2!1svi!2sus!4v1712127165574!5m2!1svi!2sus" width="35%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <div class="member">
                         <h2>Bệnh viện đa khoa Hà Nội</h2>
                         <ul>
@@ -211,12 +250,11 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="clear"></div>
                 </div>
                 <div class="line"></div>
                 <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55844.05007374956!2d105.79426072456354!3d21.0090456324474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac7c33fd6323%3A0x930d205cf25ff492!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBZIEjDoCBO4buZaQ!5e0!3m2!1svi!2sus!4v1712127279104!5m2!1svi!2sus" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <div class="member">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55844.05007374956!2d105.79426072456354!3d21.0090456324474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac7c33fd6323%3A0x930d205cf25ff492!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBZIEjDoCBO4buZaQ!5e0!3m2!1svi!2sus!4v1712127279104!5m2!1svi!2sus" width="35%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="member" style="padding-bottom: 120px;">
                         <h2>Bệnh viện đa khoa TP.HCM</h2>
                         <ul>
                             <li><i class="ti-location-pin"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repudiandae eos rerum.</li>
@@ -232,7 +270,7 @@
             </div>
 
             <div class="contact">
-                <h1 class="js-after">Liên hệ với chúng tôi</h1>
+                <h1 class="js-after">In touch with us</h1>
                 <div class="chi-nhanh">
                     <img src="../image/copntact 1.jpg" alt="LLLT">
                     <p class="text-white">Hotline TP.Hà Nội:<br>0819 170 504</p>
@@ -258,16 +296,22 @@
                 <div class="table-1">
                     <label for="Đặt lịch">Đặt lịch *</label>
                     <input required type="datetime-local">
+                    <label for="Ngày sinh">Ngày sinh</label>
+                    <input type="date">
                     <label for="Số điện thoại">Số điện thoại *</label>
                     <input required type="number" name="" id="Số điện thoại">
                 </div>
                 <div class="table-2">
                     <label for="Họ & Tên">Họ & Tên</label>
                     <input type="text" name="" id="Họ & Tên">
+                    <label for="Giới tính">Giới tính</label>
+                    <input type="text" name="" id="Giới tính">
                     <label for="email">Email</label>
                     <input type="email"  id="email" placeholder="VD: abc@gmail.com">
                 </div>
-                <label for="Vấn đề hiện tại" id="en">Vấn đề hiện tại</label>
+                <label for="Số bảo hiểm y-tế" style="max-width: max-content;">Số bảo hiểm y-tế *</label>
+                <input required type="number" name="" id="Số bảo hiểm y-tế">
+                <label for="Vấn đề hiện tại">Vấn đề hiện tại</label>
                 <input type="text" name="" id="Vấn đề hiện tại" placeholder="VD: bệnh, triệu chứng...">
 
                 <input class="js-sent" type="submit" value="Gửi thông tin">
@@ -320,8 +364,9 @@
                 <img src="../image/quakiemduyet.png" alt="BỘ CÔNG THƯƠNG">
                 <img src="../image/layout_set_logo.png" alt="">
             </div>
+            <div class="clear"></div>
         </div>
-
+        
         <div id="modal-login">
             <div class="background-login">
                 <div class="ti-close" style="position: absolute; right: 0; top: 0; padding: 12px;"></div>
@@ -413,7 +458,6 @@
 
             <input class="enter save js-saveInfo" type="submit" value="Lưu">
         </form>
-        <i></i>
     </div>
 </body> 
 
