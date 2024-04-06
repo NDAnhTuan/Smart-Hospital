@@ -50,13 +50,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/controllers/patientController.js":
+/*!**********************************************!*\
+  !*** ./src/controllers/patientController.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   patientController: () => (/* binding */ patientController)\n/* harmony export */ });\n/* harmony import */ var firebase_firestore__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! firebase/firestore */ \"./node_modules/firebase/firestore/dist/esm/index.esm.js\");\n/* harmony import */ var _startApp_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../startApp.js */ \"./src/startApp.js\");\n\r\n\r\nclass patientController {\r\n    async viewDoctors() {\r\n        \r\n        const allUsers = [];\r\n        try {\r\n            const subcolref = (0,firebase_firestore__WEBPACK_IMPORTED_MODULE_0__.collection)(_startApp_js__WEBPACK_IMPORTED_MODULE_1__.db, 'Users', 'Doctor', 'Data');\r\n            \r\n            const subsnapshot = await (0,firebase_firestore__WEBPACK_IMPORTED_MODULE_0__.getDocs)(subcolref);\r\n            subsnapshot.forEach((doc) => {\r\n                allUsers.push({\r\n                    id: doc.id,\r\n                   ...doc.data(),\r\n                });\r\n            })\r\n        } catch (error) {\r\n            console.error(\"Error fetching data:\", error);\r\n            // Handle errors appropriately (consider rejecting the Promise)\r\n        }\r\n        \r\n        return allUsers;\r\n    }\r\n\r\n}\r\n\r\n\n\n//# sourceURL=webpack://be-hospital/./src/controllers/patientController.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _controllers_doctorController_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./controllers/doctorController.js */ \"./src/controllers/doctorController.js\");\n\r\n\r\n\r\n\r\n\r\nconst app = new _controllers_doctorController_js__WEBPACK_IMPORTED_MODULE_0__.doctorController();\r\nconst myPromise = await app.getPatient();\r\nconsole.log(myPromise);\r\n\r\n  \r\n\r\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } }, 1);\n\n//# sourceURL=webpack://be-hospital/./src/index.js?");
+eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _controllers_doctorController_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./controllers/doctorController.js */ \"./src/controllers/doctorController.js\");\n/* harmony import */ var _controllers_patientController_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./controllers/patientController.js */ \"./src/controllers/patientController.js\");\n\r\n\r\n\r\n\r\n\r\nconst app = new _controllers_patientController_js__WEBPACK_IMPORTED_MODULE_1__.patientController();\r\nconst myPromise = await app.viewDoctors();\r\nconsole.log(myPromise);\r\n\r\n  \r\n\r\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } }, 1);\n\n//# sourceURL=webpack://be-hospital/./src/index.js?");
 
 /***/ }),
 
