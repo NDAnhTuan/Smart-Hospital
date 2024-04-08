@@ -14,13 +14,6 @@ const clickSave = document.querySelector('.js-saveInfo')
 const clickHome = document.querySelector('#back-home') //chinh lai ve home dung nghia
 
 
-const clickLogin = document.querySelector('.js-login')
-const jsLogin = document.querySelector('#modal-login')
-const propagationLogin_1 = document.querySelector('.background-login')
-const propagationLogin_2 = document.querySelector('.js-login')
-const propagationLogin_3 = document.querySelector('#info-summary')
-const close = document.querySelector('.ti-close')
-
 
 const clickLogout = document.querySelector('.js-logout') // thoat all chưa xong
 
@@ -29,10 +22,6 @@ const jsContact = document.querySelector('#sent-info')
 const clickSent = document.querySelector('.js-sent')
 
 const clickForgetMK = document.querySelector('.js-forgetmk')
-
-
-
-
 
 
 
@@ -62,13 +51,6 @@ function backHome() {
     jsInfo.classList.remove('show')
 }
 
-function showLogin() {
-    jsLogin.classList.add('show')
-}
-function hideLogin() {
-    jsLogin.classList.remove('show')
-}
-
 function showContact(){
     jsContact.classList.add('show')
 }
@@ -91,16 +73,15 @@ clickInfo.addEventListener('click', showInfo)
 
 clickHome.addEventListener('click', backHome)
 
-clickLogin.addEventListener('click', showLogin)
-close.addEventListener('click', hideLogin)
-closeSomething.addEventListener('click', hideLogin)
-propagationLogin_1.addEventListener('click', function (event) {
-    event.stopPropagation()
-})
-propagationLogin_2.addEventListener('click', function (event) {
-    event.stopPropagation()
-})
-propagationLogin_3.addEventListener('click', function (event) {
+
+const jsLogin = document.querySelector('#modal-login')
+const propagationLogin_3 = document.querySelector('#info-summary')
+window.onclick = function(event) {// When the user clicks anywhere outside of the modal, close it
+    if (event.target == jsLogin) {
+        jsLogin.style.display = "none";
+    }
+}
+propagationLogin_3.addEventListener('click', function (event) {//bấm vào con của button login ko dc mở
     event.stopPropagation()
 })
 clickForgetMK.addEventListener('click', function(){
