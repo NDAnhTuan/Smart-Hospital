@@ -17,7 +17,7 @@ signInWithEmailAndPassword(auth, 'nguyenducanhtuan0602@gmail.com', '123456abc')
 .catch((error) => {console.log('error: ' + error)})
 
 // const app = new patientController();
-// const myPromise = await app.addMedExamSch("hi", "hi", "3goKrkzQIqSCoP1t64kNieRh8AG2", "0000", );
+// const myPromise = await app.addMedExamSch("hi", "hi", "3goKrkzQIqSCoP1t64kNieRh8AG2", "05420700984", );
 // // console.log(myPromise);
 
   
