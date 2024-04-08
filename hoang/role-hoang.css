@@ -6,6 +6,9 @@
     /*background chèn vào tới border*/
 }
 
+p {
+    margin: 0;
+}
 
 /* *******SETUP********* */
 html {
@@ -49,7 +52,7 @@ html {
 
 #header #logo {
     display: inline-block;
-    margin: 0 8%;
+    margin: 0 20px;
     width: 200px;
 }
 
@@ -65,8 +68,8 @@ html {
 }
 
 #header .MXH {
-    display: inline-table;
-    height: var(--height-header);
+    display: flex;
+    height: 100%;
 }
 
 #header .MXH .icon-header {
@@ -91,7 +94,6 @@ html {
 }
 
 .MXH>div {
-    display: inline;
     position: relative;
 }
 
@@ -140,8 +142,8 @@ html {
 
 
 /* ******** NAVIGATION ******** */
-#navigation {
-    display: inline;
+#header {
+    display: flex;
 }
 
 #navigation>li {
@@ -884,8 +886,26 @@ h1.js-after {
     right: 13px;
 }
 
+.js-login {
+    display: flex;
+    justify-content: space-around;
+	align-items: center;
+} 
+
+.js-login .icon-header {
+    /* width: 60px;
+    height: 60px; */
+}
+
+.js-login .icon-header img {
+
+    width: 45px;
+    height: 45px;
+
+}
 .js-login:hover #info-summary {
     display: block;
+    
 }
 
 #info-summary {
@@ -1008,7 +1028,7 @@ h1.js-after {
 
 
 /* ******** DESIGN FOR DIVICE ******** */
-@media (min-width: 1469px) {}
+/* @media (min-width: 1469px) {}
 
 @media (max-width: 1469px) and (min-width: 740px) {
     .MXH {
@@ -1041,4 +1061,4 @@ h1.js-after {
     #contact p {
         font-size: 16px;
     }
-}
+} */
