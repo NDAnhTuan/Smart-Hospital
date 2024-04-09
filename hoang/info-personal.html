@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bệnh viện</title>
+</head>
+ 
+<link rel="stylesheet" href="header.html">
+
+<body>
+    <div id="info-personal">
+        <button id="back-home">
+            <i class="ti-home"></i>
+            <div>Về trang chủ</div>
+        </button>
+        <form class="background-info">
+            <h1>Thông tin cá nhân</h1>
+            <div class="table">
+                <img src="../image/toanthang_logo_1.png" alt="ảnh thẻ 3x4">
+                <ul class="thongtin">
+                    <label for="Full name">Full name:</label>
+                    <input required id="Full name" type="text">
+                    <label for="Birth day">Birth day:</label>
+                    <input id="Birth day" type="date">
+                    <label for="Sex">Sex:</label>
+                    <select required id="Sex">
+                        <option>- Unknown -</option>
+                        <option value="Male">Nam</option>
+                        <option value="Female">Nữ</option>
+                        <option value="LGBT">LGBT</option>
+                    </select>
+                    <label for="Email">Email:</label>
+                    <input required id="Email" type="email" placeholder="VD: abc@gmail.com">
+                    <label for="Phone number">Phone number:</label>
+                    <input required id="Phone number" type="number">
+                    <label for="Degree">Degree:</label>
+                    <select id="Degree">
+                        <option>- None -</option>
+                        <option value="TS">Tiến sĩ - Bác sĩ</option>
+                        <option value="BS">Bác sĩ</option>
+                        <option value="Yta">Y tá</option>
+                        <option value="ThS">Thạc sĩ - Bác sĩ</option>
+                        <option value="GS.TS">GS.Tiến sĩ</option>
+                        <option value="PGS.TS">PGS.Tiến sĩ</option>
+                        <option value="GS.ThS">GS.Thạc sĩ</option>
+                        <option value="PGS.ThS">PGS.Thạc sĩ</option>
+                    </select>
+                </ul>
+            </div>
+            <div class="table">
+                <ul class="thongtin">
+                    <label for="Identity number">Identity number:</label>
+                    <input required id="Identity number" type="number">
+                    <label for="National">National:</label>
+                    <input id="National" type="text">
+                    <label for="Permanent address">Permanent address:</label>
+                    <input required id="Permanent address" type="text">
+                    <label for="Department - specialized">Department - specialized:</label>
+                    <input required id="Department - specialized" type="text">
+                    <label for="Position">Position:</label>
+                    <input id="Position" type="text">
+                    <label for="Working status">Working status:</label>
+                    <select required id="Working status">
+                        <option>- Unknown -</option>
+                        <option value="Pause">Tạm dừng</option>
+                        <option value="Active">Đang làm việc</option>
+                        <option value="Retired">Đã nghỉ hưu</option>
+                    </select>
+                </ul>
+            </div>
+
+            <input class="enter save js-saveInfo" type="submit" value="Lưu">
+        </form>
+    </div>
+</body>
+
+</html>

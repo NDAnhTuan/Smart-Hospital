@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bệnh viện</title>
+</head>
+
+<!-- ket noi voi file css, js-->
+<link rel="stylesheet" href="role-hoang.css">
+<link rel="stylesheet" href="responsive.css">
+<link rel="stylesheet" href="../icons_font/themify-icons.css">
+
+
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="logo">
+                <img src="../image/Benh vien Phu Yen logo-02 1.png" alt="logo">
+            </div>
+            <ul id="navigation" class="js-hide">
+                <li class="js-introduce"><a href="#content-1">Giới thiệu</a></li>
+                <li class="js-achievement"><a href="#content-2">Thành Tựu</a></li>
+                <li class="js-doctor"><a href="#content-2">Chuyên Gia - Bác Sĩ</a></li>
+                <li class="js-service"><a href="#content-1">Dịch Vụ</a></li>
+                <li class="js-contact">
+                    <a href="#">Liên Hệ
+                        <i class="icon-header ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="#">Hotline - Chi nhánh Hà Nội: 0819 170 504</a></li>
+                        <li><a href="#">Hotline - Chi nhánh TP.HCM: 0819 170 504</a></li>
+                        <li><a href="#">Để lại thông tin liên hệ</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="MXH js-hide">
+                <div class="js-login">
+                    <button class="icon-header" onclick="document.getElementById('modal-login').style.display='block'"
+                        style="background-image: url(../image/login.png);"></button>
+                    <div id="info-summary">
+                        <div id="none">
+                            <div class="triangle"></div>
+                        </div>
+                        <div>
+                            <img src="" alt="avatar">
+                        </div>
+                        <div class="text">
+                            <div>
+                                <p></p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="text">
+                            <div>
+                                <p></p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="logout js-info">
+                            <img src="../image/notebook.png" alt="login">
+                            <div>
+                                <a href="#">
+                                    <p>Trang cá nhân</p>
+                                </a>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="logout js-logout">
+                            <img src="../image/logout.png" alt="logout">
+                            <a href="">
+                                <p>Đăng xuất</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <button class="icon-header js-call" style="background-image: url(../image/call.jpg);"></button>
+
+                <p class="text-white" style="margin-left: 16px;">
+                    Hotline:<br>
+                    +84 819 170 504
+                </p>
+
+                <a href="https://facebook.com/" class="icon-header"
+                    style="background-image: url(../image/facebook.png);"></a>
+                <a href="https://chat.zalo.me/" class="icon-header"
+                    style="background-image: url(../image/Logo-Zalo.png);"></a>
+                <button class="icon-header ti-search"></button>
+            </div>
+
+            <div class="header-second js-show-search">
+                <label for="ti-search" class="search-header">
+                    <i class="ti-search" style="padding-left: 10px;"></i>
+                    <input id="ti-search" type="text" placeholder="Tìm kiếm">
+                </label>
+            </div>
+        </div>
+
+        <div id="slider">
+            <div class="text-slider">
+                <h2 class="text-0"> Chi Nhánh Hà Nội </h2>
+                <!-- 
+                <h2 class="text-4">Chi Nhánh TP.HCM</h2>
+                <h2 class="text-1">Đội ngũ Bác sĩ</h2>
+                <h2 class="text-2">Cơ sở vật chất</h2>
+                <h2 class="text-3">Giấy chứng nhận</h2> 
+                -->
+            </div>
+        </div>
+
+        <div id="container">
+            <div id="banner-left">
+
+            </div>
+            <div id="banner-right">
+
+            </div>
+            <div id="content-1">
+                <div class="Introduce">
+                    <h1 class="js-after">Introduce</h1>
+                    <div class="member">
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima placeat eius reprehenderit repellendus magnam dolores quia minus, facilis, vitae officiis deleniti dolorum natus.Illum labore quas similique pariatur rem.</h2>
+                        <h2> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum magni quaerat hic mollitia dicta incidunt asperiores autem ipsam! Quas laudantium blanditiis facereanimi est, fuga vitae cupiditate quisquam ad?</h2>
+                    </div>
+                    <div class="member">
+                        <iframe width="95%" height="400px"
+                            src="https://www.youtube.com/embed/wMzujWoVs_M?si=3FkZ-5szwzhqPP5D&amp;start=3"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="Services">
+                    <h1 class="js-after">Services</h1>
+                    <div class="row-serv">
+                        <button class="icon ti-angle-left" id="prevSv"><i style="font-size: 0;">.</i></button>
+                        <div class="row-container">
+                            <ul class="row row-1">
+                                <li>
+                                    <a href="#">
+                                        <img src="https://tamanhhospital.vn/wp-content/uploads/2021/10/icon-tim-bam-sinh.png"
+                                            alt="tim">
+                                        <h3>Khám, tầm soát & điều trị bệnh lý mạch máu</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae voluptates
+                                            expedita animi autem unde hic molestias repellendu a officia aperiam
+                                            laudantium.</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="">
+                                        <img src="https://tamanhhospital.vn/wp-content/uploads/2021/02/giai-phau-benh-va-te-bao.png"
+                                            alt="tim">
+                                        <h3>Dịch vụ giải phẫu bệnh & tế bào</h3>
+                                        <br>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel nam illum
+                                            corrupti asperiores accusantium perspiciatis eveniet! Repudiandae aut
+                                            voluptas eaque voluptatem a officia aperiam laudantium officiis.</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="">
+                                        <img src="https://tamanhhospital.vn/wp-content/uploads/2021/07/icon__1.png"
+                                            alt="ruot">
+                                        <h3>Các dịch vụ của Đơn vị Hậu môn – Trực tràng</h3>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel nam illum
+                                            corrupti asperiores accusantium perspiciatis eveniet! Repudiandae aut
+                                            voluptas eaque voluptatem a officia aperiam.</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="row row-2">
+                                <li>
+                                    <a href="#" title="">
+                                        <img src="https://tamanhhospital.vn/wp-content/uploads/2020/11/dvdb_vosinh_hiemmuon.png"
+                                            alt="thu thai">
+                                        <h3>Khám, tư vấn & điều trị vô sinh hiếm muộn</h3>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel nam illum
+                                            corrupti asperiores accusantium perspiciatis eveniet! Repudiandae aut
+                                            voluptas eaque voluptatem a officia aperiam laudantium .</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="">
+                                        <img src="https://tamanhhospital.vn/wp-content/uploads/2020/11/dvdb_chuyenkhoa_nhi.png"
+                                            alt="so sinh">
+                                        <h3>Khám & Điều trị chuyên khoa Nhi</h3>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel nam illum
+                                            corrupti asperiores accusantium perspiciatis eveniet! Repudiandae aut
+                                            voluptas eaque voluptatem a.</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="">
+                                        <img src="https://tamanhhospital.vn/wp-content/uploads/2020/11/dvdb_noithanhkinh.png"
+                                            alt="nao">
+                                        <h3>Khám & Điều trị bệnh lý Nội thần kinh</h3>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel nam illum
+                                            corrupti asperiores accusantium perspiciatis eveniet! Repudiandae aut
+                                            voluptas eaque voluptatem.</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="icon ti-angle-right" id="nextSv" style="left: 90%;"><i
+                                style="font-size: 0;">.</i></button>
+                    </div>
+                </div>
+            </div>
+            <div id="content-2">
+                <div class="Achievements">
+                    <h1 class="js-after">Achievements</h1>
+                    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui reiciendis quo quisquam debitis
+                        odio, assumenda excepturi cupiditate iste ipsum at nam eos, officiis consequuntur distinctio
+                        fugiat facere minima quia blanditiis?</h2>
+                    <div class="member">
+                        <img src="../image/TTT.jpg" alt="NHH">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel doloremque esse culpa expedita.
+                            pariatur repellat cupiditate nemo corrupti sed? Nulla quidem ex quos ipsa libero tenetur
+                            iure eveniet magnam. Ut?</p>
+                    </div>
+                    <div class="member">
+                        <img src="../image/Robot-ykhoa.png" alt="TTT">
+                        <p class="achievement">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel doloremque
+                            esse culpa expedita. pariatur repellat cupiditate nemo corrupti sed? Nulla quidem ex quos
+                            ipsa libero tenetur iure eveniet magnam. Ut?</p>
+                    </div>
+                    <div class="member">
+                        <img src="../image/OIP.jpg" alt="LLLT">
+                        <p class="achievement">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel doloremque
+                            esse culpa expedita. pariatur repellat cupiditate nemo corrupti sed? Nulla quidem ex quos
+                            ipsa libero tenetur iure eveniet magnam. Ut?</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="Doctors">
+                    <h1 class="js-after">List Doctor</h1>
+                    <div class="row-container">
+                    </div>
+                </div>
+            </div>
+            <div id="content-3">
+                <h1 class="js-after">Places</h1>
+                <div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10314.301327360568!2d106.65351349880461!3d10.758106344239573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ef09222b00b%3A0xb02f0a86479b4d8f!2zxJDhuqFpIEjhu41jIFkgRMaw4bujYyBUaMOgbmggUGjhu5EgSOG7kyBDaMOtIE1pbmggKFVNUCk!5e0!3m2!1svi!2sus!4v1712127165574!5m2!1svi!2sus"
+                        width="35%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="member">
+                        <h2>Bệnh viện đa khoa Hà Nội</h2>
+                        <ul>
+                            <li><i class="ti-location-pin"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Hic repudiandae eos rerum.</li>
+                            <li><i class="ti-email"></i> hoang.nguyen2211093@hcmut.edu.vn</li>
+                            <li>
+                                <img src="https://th.bing.com/th/id/R.2189e376904c13677b91d7f037221fc7?rik=O6PaxudYt70BBA&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_56566.png&ehk=P2rFWGv4Nmtr1IDIGu0ou4h6Ye0LMQO1n5banzcSZb4%3d&risl=&pid=ImgRaw&r=0"
+                                    alt="" style="width: 20px; height: 20px;">
+                                0819.170.504
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55844.05007374956!2d105.79426072456354!3d21.0090456324474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac7c33fd6323%3A0x930d205cf25ff492!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBZIEjDoCBO4buZaQ!5e0!3m2!1svi!2sus!4v1712127279104!5m2!1svi!2sus"
+                        width="35%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="member" style="padding-bottom: 120px;">
+                        <h2>Bệnh viện đa khoa TP.HCM</h2>
+                        <ul>
+                            <li><i class="ti-location-pin"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Hic repudiandae eos rerum.</li>
+                            <li><i class="ti-email"></i> hoang.nguyen2211093@hcmut.edu.vn</li>
+                            <li>
+                                <img src="https://th.bing.com/th/id/R.2189e376904c13677b91d7f037221fc7?rik=O6PaxudYt70BBA&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_56566.png&ehk=P2rFWGv4Nmtr1IDIGu0ou4h6Ye0LMQO1n5banzcSZb4%3d&risl=&pid=ImgRaw&r=0"
+                                    alt="" style="width: 20px; height: 20px;">
+                                0819.170.504
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <div class="contact">
+                <h1 class="js-after">In touch with us</h1>
+                <div class="chi-nhanh">
+                    <img src="../image/copntact 1.jpg" alt="LLLT">
+                    <p class="text-white">Hotline TP.Hà Nội:<br>0819 170 504</p>
+                </div>
+                <div class="chi-nhanh">
+                    <img src="../image/contact 2..jpg" alt="LLLT">
+                    <p class="text-white">Hotline TP.Hồ Chí Minh:<br>0819 170 504</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div id="sent-info">
+            <form class="info-cus">
+                <h1 style="color: #4696EB; margin-top: 50px;">ĐẶT LỊCH</h1>
+                <p style="font-style: italic; margin-top: 3px;">Để lại thông tin</p>
+                <label for="facility">Cơ sở *</label>
+                <select required id="facility">
+                    <option>- Chọn cơ sở -</option>
+                    <option value="Hà Nội">Cơ sở TP.Hà Nội</option>
+                    <option value="Hồ Chí Minh">Cơ sở TP.Hồ Chí Minh</option>
+                </select>
+                <div class="table-1">
+                    <label for="Đặt lịch">Đặt lịch *</label>
+                    <input required type="datetime-local">
+                    <label for="Ngày sinh">Ngày sinh</label>
+                    <input type="date">
+                    <label for="Số điện thoại">Số điện thoại *</label>
+                    <input required type="number" name="" id="Số điện thoại">
+                </div>
+                <div class="table-2">
+                    <label for="Họ & Tên">Họ & Tên</label>
+                    <input type="text" name="" id="Họ & Tên">
+                    <label for="Giới tính">Giới tính</label>
+                    <input type="text" name="" id="Giới tính">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="VD: abc@gmail.com">
+                </div>
+                <label for="Số bảo hiểm y-tế" style="max-width: max-content;">Số bảo hiểm y-tế *</label>
+                <input required type="number" name="" id="Số bảo hiểm y-tế">
+                <label for="Vấn đề hiện tại">Vấn đề hiện tại</label>
+                <input type="text" name="" id="Vấn đề hiện tại" placeholder="VD: bệnh, triệu chứng...">
+
+                <input class="js-sent" type="submit" value="Gửi thông tin">
+            </form>
+        </div>
+
+        <div id="footer">
+            <div>
+                <ul>
+                    <li class="img-footer"></li>
+                    <li class="place-time">
+                        <h3>HỆ THỐNG BỆNH VIỆN</h3>
+                        <p>
+                            <i class="ti-location-pin"></i>
+                            Q. Long Biên, Tp. Hà Nội
+                            <a href="#">Xem bản đồ</a>
+                            <br> Làm việc từ 7:00 - 19:00
+                        </p>
+                        <p>
+                            <i class="ti-location-pin"></i>
+                            Q. Tân Bình, Tp. Hồ Chí Minh
+                            <a href="#">Xem bản đồ</a>
+                            <br>Làm việc từ 7:30 - 16:30
+                        </p>
+                        <p><i class="ti-email"></i> hoang.nguyen2211093@hcmut.edu.vn</p>
+                    </li>
+                    <li class="work-cooperation">
+                        <h3>WEBSITE CÙNG TẬP ĐOÀN</h3>
+                        <p><a href="#">Viện Nghiên cứu</a></p>
+                        <p><a href="#">Trung tâm Hỗ trợ sinh sản</a> </p>
+                        <h3>HỢP TÁC CÙNG</h3>
+                        <p>Lorem ipsu amet consectetur</p>
+                        <p>Autem erum enim voluptas rem</p>
+                        <p>Lorem ipsum dolor adipisicing</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="intro-company">
+                <h3>CÔNG TY CỔ PHẦN BỆNH VIỆN ĐA KHOA</h3>
+                <p>Số đăng ký kinh doanh: 012345678999</p>
+                <p>cấp bởi Sở kế hoạch và đầu tư Thành phố Hà Nội, đăng ký lần đầu ngày 1 tháng 4 năm 2024</p>
+            </div>
+            <div class="logo-kiemdinh">
+                <img src="../image/quakiemduyet.png" alt="BỘ CÔNG THƯƠNG">
+                <img src="../image/layout_set_logo.png" alt="">
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div id="modal-login">
+            <div class="background-login">
+                <button class="ti-close" onclick="document.getElementById('modal-login').style.display='none'"></button>
+                <form class="log-in" method="post">
+                    <h1>Quản lí bệnh viện</h1>
+                    <i class="icon-login"></i>
+                    <label for="User-name" class="modal-label">
+                        <i class="ti-user"></i>User name*
+                    </label>
+                    <input id="User-name" type="text" class="modal-input" placeholder="Tên đăng nhập">
+
+                    <label for="Password" class="modal-label">
+                        <i class="ti-key"></i>Password*
+                    </label>
+                    <input id="Password" type="text" class="modal-input" placeholder="Mật khẩu gồm 8 chữ số và cả chữ">
+
+                    <label for="User name*" class="modal-label">*Chỉ dành cho quản trị viên/nhân sự</label>
+                    <button class="enter" type="submit">Log in</button>
+
+                    <a href="#" class="js-forgetmk" style="color: black;">Quên mật khẩu?</a>
+                </form>
+            </div>
+        </div>
+
+        <div id="info-personal">
+            <button id="back-home">
+                <i class="ti-home"></i>
+                <div>Về trang chủ</div>
+            </button>
+            <form class="background-info">
+                <h1>Thông tin cá nhân</h1>
+                <div class="table">
+                    <img src="../image/toanthang_logo_1.png" alt="ảnh thẻ 3x4">
+                    <ul class="thongtin">
+                        <label for="Full name">Full name:</label>
+                        <input required id="Full name" type="text">
+                        <label for="Birth day">Birth day:</label>
+                        <input id="Birth day" type="date">
+                        <label for="Sex">Sex:</label>
+                        <select required id="Sex">
+                            <option>- Unknown -</option>
+                            <option value="Male">Nam</option>
+                            <option value="Female">Nữ</option>
+                            <option value="LGBT">LGBT</option>
+                        </select>
+                        <label for="Email">Email:</label>
+                        <input required id="Email" type="email" placeholder="VD: abc@gmail.com">
+                        <label for="Phone number">Phone number:</label>
+                        <input required id="Phone number" type="number">
+                        <label for="Degree">Degree:</label>
+                        <select id="Degree">
+                            <option>- None -</option>
+                            <option value="TS">Tiến sĩ - Bác sĩ</option>
+                            <option value="BS">Bác sĩ</option>
+                            <option value="Yta">Y tá</option>
+                            <option value="ThS">Thạc sĩ - Bác sĩ</option>
+                            <option value="GS.TS">GS.Tiến sĩ</option>
+                            <option value="PGS.TS">PGS.Tiến sĩ</option>
+                            <option value="GS.ThS">GS.Thạc sĩ</option>
+                            <option value="PGS.ThS">PGS.Thạc sĩ</option>
+                        </select>
+                    </ul>
+                </div>
+                <div class="table">
+                    <ul class="thongtin">
+                        <label for="Identity number">Identity number:</label>
+                        <input required id="Identity number" type="number">
+                        <label for="National">National:</label>
+                        <input id="National" type="text">
+                        <label for="Permanent address">Permanent address:</label>
+                        <input required id="Permanent address" type="text">
+                        <label for="Department - Specialized">Department - Specialized:</label>
+                        <input required id="Department - Specialized" type="text">
+                        <label for="Position">Position:</label>
+                        <input id="Position" type="text">
+                        <label for="Working status">Working status:</label>
+                        <select required id="Working status">
+                            <option>- Unknown -</option>
+                            <option value="Pause">Tạm dừng</option>
+                            <option value="Active">Đang làm việc</option>
+                            <option value="Retired">Đã nghỉ hưu</option>
+                        </select>
+                    </ul>
+                </div>
+
+                <input class="enter save js-saveInfo" type="submit" value="Lưu">
+            </form>
+        </div>
+    </div>
+
+</body>
+
+<script src="./role-hoang.js"></script>
+<script src="./list-doctor.js"></script>
+<script src="./info-summary.js"></script>
+<script src="./info-personal.js"></script>
+<script src="../BE/BE-Hospital/dist/login.bundle.js"></script>
+<!-- <script src="../BE/BE-Hospital/src/forFEjs/login-account.js"></script> -->
+
+</html>

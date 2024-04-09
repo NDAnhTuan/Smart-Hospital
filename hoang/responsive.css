@@ -1,0 +1,54 @@
+/* ******** DESIGN FOR DIVICE ******** */
+@media (min-width: 1551px) {
+    #header .MXH {
+        position: absolute;
+    }
+
+    #container .chi-nhanh p {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 1551px) and (min-width: 740px) {
+    #header {
+        height: auto;
+    }
+
+    #header .MXH {
+        margin-left: 35%;
+    }
+
+    #footer li {
+        margin: auto;
+        width: 60% !important;
+    }
+
+    #content-3 .member {
+        float: right;
+        width: 45%;
+    }
+
+    #container .chi-nhanh p {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 740px) {
+    #header {
+        height: auto;
+    }
+
+    #footer ul,
+    #footer li {
+        float:initial !important;
+        width: 400px !important;
+    }
+
+    #content-3 iframe {
+        width: 350px;
+    }
+
+    #container .chi-nhanh p {
+        font-size: 16px;
+    }
+}

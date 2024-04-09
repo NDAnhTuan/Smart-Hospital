@@ -6,9 +6,6 @@
     /*background chèn vào tới border*/
 }
 
-p {
-    margin: 0;
-}
 
 /* *******SETUP********* */
 html {
@@ -42,17 +39,12 @@ html {
     top: 0px;
     z-index: 99;
 
-    display: inline-block;
-}
-
-#header>.MXH>p {
-    display: inline-block;
-    margin-right: -5px;
+    display: inline;
 }
 
 #header #logo {
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 8%;
     width: 200px;
 }
 
@@ -68,14 +60,16 @@ html {
 }
 
 #header .MXH {
-    display: flex;
-    height: 100%;
+    height: var(--height-header);
+
+    right: 1%;
+    display: inline-flex;
+    align-items: center;
 }
 
 #header .MXH .icon-header {
     display: inline-block;
-    vertical-align: middle;
-    margin: auto 0 auto 16px;
+    margin: auto 0 auto 1vw;
 
     background: rgb(255, 0, 0);
     background-size: cover;
@@ -94,6 +88,7 @@ html {
 }
 
 .MXH>div {
+    display: inline;
     position: relative;
 }
 
@@ -104,12 +99,6 @@ html {
     display: none !important;
 }
 
-.js-right.right {
-    float: right;
-    display: flex !important;
-    align-items: center;
-    margin-right: 30px;
-}
 
 .header-second {
     background-color: #fff;
@@ -141,9 +130,11 @@ html {
 }
 
 
+
+
 /* ******** NAVIGATION ******** */
-#header {
-    display: flex;
+#navigation {
+    display: inline;
 }
 
 #navigation>li {
@@ -491,8 +482,6 @@ h1.js-after {
 }
 
 .chi-nhanh p {
-    font-size: 30px;
-
     position: absolute;
     top: 50%;
     left: 50%;
@@ -651,7 +640,7 @@ h1.js-after {
 }
 
 .row-1 {
-    transform: translateX(0);
+    transform: translateX(0%);
 }
 
 .row-2 {
@@ -780,14 +769,13 @@ h1.js-after {
 
 
 /* *********BANNER******* */
-#banner-left {
+/* #banner-left {
     display: none;
 }
 
 #banner-right {
-
     display: none;
-}
+} */
 
 
 
@@ -798,6 +786,7 @@ h1.js-after {
     position: absolute;
     right: 0;
     background-color: #eee;
+    box-shadow: 0px 10px 10px rgba(98, 76, 87, 0.7);
 }
 
 #info-summary img {
@@ -872,10 +861,9 @@ h1.js-after {
 }
 
 #info-summary #none {
-    height: 16px;
-    width: 338px;
+    height: 15px;
+    width: 100%;
     background-color: #0058A0;
-    position: relative;
 }
 
 #info-summary #none .triangle {
@@ -883,34 +871,16 @@ h1.js-after {
     border-right: 14.14px solid transparent;
     border-bottom: 20px solid #eee;
     position: absolute;
-    right: 13px;
+    right: 10px;
 }
 
-.js-login {
-    display: flex;
-    justify-content: space-around;
-	align-items: center;
-} 
-
-.js-login .icon-header {
-    /* width: 60px;
-    height: 60px; */
-}
-
-.js-login .icon-header img {
-
-    width: 45px;
-    height: 45px;
-
-}
 .js-login:hover #info-summary {
     display: block;
-    
 }
-
 #info-summary {
     display: none;
 }
+
 
 
 /* ******* info-personal ********* */
@@ -971,7 +941,6 @@ h1.js-after {
 }
 
 
-
 #info-personal .background-info {
     background-color: #eee;
     border-radius: 10px;
@@ -1025,40 +994,3 @@ h1.js-after {
 
 
 
-
-
-/* ******** DESIGN FOR DIVICE ******** */
-/* @media (min-width: 1469px) {}
-
-@media (max-width: 1469px) and (min-width: 740px) {
-    .MXH {
-        display: none !important;
-    }
-
-    #footer li {
-        margin: auto;
-        width: 60% !important;
-    }
-
-    #content-3 .member {
-        float: right;
-        width: 45%;
-    }
-
-}
-
-@media (max-width: 740px) {
-    .MXH {
-        display: none !important;
-    }
-
-    #footer li {
-        float: none !important;
-        width: 60%;
-        margin: auto;
-    }
-
-    #contact p {
-        font-size: 16px;
-    }
-} */
