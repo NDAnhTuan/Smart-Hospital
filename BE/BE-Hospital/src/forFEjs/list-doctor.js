@@ -1,41 +1,31 @@
+import { patientController } from "../controllers/patientController"
 const listDoctor = document.querySelector('.Doctors .row-container')
 
 
 async function getDataFromPublicAPI() {
     const responseAPI = await fetch('https://randomuser.me/api?results=20')
-    const {results} = await responseAPI.json()
+    const results = await (new patientController).viewDoctors()
+    // responseAPI.json()
+    console.log(results)
     listDoctor.innerHTML = ''
-    for(let i=3; i < results.length; i+=3){
+    // for(let i=3; i < results.length; i+=3){
+    results.forEach( (result) => {
         const ulItem = document.createElement('ul')
-        ulItem.innerHTML = `
-            <li class="avatar" style=" background-image: url(${results[i-3].picture.thumbnail});">
+        ulItem.innerHTML += `
+            <li class="avatar" style=" background-image: url();">
             <p>
-                <span>${results[i-3].location.city}</span>
-                ${results[i-3].name.title}.${results[i-3].name.first} ${results[i-3].name.last}
-                <span>Khoa ${results[i-3].email}</span>
-                <span>${results[i-3].location.city}</span>
+                <span></span>
+                Họ tên: ${result.FirstName} ${result.LastName}
+                <span>Khoa: ${result.Department}</span>
+                <span>Email: ${result.Email}</span>
             </p>
             </li>
-            <li class="avatar" style=" background-image: url(${results[i-2].picture.thumbnail});">
-            <p>
-                <span>${results[i-2].location.city}</span>
-                ${results[i-2].name.title}.${results[i-2].name.first} ${results[i-2].name.last}
-                <span>Khoa ${results[i-2].email}</span>
-                <span>${results[i-2].location.city}</span>
-            </p>
-            </li>
-            <li class="avatar" style=" background-image: url(${results[i-1].picture.thumbnail});">
-            <p>
-                <span>${results[i-1].location.city}</span>
-                ${results[i-1].name.title}.${results[i-1].name.first} ${results[i-1].name.last}
-                <span>Khoa ${results[i-1].email}</span>
-                <span>${results[i-1].location.city}</span>
-            </p>
-            </li>
+            
         </ul>
         `
         listDoctor.appendChild(ulItem)
-    }
+    // }
+    })
 }
 getDataFromPublicAPI()
 
