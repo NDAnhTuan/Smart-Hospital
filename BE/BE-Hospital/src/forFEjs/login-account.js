@@ -44,7 +44,7 @@ async function handleLogin() {
                 window.location.href = '../Kim/index.html'
               } 
               else {
-                window.location.href = '../Kim/tracuu.html'
+                window.location.href = '../thinh/btl-ltnc/bs.html'
               }
           } catch (error) {
               console.error("Error fetching data:", error);
