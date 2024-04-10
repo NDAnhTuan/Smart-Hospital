@@ -1,0 +1,382 @@
+* {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#head {
+    width: 100%;
+    height: 100px;
+    background-color: #0058A0;
+    padding: 0 10px;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 11;
+}
+
+#head .img {
+    width: 15%;
+    height: 100%;
+    padding: 20px 10px;
+    margin-right: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+#head .search {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    padding: 0 20px;
+    margin-left: 100px;
+    margin-right: 30px;
+    position: relative;
+}
+
+#head .search input {
+    height: 30px;
+    display: flex;
+    margin-top: 35px;
+    border-radius: 23.23px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-indent: 40px;
+    border-width: 0;
+}
+
+.search a {
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 55px;
+    text-decoration: none;
+}
+
+.search .img-icon {
+    width: 16px;
+}
+
+#hs .head p {
+    font-weight: bold;
+}
+
+#head .search .no-border {
+    border: none;
+    outline: none;
+}
+
+#head .right {
+    width: 15%;
+    margin-left: auto;
+    display: flex;
+    position: relative;
+}
+
+#head .right #login {
+    width: 48px;
+    height: 48px;
+    background-color: #F71414;
+    margin-left: auto;
+    margin-right: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+    border-radius: 50%;
+}
+
+#head .right img {
+    padding-top: 2px;
+    position: relative;
+}
+
+#head .right #info {
+    height: 368px;
+    width: 338px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: #eee;
+    z-index: 110;
+}
+
+#info img {
+    width: 90px;
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#info div {
+    display: flex;
+    justify-content: center;
+}
+
+#info .text {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    display: inline;
+}
+
+#info .text p {
+    line-height: 29px;
+    font-size: 16px;
+    height: 29px;
+    width: 100%;
+}
+
+#info .logout {
+    height: 78px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#info .logout p {
+    height: 78px;
+    font-size: 16px;
+    line-height: 78px;
+    color: #000;
+    position: absolute;
+    top: 0;
+    left: 90px;
+}
+
+#info .logout a {
+    text-decoration: none;
+}
+
+#info .logout img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 55px;
+}
+
+#info .text div {
+    height: 29px;
+    width: 100%;
+}
+
+#info .text .line {
+    height: 1px;
+    width: 90%;
+    background-color: #B4B4B4;
+    margin-left: 16.9px;
+}
+
+#info .logout div {
+    height: 77px;
+    width: 100%;
+}
+
+.logout .line {
+    flex: 1;
+    height: 1px;
+    background-color: #B4B4B4;
+}
+
+#info #none {
+    height: 20px;
+    width: 100%;
+    background-color: #0058A0;
+    position: relative;
+}
+#info #none .triangle {
+    width: 0;
+    height: 0;
+    border-left: 14.14px solid transparent; 
+    border-right: 14.14px solid transparent; 
+    border-bottom: 20px solid #eee;
+    position: absolute;
+    right: 13px;
+}
+#login:hover #info {
+    display: block;
+}
+#info {
+    display: none;
+    z-index: 200;
+}
+#nav {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 100px;
+    background-color: #eee;
+    display: flex;
+    font-size: 0;
+    z-index: 10;
+}
+#nav .subnav {
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+}
+#nav .subnav div {
+    height: 50px;
+    width: 100%;
+}
+#nav .subnav .out {
+    line-height: 50px;
+    font-size: 16px;
+    display: inline;
+}
+#nav .subnav .down {
+    display: inline;
+    line-height: 50px;
+    font-size: 16px;
+    padding-left: 5px;
+}
+#nav .subnav #d2 {
+    left: 240px;
+}
+#p2 p {
+    height: 50px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 50px;
+}
+#nav .subnav a {
+    color :#000;
+    text-decoration: none;
+}
+#nav .subnav #p2 {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    background-color: #eee;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+}
+#nav .subnav:hover {
+    background-color: #c1c1c1;
+}
+#p2 div:hover p {
+    background-color: #cacaca;
+}
+#sn2 #pp2 {
+    display: none;
+}
+#sn2:hover #pp2 {
+    display: block;
+}
+#content {
+    width: 100%;
+    height: 550px;
+    position: relative;
+    top: 150px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+#content #homep {
+    height: 50px;
+    width: 130px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    font-size: 0;
+}
+#content #homep img {
+    height: 50px;
+    width: 40px;
+    position: relative;
+}
+#content #homep .text {
+    height: 50px;
+    width: 130px;
+}
+#homep .text p {
+    font-size: 16px;
+    color: #000;
+    line-height: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 42px;
+    display: none;
+}
+#homep .text a {
+    text-decoration: none;
+    color: #000;
+}
+#content #homep:hover p {
+    display: block;
+    background-color: #0F58A0;
+    color: #fff;
+    text-align: center;
+}
+#content #vien {
+    width: 1140px;
+    height: 540px;
+    background-color: #f5f8fa;
+    border-radius: 20px;
+    position: absolute;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+}
+#content #vien #giua {
+    width: 1100px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+}
+#vien #giua #h {
+    height: 50px;
+    width: 200px;
+    position: absolute;
+    left: 20px;
+}
+#vien #giua #h p {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+}
+#vien #giua #l {
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: 49px;
+    background-color: #000;
+}
+#vien #giua #currentday {
+    height: 40px;
+    width: 250px;
+    text-align: left;
+    line-height: 50px;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+}
+#content #giua #lich {
+    width: 1050px;
+    position: absolute;
+    top: 50px;
+    left: 25px;
+}
+#content #giua #lich .h {
+    font-size: 16px;
+    line-height: 40px;
+    width: 150px;
+}
+#content #giua #lich tr {
+    display: flex;
+}
+#giua #lich #lich-body {
+    text-align: center;
+}
