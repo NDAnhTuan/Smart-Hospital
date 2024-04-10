@@ -60,8 +60,8 @@ import {
               console.error("Error fetching data:", error);
               // Handle errors appropriately (consider rejecting the Promise)
           }
-          
           return allUsers;
+          
       }
 
       //Medicine
@@ -69,7 +69,7 @@ import {
       decreaseQuantifyMedicine = () => {};
 
       //MedExamSch
-      addDiagnosis = () => {};
+      UpdateDiagnosis = () => {};
       viewMyPatientMedExamSch = (id) => {};
       addPrescription = () => {};
 
