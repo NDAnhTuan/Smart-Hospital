@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./assets-dst/css/main.css">
+        <link rel="stylesheet" href="./assets/font/themify-icons-font/themify-icons/themify-icons.css">
+    </head>
+    <body>
+        <div id="head">
+            <div class = "img">
+                <img src="./assets-hsbn/img/Benh vien Phu Yen logo-02 1.png" alt="">
+            </div>
+            <div class="search">
+                <a href="">
+                    <span class = "img-icon ti-search"></span>
+                </a>
+                <input class = "no-border" type="text" placeholder="Tìm kiếm">
+            </div>
+            <div class = "right">
+                <div id = "login">
+                    <a href="#">
+                        <img src="./assets-hsbn/img/user 1.png" id = "hv" alt="">
+                    </a>
+                    
+                    <div id = "info">
+                        <div id="none">
+                            <div class="triangle"></div>
+                        </div>
+                        <div>
+                            <img src="./assets-hsbn/img/Image.png" alt="">
+                        </div>
+                        <div class = "text">
+                            <div>
+                                <p>TS - Bác sĩ: Lê Trần Thanh Phong</p>
+                            </div>
+                            <div class = "line"></div>
+                        </div>
+                        <div class = "text">
+                            <div>
+                                <p>Trưởng khoa khám bệnh, Phó giám đốc</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class = "logout">
+                            <img src="./assets-hsbn/img/notebook_duotone@3x.png" alt="">
+                            <div>
+                                <a href="">
+                                    <p>Trang cá nhân</p>
+                                </a>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="logout">
+                            <img src="./assets-hsbn/img/Vector.png" alt="">
+                            <a href="">
+                                <p>Đăng xuất</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nav">
+            <div class="subnav">
+                <a href="hsbn.html"><p class = "out">Hồ sơ bệnh nhân</p></a>
+            </div>
+            <div class="subnav">
+                <a href="./kham.html">
+                    <p class="out">Ca khám của tôi</p>
+                </a>
+            </div>
+            <div id = "sn1" class="subnav">
+                <div>
+                    <a href="./dst.html">
+                        <p class = "out">Danh sách thuốc</p>
+                    </a>
+                </div>
+            </div>
+            <div id = "sn2" class="subnav">
+                <div>
+                    <p class = "out">Lịch của bạn</p>
+                    <i id = "d2" class = "down ti-angle-down"></i>
+                </div>
+                <div id="pp2">
+                    <div id="p2">
+                        <div>
+                            <a href="./lich.html">
+                                <p>Lịch làm việc</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="./ycnp.html">
+                                <p>Yêu cầu nghỉ phép</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div id="homep">
+                <img src="./assets-hsbn/img/Mini Button- 2.png" alt="">
+                <div class = "text" id = "hp2">
+                    <a href="./bs.html">
+                        <p>Về trang chủ</p>
+                    </a>
+                </div>
+            </div>
+            <div class="vien">
+                <div class="giua">
+                    <div class="con">
+                        <div class="list">
+                            <p>Danh sách thuốc</p>
+                        </div>
+                        <div class="tk" onclick="searchTable()">
+                            Tìm kiếm
+                        </div>
+                        <div class="ip">
+                            <input type="text" id="searchInput" onkeyup ="searchTable()" placeholder="Nhập từ khóa...">
+                        </div>
+                        <div class="line"></div>
+                        <table id = "dst">
+                            <thead>
+                                <tr>
+                                    <th class="h1">Tên thuốc</th>
+                                    <th class="h2">Ngày sản xuất</th>
+                                    <th class="h3">Ngày hết hạn</th>
+                                    <th class="h4">Giá</th>
+                                    <th class="h5">Số lượng</th>
+                                    <th class="h6">Hàm lượng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="./assets-dst/js/scripts.js"></script>
+</html>
