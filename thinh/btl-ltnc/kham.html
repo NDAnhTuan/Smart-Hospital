@@ -12,12 +12,12 @@
             <div class = "img">
                 <img src="./assets-hsbn/img/Benh vien Phu Yen logo-02 1.png" alt="">
             </div>
-            <div class="search">
+            <!-- <div class="search">
                 <a href="">
                     <span class = "img-icon ti-search"></span>
                 </a>
                 <input class = "no-border" type="text" placeholder="Tìm kiếm">
-            </div>
+            </div> -->
             <div class = "right">
                 <div id = "login">
                     <a href="#">
@@ -28,7 +28,7 @@
                         <div id="none">
                             <div class="triangle"></div>
                         </div>
-                        <div>
+                        <!-- <div>
                             <img src="./assets-hsbn/img/Image.png" alt="">
                         </div>
                         <div class = "text">
@@ -51,7 +51,7 @@
                                 </a>
                             </div>
                             <div class="line"></div>
-                        </div>
+                        </div> -->
                         <div class="logout">
                             <img src="./assets-hsbn/img/Vector.png" alt="">
                             <a href="">
@@ -80,22 +80,9 @@
             </div>
             <div id = "sn2" class="subnav">
                 <div>
-                    <p class = "out">Lịch của bạn</p>
-                    <i id = "d2" class = "down ti-angle-down"></i>
-                </div>
-                <div id="pp2">
-                    <div id="p2">
-                        <div>
-                            <a href="./lich.html">
-                                <p>Lịch làm việc</p>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="./ycnp.html">
-                                <p>Yêu cầu nghỉ phép</p>
-                            </a>
-                        </div>
-                    </div>
+                    <a href="./lich.html">
+                        <p class = "out">Lịch của bạn</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -126,7 +113,7 @@
                                 <th class="k1">Ngày</th>
                                 <th class="k2">Triệu chứng</th>
                                 <th class="k3">ID bệnh nhân</th>
-                                <th class="k4">Chẩn đoán</th>
+                                <!-- <th class="k4">Chẩn đoán</th> -->
                                 <th class="k5">Kê đơn</th>
                             </tr>
                         </thead>
@@ -142,7 +129,7 @@
                         <p>Kê đơn</p>
                     </div>
                     <div class="line"></div>
-                    <form>
+                    <div>
                         <div class="f1">
                             <label for="fname">Họ</label>
                             <input id="fn" type="text" placeholder="Nguyễn">
@@ -201,9 +188,9 @@
                             <p>Hủy</p>
                         </div>
                         <div class="xuat">
-                            <button type="submit">Xuất đơn</button>
+                            <button type="submit" onclick="xoaHang()">Xuất đơn</button>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
