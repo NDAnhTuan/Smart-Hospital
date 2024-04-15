@@ -1,0 +1,293 @@
+/* 1 */
+
+        #main-interface {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+            margin-bottom: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .function-button {
+            padding: 0.5rem 1.5rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .function-button:hover {
+            background-color: #45a049;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 20px; /* Tăng padding để tạo khoảng cách */
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 30px; /* Tăng khoảng cách giữa các mục */
+        }
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px; /* Tăng kích thước chữ */
+        }
+
+/* tra cuu */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+ /* Grid layout container */
+ .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/*header*/
+.header {
+    grid-column: span 12;
+    background-color: #003366;
+    padding: 20px;
+}
+
+.header h1 {
+    color: #fff;
+    text-align: center;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.main-nav {
+    display: flex;
+    border: 2px solid grey;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.main-nav a {
+    color: #005b9f;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+
+h2 {
+    margin: 1rem 0;
+}
+
+.doctors-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+.doctor-item {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.doctor-item img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+.doctor-item h3 {
+    margin-top: 0;
+}
+
+.doctor-item p {
+    margin-bottom: 0;
+}
+
+.doctor-item button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.doctor-item button:hover {
+    background-color: #45a049;
+}
+
+p.round3 {
+border: 2px solid grey;
+border-radius: 12px;
+padding: 5px;
+}
+
+
+
+
+/* medicine */
+
+
+.container1 {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+        
+    /* appoin*/
+
+  
+    
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .left, .right {
+        flex-basis: 45%;
+    }
+    
+    .patient-list, .accepted-list {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .patient-list li, .accepted-list li {
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #45a049;
+    }
+    
+    /* tim kiem */
+      
+      .form-group {
+        margin-bottom: 10px;
+      }
+      
+      label {
+        font-weight: bold;
+      }
+      
+      input[type="text"], select {
+        width: 100%;
+        padding: 5px;
+        margin-top: 5px;
+      }
+      
+      button {
+        padding: 8px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color: #0056b3;
+      }
+      
+
+

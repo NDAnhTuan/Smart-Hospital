@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./assets-kham/css/main.css">
+        <link rel="stylesheet" href="./assets-hsbn/font/themify-icons-font/themify-icons/themify-icons.css">
+    </head>
+    <body>
+        <div id="head">
+            <div class = "img">
+                <img src="./assets-hsbn/img/Benh vien Phu Yen logo-02 1.png" alt="">
+            </div>
+            <div class="search">
+                <a href="">
+                    <span class = "img-icon ti-search"></span>
+                </a>
+                <input class = "no-border" type="text" placeholder="Tìm kiếm">
+            </div>
+            <div class = "right">
+                <div id = "login">
+                    <a href="#">
+                        <img src="./assets-hsbn/img/user 1.png" id = "hv" alt="">
+                    </a>
+                    
+                    <div id = "info">
+                        <div id="none">
+                            <div class="triangle"></div>
+                        </div>
+                        <div>
+                            <img src="./assets-hsbn/img/Image.png" alt="">
+                        </div>
+                        <div class = "text">
+                            <div>
+                                <p>TS - Bác sĩ: Lê Trần Thanh Phong</p>
+                            </div>
+                            <div class = "line"></div>
+                        </div>
+                        <div class = "text">
+                            <div>
+                                <p>Trưởng khoa khám bệnh, Phó giám đốc</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class = "logout">
+                            <img src="./assets-hsbn/img/notebook_duotone@3x.png" alt="">
+                            <div>
+                                <a href="">
+                                    <p>Trang cá nhân</p>
+                                </a>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="logout">
+                            <img src="./assets-hsbn/img/Vector.png" alt="">
+                            <a href="">
+                                <p>Đăng xuất</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nav">
+            <div class="subnav">
+                <a href="hsbn.html"><p class = "out">Hồ sơ bệnh nhân</p></a>
+            </div>
+            <div class="subnav">
+                <a href="./kham.html">
+                    <p class="out">Ca khám của tôi</p>
+                </a>
+            </div>
+            <div id = "sn1" class="subnav">
+                <div>
+                    <a href="./dst.html">
+                        <p class = "out">Danh sách thuốc</p>
+                    </a>
+                </div>
+            </div>
+            <div id = "sn2" class="subnav">
+                <div>
+                    <p class = "out">Lịch của bạn</p>
+                    <i id = "d2" class = "down ti-angle-down"></i>
+                </div>
+                <div id="pp2">
+                    <div id="p2">
+                        <div>
+                            <a href="./lich.html">
+                                <p>Lịch làm việc</p>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="./ycnp.html">
+                                <p>Yêu cầu nghỉ phép</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div id="homep">
+                <img src="./assets-hsbn/img/Mini Button- 2.png" alt="">
+                <div class = "text" id = "hp2">
+                    <a href="./bs.html">
+                        <p>Về trang chủ</p>
+                    </a>
+                </div>
+            </div>
+            <div class="vien">
+                <div class="giua">
+                    <div class="head">
+                        <p>Ca khám của tôi</p>
+                    </div>
+                    <div class="tk" onclick="">
+                        Tìm kiếm
+                    </div>
+                    <div class="ip">
+                        <input type="text" id="searchInput" onkeyup ="timKiem()" placeholder="Nhập từ khóa...">
+                    </div>
+                    <div class="line"></div>
+                    <table id="kham">
+                        <thead>
+                            <tr>
+                                <th class="k1">Ngày</th>
+                                <th class="k2">Triệu chứng</th>
+                                <th class="k3">ID bệnh nhân</th>
+                                <th class="k4">Chẩn đoán</th>
+                                <th class="k5">Kê đơn</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="bgr" style="display: none;">
+                <div id="don">
+                    <div class="head">
+                        <p>Kê đơn</p>
+                    </div>
+                    <div class="line"></div>
+                    <form>
+                        <div class="f1">
+                            <label for="fname">Họ</label>
+                            <input id="fn" type="text" placeholder="Nguyễn">
+                        </div>
+                        <div class="f2">
+                            <label for="lname">Tên</label>
+                            <input id="ln" type="text" placeholder="Văn A">
+                        </div>
+                        <div class="f3">
+                            <label for="se">Giới tính</label>
+                            <input id="se" type="text" placeholder="Nam">
+                        </div>
+                        <div class="f4">
+                            <label for="id">ID Card</label>
+                            <input id="id" type="text" placeholder="123456789">
+                        </div>
+                        <div class="f5">
+                            <label for="e">Email</label>
+                            <input id="em" type="text" placeholder="abc@example.com">
+                        </div>
+                        <div class="f6">
+                            <label for="phone">Điện thoại</label>
+                            <input id="ph" type="text" placeholder="0909123456">
+                        </div>
+                        <div class="f7">
+                            <label for="ns">Ngày sinh</label>
+                            <input id="ns" type="text" placeholder="01/01/2000">
+                        </div>
+                        <div class="f8">
+                            <label for="cd">Chẩn đoán</label>
+                            <input id="cd" type="text" placeholder="Cao huyết áp">
+                        </div>
+                        <div class="f9">
+                            <label for="tt">Đơn thuốc</label>
+                        </div>
+                        <table id="thuoc">
+                            <thead>
+                                <tr>
+                                    <th class="h0">
+                                        <div class="deleteRow" onclick="xoaHang(this)">
+                                            <span class="xoa ti-trash"></span>
+                                        </div>
+                                    </th>
+                                    <th class="h1">Tên thuốc</th>
+                                    <th class="h2">Số lượng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Dữ liệu hàng sẽ được thêm vào đây -->
+                            </tbody>
+                        </table>
+                        <div class="add" id="toggle-table-btn">
+                            <span class="cong ti-plus"></span>
+                        </div>
+                        <div class="huy">
+                            <p>Hủy</p>
+                        </div>
+                        <div class="xuat">
+                            <button type="submit">Xuất đơn</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="./assets-kham/js/script.js"></script>
+    <script src="./assets-hsbn/js/script.js"></script>
+</html>
