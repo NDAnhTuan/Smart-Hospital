@@ -9,42 +9,151 @@
 
 <link rel="stylesheet" href="kim.css">
 <script src = "./kim.js"></script>
+<script src = "./role-hoang.js"></script>
+  </head>
 
-<body>
-    <header class="header">
-        <h1>BỆNH VIỆN BÁCH KHOA</h1>
-    </header>
-    <div class="container">
-        <div class="left">
-            <h2>Danh sách bệnh nhân</h2>
-            <ul class="patient-list" id="patient-list">
-                <li>
-                    <strong>Tên bệnh nhân:</strong> Nguyễn Văn A
-                    <br>
-                    <strong>Mã bệnh ICD 10:</strong> ABC123
-                    <br>
-                    <strong>Ngày tháng năm sinh:</strong> 01/01/1990
-                    <br>
-                    <strong>Giới tính:</strong> Nam
-                    <br>
-                    <strong>Mã số BHYT:</strong> 00000000
-                    <br>
-                    <strong>Địa chỉ nhà:</strong> Khu B ĐHQG
-                    <br>
-                    <strong>Số điện thoại:</strong> 0123456789
-                    <br>
-                    <button onclick="acceptPatient('Nguyễn Văn A')">Duyệt</button>
-                </li>
-                <!-- bệnh nhân khác -->
-            </ul>
+  <style>
+    .center {
+        display: flex;
+        flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Điều chỉnh theo nhu cầu */
+      }
+
+    .table {
+        padding: 10px;
+        width: 80%; 
+        margin-top : 100px ;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 2rem;
+        max-width: 1200px; 
+        border-collapse: collapse;  
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      /* Định dạng cho tiêu đề cột */
+      th {
+        background-color: #b9b9b9;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      
+      /* Định dạng cho dòng chẵn */
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      
+      /* Định dạng cho dòng lẻ */
+      tr:nth-child(odd) {
+        background-color: #ffffff;
+      }
+      
+      th {
+        padding: 20px;
+      }
+      
+      /* Định dạng cho nút hover */
+      tr:hover {
+        background-color: #cce5ff;
+      }
+  </style>
+
+    <div id="main">
+        <div id="header">
+            <div id="logo">
+                <img src="../image/Benh vien Phu Yen logo-02 1.png" alt="">
+            </div>
+            <div class="MXH js-right right">
+                <div class="js-login">
+                    <button class="icon-header js-hide" style="background-image: url(../image/login.png);"><i style="font-size: 0;">.</i></button>
+                    <div id = "info-summary">
+                        <div id="none">
+                            <div class="triangle"></div>
+                        </div>
+                        <div>
+                            <img src="../image/Image.png" alt="">
+                        </div>
+                        <div class = "text">
+                            <div>
+                                <p>TS - Bác sĩ: Lê Trần Thanh Phong</p>
+                            </div>
+                            <div class = "line"></div>
+                        </div>
+                        <div class = "text">
+                            <div>
+                                <p>Trưởng khoa khám bệnh, Phó giám đốc</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class = "logout js-info">
+                            <img src="../image/notebook.png" alt="login">
+                            <div>
+                                <a href="#">
+                                    <p>Trang cá nhân</p>
+                                </a>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="logout js-logout">
+                            <img src="../image/logout.png" alt="logout">
+                            <a href="#">
+                                <p>Đăng xuất</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-second js-show-search show">
+                <label for="ti-search" class="search-header">
+                    <i class="ti-search" style="padding-left: 10px;"></i>
+                    <input id="ti-search" type="text" placeholder="Tìm kiếm">
+                </label>
+            </div>        
         </div>
-        <div class="right">
-            <h2>Danh sách bệnh nhân đã duyệt</h2>
-            <ul class="accepted-list" id="accepted-list">
-                <!-- Danh sách bệnh nhân được aco\p -->
-            </ul>
-        </div>
+
     </div>
 
-</body>
+
+        <div id="center">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Nhập thông tin tìm kiếm...">
+            </div>
+    
+            <div id="table">
+                
+            <h2 class="text-center mb-4">Danh sách bệnh nhân</h2>
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Ngày</th>
+                    <th>Triệu chứng</th>
+                    <th>Chuẩn đoán</th>
+                    <th>ID Bác sĩ</th>
+                    <th>ID Bệnh nhân</th>
+                  </tr>
+                </thead>
+                <tbody id="patientRecords">
+                  <!-- Dữ liệu sẽ được thêm vào đây bằng JavaScript -->
+                </tbody>
+              </table>
+            </div>
+        </div>
+            </div>
+          </div>
+        </div>
+
+       
+        
+
+</body> 
+<script src = "./kim.js"></script>
 </html>

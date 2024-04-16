@@ -1,4 +1,119 @@
 /* 1 */
+#op {
+    padding-top: 4rem;
+    background-color: #f8f9fa;
+  }
+
+/*index*/
+    #index1 {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d6d3d3;
+        }
+
+        .container1 {
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #060606;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            border-radius: 10px;
+
+        }
+        /* Mau sac cua phan lich kham*/
+        th {
+            background-color: #c1c3c4;
+            color: #fff;
+        }
+
+      
+
+        .function-box {
+            width: 250px;
+            height: 150px;
+            background-color: #d0d0d0;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            font-family: 'CONG', sans-serif;
+            border-radius: 20px;
+        }
+
+        .function-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+
+        .function-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .function-name {
+            font-size: 1.2em;
+            margin-bottom: 0;
+        }
+    
+
+   /* CSS cho thanh tìm kiếm */
+.search-container {
+    float: right;
+    margin-right: 390px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+  
+    
+  }
+  
+  .search-container input[type=text] {
+    padding: 13px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .search-container input[type=text]:focus {
+    outline: none;
+    border-color: #bebebe;
+    box-shadow: 0 0 5px rgba(135, 137, 138, 0.5);
+  }
+  
+   /* end*/
+
+   .image-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image-container img {
+    max-width: 90px;
+    height: auto;
+  }
+
 
         #main-interface {
             display: flex;
@@ -45,7 +160,7 @@
         nav {
             background-color: #333;
             color: #fff;
-            padding: 15px 20px; /* Tăng padding để tạo khoảng cách */
+            padding: 15px 20px; 
             text-align: center;
         }
         nav ul {
@@ -55,7 +170,7 @@
         }
         nav ul li {
             display: inline;
-            margin-right: 30px; /* Tăng khoảng cách giữa các mục */
+            margin-right: 30px; 
         }
         nav ul li:last-child {
             margin-right: 0;
@@ -128,25 +243,30 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     margin: 1rem;
+
 }
 
 .doctor-item {
-    width: 30%;
-    border: 1px solid #ccc;
-    padding: 1rem;
+    background-color: #d6d6d6;
+    width: 24%;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    border: 6px solid #ccc;
+    padding: 2rem;
     margin-bottom: 1rem;
     box-sizing: border-box;
-    border-radius: 4px;
+    border-radius: 10px;
     text-align: center;
+    margin-right: auto;
 }
 
 .doctor-item img {
-    max-width: 100%; 
+    width: 60% ; 
     height: auto; 
+  
 }
 
 .doctor-item h3 {
-    margin-top: 0;
+    margin-top: 20px;
 }
 
 .doctor-item p {
@@ -169,7 +289,7 @@ h2 {
 }
 
 p.round3 {
-border: 2px solid grey;
+border: 2px solid rgb(22, 20, 20);
 border-radius: 12px;
 padding: 5px;
 }
@@ -180,12 +300,14 @@ padding: 5px;
 /* medicine */
 
 
-.container1 {
-    width: 50%;
-    margin: 0 auto;
+.container7 {
+    width: 60%;
+    margin-top:200px;
+    margin-left:400px;
 }
 
 .form-group {
+    margin-top: 30px;
     margin-bottom: 20px;
 }
 
@@ -262,32 +384,330 @@ input[type="submit"]:hover {
     }
     
     /* tim kiem */
+    .container6 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f3f7f9; /* Màu nền cho container */
+        border-radius: 10px; /* Bo tròn góc của container */
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
+      }
       
       .form-group {
-        margin-bottom: 10px;
+        margin-bottom: 20px; 
+        margin-top: auto;
       }
       
       label {
         font-weight: bold;
+        margin-bottom: 8px; /* Khoảng cách giữa nhãn và input */
+        display: block;
+        color: #333; /* Màu chữ cho nhãn */
       }
       
-      input[type="text"], select {
-        width: 100%;
-        padding: 5px;
+      input[type="text"],
+      select {
+        width: calc(100% - 12px);
+        padding: 10px; /* Tăng kích thước padding cho input */
         margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 6px; /* Bo tròn góc của input */
+        box-sizing: border-box;
       }
       
       button {
-        padding: 8px 20px;
-        background-color: #007bff;
+        padding: 12px 30px; /* Tăng kích thước của nút */
+        background-color: #4CAF50; /* Màu nền cho nút */
         color: #fff;
         border: none;
         cursor: pointer;
+        border-radius: 6px; /* Bo tròn góc của nút */
+        transition: background-color 0.3s ease;
       }
       
       button:hover {
-        background-color: #0056b3;
+        background-color: #45a049; /* Màu nền hover cho nút */
       }
-      
+
+      /* Header cua Hoang*/
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /*background chèn vào tới border*/
+    }
+      html {
+        font-family: Arial, Helvetica, sans-serif;
+    
+        scroll-behavior: smooth;
+    }
+    
+    :root {
+        --height-header: 80px;
+    }
+    
+    /* ******** HEADER ******** */
+    #header {
+        height: var(--height-header);
+        width: 100%;
+        position: fixed;
+        background-color: #0058A0;
+        top: 0px;
+        z-index: 1;
+    
+        display: inline-block;
+    }
+    
+    #header #logo {
+        display: inline-block;
+        margin: 0 85px;
+        width: 200px;
+    }
+    
+    #logo img {
+        position: absolute;
+        top: 10px;
+        width: 200px;
+        height: 60px;
+    }
+  
+    #header .MXH {
+        display: inline-table;
+        height: var(--height-header);
+    }
+    
+    #header .MXH .icon-header {
+        display: inline-block;
+        vertical-align: middle;
+        margin: auto 0 auto 16px;
+    
+        background: rgb(255, 0, 0);
+        background-size: cover;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        border: none;
+    
+        cursor: pointer;
+        transition: opacity 0.5s ease;
+        opacity: 0.8;
+    }
+    
+    #header .icon-header:hover {
+        opacity: 1;
+    }
+    
+    .MXH>div {
+        display: inline;
+        position: relative;
+    }
+    
+    
+    
+    /* ******* HEADER-SECOND********* */
+  
+    .js-right.right {
+        float: right;
+        display: flex !important;
+        align-items: center;
+        margin-right: 30px;
+    }
+    
+    .header-second {
+        background-color: #fff;
+        display: none;
+        border-radius: 20px;
+    }
+    
+    .header-second.show {
+        display: inline-block;
+        margin: 20px 0 0 120px;
+    }
+    
+    .header-second input {
+        padding: 6px 400px 6px 10px;
+        border-radius: 20px;
+        font-size: 20px;
+        border: none;
+    }
+    
+    .header-second input:focus {
+        outline: none;
+    }
+    
+    .ti-search {
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        color: blue;
+    }
+   
+  
+    /* ******* show-info && logout ********* */
+    .MXH #info-summary {
+        height: 368px;
+        width: 338px;
+        position: absolute;
+        right: 0;
+        background-color: #eee;
+    }
+    
+    #info-summary img {
+        width: 90px;
+        height: 100px;
+        margin: 10px 0;
+    }
+    
+    #info-summary div {
+        display: flex;
+        justify-content: center;
+    }
+    
+    #info-summary .text {
+        display: block;
+        margin-top: 10px;
+    }
+    
+    #info-summary .text p {
+        line-height: 30px;
+        font-size: 16px;
+    }
+    
+    #info-summary .logout {
+        height: 78px;
+        width: 338px;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    
+    #info-summary .logout p {
+        font-size: 16px;
+        color: #000;
+        position: absolute;
+        top: 30px;
+        left: 100px;
+    }
+    
+    #info-summary .logout a {
+        text-decoration: none;
+    }
+    
+    #info-summary .logout img {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 55px;
+    }
+    
+    #info-summary .text div {
+        height: 29px;
+        width: 338px;
+    }
+    
+    #info-summary .text .line {
+        height: 1px;
+        width: 300px;
+        background-color: #B4B4B4;
+        margin-left: 16.9px;
+    }
+    
+    #info-summary .logout div {
+        height: 77px;
+        width: 100%;
+    }
+    
+    .logout .line {
+        flex: 1;
+        height: 1px;
+        background-color: #B4B4B4;
+    }
+    
+    #info-summary #none {
+        height: 16px;
+        width: 338px;
+        background-color: #0058A0;
+        position: relative;
+    }
+    
+    #info-summary #none .triangle {
+        border-left: 14.14px solid transparent;
+        border-right: 14.14px solid transparent;
+        border-bottom: 20px solid #eee;
+        position: absolute;
+        right: 13px;
+    }
+    
+    .js-login:hover #info-summary {
+        display: block;
+    }
+    
+    #info-summary {
+        display: none;
+    }
+    
+  /* ******* info-personal ********* */
+  #info-personal.show {
+      display: flex;
+  }
+  
+  #info-personal {
+      position: fixed;
+      top: var(--height-header);
+      bottom: 0;
+      left: 0;
+      right: 0;
+  
+      background-color: white;
+      display: none;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  #info-personal .ti-home {
+      background-color: #4696EB;
+      border-radius: 50%;
+  
+      font-size: 20px;
+      text-decoration: none;
+      color: #fff;
+      text-align: center;
+      padding: 25px 20px 25px 70px;
+      width: 90px;
+  }
+  
+  
+  #back-home:hover {
+      height: 19px;
+      left: -810px !important;
+  }
+  #info-personal #back-home {
+      position: relative;
+      top: -270px;
+      left: -830px;
+      border: none;
+      font-size: 15px;
+  }
+  #info-personal #back-home:hover div {
+      display: block;
+  }
+  
+  #back-home div {
+      display: none;
+      position: relative;
+      top: -18px;
+      left: 100px;
+      right: 0;
+      bottom: 0;
+  }
+
+
+
+  /* end  header*/
+
+
+  /*Table*/
+  
 
 
