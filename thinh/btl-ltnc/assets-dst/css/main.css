@@ -67,11 +67,41 @@
     outline: none;
 }
 
+#head .mid {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+#head .mid .navigation {
+    height: 100%;
+    width: 80%;
+    display: flex;
+}
+
+#head .mid .navigation a {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    line-height: 100px;
+}
+
+.navigation .n:hover p {
+    background-color: #009ef7;
+}
+
 #head .right {
     width: 15%;
     margin-left: auto;
     display: flex;
     position: relative;
+}
+
+#login #mybutton {
+    height: 48px;
+    border-radius: 50%;
 }
 
 #head .right #login {
@@ -192,9 +222,9 @@
     position: absolute;
     right: 13px;
 }
-#login:hover #info {
+/* #login:hover #info {
     display: block;
-}
+} */
 #info {
     display: none;
     z-index: 200;
@@ -267,7 +297,7 @@
     height: 600px;
     width: 100%;
     position: relative;
-    top: 150px;
+    top: 100px;
     left: 0px;
     display: flex;
     justify-content: center;
@@ -282,8 +312,8 @@
     z-index: 1;
 }
 #content #homep img {
-    height: 50px;
-    width: 40px;
+    height: 60px;
+    width: 55px;
     position: relative;
 }
 #content #homep .text {
@@ -306,7 +336,7 @@
 }
 #content #homep:hover p {
     display: block;
-    background-color: #0F58A0;
+    background-color: #009ef7;
     color: #fff;
     text-align: center;
 }

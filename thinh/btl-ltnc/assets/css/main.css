@@ -87,6 +87,11 @@
     border-radius: 50%;
 }
 
+#login #mybutton {
+    height: 48px;
+    border-radius: 50%;
+}
+
 #head .right img {
     padding-top: 2px;
     position: relative;
@@ -192,9 +197,9 @@
     position: absolute;
     right: 13px;
 }
-#login:hover #info {
+/* #login:hover #info {
     display: block;
-}
+} */
 #info {
     display: none;
     z-index: 200;
