@@ -122,31 +122,33 @@
                 </div> -->
             </div>
             <div class="vien">
-                <div class="giua">
-                    <div class="head">
-                        <p>Ca khám của tôi</p>
+                <div class="hidden">
+                    <div class="giua">
+                        <div class="head">
+                            <p>Ca khám của tôi</p>
+                        </div>
+                        <div class="tk" onclick="">
+                            Tìm kiếm
+                        </div>
+                        <div class="ip">
+                            <input type="text" id="searchInput" onkeyup ="timKiem()" placeholder="Nhập từ khóa...">
+                        </div>
+                        <div class="line"></div>
+                        <table id="kham">
+                            <thead>
+                                <tr>
+                                    <th class="k1">Ngày</th>
+                                    <th class="k2">Triệu chứng</th>
+                                    <th class="k3">ID bệnh nhân</th>
+                                    <!-- <th class="k4">Chẩn đoán</th> -->
+                                    <th class="k5">Kê đơn</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-body">
+                                
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="tk" onclick="">
-                        Tìm kiếm
-                    </div>
-                    <div class="ip">
-                        <input type="text" id="searchInput" onkeyup ="timKiem()" placeholder="Nhập từ khóa...">
-                    </div>
-                    <div class="line"></div>
-                    <table id="kham">
-                        <thead>
-                            <tr>
-                                <th class="k1">Ngày</th>
-                                <th class="k2">Triệu chứng</th>
-                                <th class="k3">ID bệnh nhân</th>
-                                <!-- <th class="k4">Chẩn đoán</th> -->
-                                <th class="k5">Kê đơn</th>
-                            </tr>
-                        </thead>
-                        <tbody id="table-body">
-                            
-                        </tbody>
-                    </table>
                 </div>
             </div>
             <div id="bgr" style="display: none;">

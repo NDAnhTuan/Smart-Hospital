@@ -276,7 +276,7 @@ function showXuatDon(button) {
     sessionStorage.setItem("selectedPatientId", patientId); // Save patient ID to session storage
 }
 
-function xoaHang() {
+function xoaHang_xd() {
     var selectedPatientId = sessionStorage.getItem("selectedPatientId");
     var rows = document.querySelectorAll("#table-body tr");
     rows.forEach(function(row) {
