@@ -27,7 +27,8 @@ class patientController {
         
         return allUsers;
     }
-    async addMedExamSch(DescSymptoms,ID_Doctor,ID, Email, FName, LName,Gen,Phone,dateOfBirth) {
+    async addMedExamSch(DescSymptoms,Diagnosis,ID_Doctor,ID, Email, FName, LName,Gen,Phone,dateOfBirth) {
+        const MedExamSch = collection(db, 'MedExamSch');
         const PatientList = collection(db,'Users','Patient','Data');
         const PatientID = query(PatientList, where("IDCard","==",ID));
         let Users = []
@@ -48,7 +49,7 @@ class patientController {
                 LastName: LName,
                 Gender: Gen,
                 Phone: Phone,
-                Diagnosis: "",
+                
                 
             })
             .then (() => {

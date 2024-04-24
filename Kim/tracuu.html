@@ -8,8 +8,7 @@
 
 <link rel="stylesheet" href="kim.css">
 <script src = "./kim.js"></script>
-
-<>
+<script src="./tracuu.js" ></script>
 
   <div id="main">
     <div id="header">
@@ -64,41 +63,50 @@
             </label>
         </div>        
     </div>
-
 </div>
-<div class="container7">
 
-    <div class="form-group">
-        <label for="chuyenkhoa">Chuyên Khoa:</label>
-        <select id="chuyenkhoa">
-          <option value="khoa-noi">Khoa Nội</option>
-          <option value="khoa-ngoai">Khoa Ngoại</option>
-          <option value="khoa-nhi">Khoa Nhi</option>
-          <option value="khoa-phu-san">Khoa Phụ Sản</option>
-          <option value="khoa-truyen-nhiem">Khoa Truyền Nhiễm</option>
-          <option value="khoa-cap-cuu">Khoa Cấp Cứu/Hồi Sức Tích Cực</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="chucvu">Chức Vụ:</label>
-        <select id="chucvu">
-          <option value="PGD">Phó Giám Đốc</option>
-          <option value="GD">Giám Đốc</option>
-          <option value="bacsi">Bác Sĩ</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="tenbacsi">Tìm theo tên Bác Sĩ:</label>
-        <input type="text" id="tenbacsi">
-      </div>
-      <button onclick="timBacSi()">Tìm</button>
-      <div id="ketqua"></div>
+
+
+    <div class="container10">
+        <div class="form-group10">
+            <label for="chuyenkhoa">Chuyên Khoa:</label>
+             <select id="chuyenkhoa">
+                <option value="">Chọn chuyên khoa</option>
+                <option value="Nhi Khoa">Nhi Khoa</option>
+                <option value="Răng Hàm Mặt">Răng Hàm Mặt</option>
+                <option value="Da Liễu">Da Liễu</option>
+                <option value="Tim Mạch">Tim Mạch</option>
+                <option value="Tai Mũi Họng">Tai Mũi Họng</option>
+                <option value="Nội Tiết">Nội Tiết</option>
+                <option value="Chấn Thương Chỉnh Hình">Chấn Thương Chỉnh Hình</option>
+                <option value="Phụ Khoa">Phụ Khoa</option>
+                <option value="Hô Hấp">Hô Hấp</option>
+                <option value="Thần Kinh">Thần Kinh</option>
+                <!-- them o day -->
+                </select>
+
+            <label for="chucvu">Chức Vụ:</label>
+            <select id="chucvu">
+                <option value="">Chọn chức vụ</option>
+                <option value="Bác sĩ chuyên khoa">Bác sĩ chuyên khoa</option>
+                <option value="Trưởng khoa">Trưởng khoa</option>
+                <option value="Bác sĩ cơ bản">Bác sĩ cơ bản</option>
+                <option value="Giám Đốc">Giám Đốc</option>
+                <option value="Phó Giám Đốc">Phó Giám Đốc</option>
+                <option value="Trưởng Phòng">Trưởng Phòng</option>
+                <!-- them o day -->
+              </select>
+             <label for="tenbacsi">Tên Bác sĩ:</label>
+             <input type="text" id="tenbacsi">
+        </div>
+
+      <button onclick="timBacSi()">Tìm Bác Sĩ</button>
     </div>
-</div>
+
+      <div id="ketqua" class="container10"></div>
    
   
     <section>
-        
         <div class="container6">
         <div class="doctors-list">
             <div class="doctor-item">
@@ -126,6 +134,10 @@
                 <button>Đặt lịch</button>
                 <p>Phú Yên</p>
             </div>
+        </div>
+        </div>  
+    </section>
+        
             
             
                  
