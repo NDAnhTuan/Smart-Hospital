@@ -104,16 +104,36 @@
 }
 
 #head .right #login {
-    width: 48px;
-    height: 48px;
-    background-color: #F71414;
-    margin-left: auto;
-    margin-right: 30px;
+    /* background-color: #F71414; */
+    height: 50px;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0px;
+    top: 25px;
+}
+
+#head .right #login .img1 {
+    height: 100%;
+    width: 50px;
     border-radius: 50%;
+    background-color: #F71414;
+    position: absolute;
+    left: 28%;
+}
+
+#login .img1 img {
+    height: 50px;
+}
+
+#head .right #login .img2 {
+    height: 100%;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #F71414;
+    position: absolute;
+    right: 15%;
+}
+
+#login .img2 img {
+    height: 50px;
 }
 
 #login #mybutton {
