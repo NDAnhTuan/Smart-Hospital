@@ -6,6 +6,7 @@ module.exports = {
         index: './src/index.js',
         login: './src/forFEjs/login-account.js',
         listDoctor: './src/forFEjs/list-doctor.js',
+        addMEH: './src/forFEjs/addMEH.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
