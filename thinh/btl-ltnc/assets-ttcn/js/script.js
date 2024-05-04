@@ -1,0 +1,10 @@
+    document.getElementById("Name").innerHTML = "Nguyễn Văn A";
+    document.getElementById("IDcard").innerHTML = "123456789";
+    document.getElementById("DayOfBirth").innerHTML = "01/01/1990";
+    document.getElementById("Degree").innerHTML = "Bác sĩ đa khoa";
+    document.getElementById("Sex").innerHTML = "Nam";
+    document.getElementById("Phone").innerHTML = "0123456789";
+    document.getElementById("Address").innerHTML = "123 Đường ABC, Quận XYZ, TP HCM";
+    document.getElementById("Email").innerHTML = "example@example.com";
+    document.getElementById("Major").innerHTML = "Khoa ngoại";
+    document.getElementById("State").innerHTML = "Đang làm việc";
