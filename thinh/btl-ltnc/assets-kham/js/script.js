@@ -102,7 +102,7 @@ newData.forEach(function(data) {
     button.textContent = "Kê đơn";
     buttonCell.appendChild(button);
     row.appendChild(buttonCell);
-
+    
     // Thêm dòng mới vào tbody
     tbody.appendChild(row);
 });
@@ -146,15 +146,24 @@ var donDiv = document.getElementById("don");
 
 // Lấy tất cả các nút có class ".k5 button"
 var k5Buttons = document.querySelectorAll(".k5 button");
+var xuatDiv = document.querySelector(".xuat button");
+
+
 
 // Lặp qua từng nút và thêm sự kiện click
 k5Buttons.forEach(function(button) {
     button.addEventListener("click", function() {
         // Lấy tham chiếu đến div có id "bgr"
+        console.log('hêhhe',button.parentElement)
         var bgrDiv = document.getElementById("bgr");
 
         // Ẩn div có id "bgr
         bgrDiv.style.display = "block";
+        
+        xuatDiv.addEventListener("click", function() {
+            bgrDiv.style.display = "none";
+            button.parentElement.parentElement.remove();
+        })
     });
 });
 
@@ -203,6 +212,7 @@ function timKiem() {
 
 // Lấy tham chiếu đến div có class "huy"
 var huyDiv = document.querySelector(".huy");
+
 
 // Lấy tham chiếu đến div có id "bgr"
 var bgrDiv = document.getElementById("bgr");
