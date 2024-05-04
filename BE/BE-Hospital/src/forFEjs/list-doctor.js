@@ -10,7 +10,6 @@ function formatDate(date) {
 
 async function getDataFromPublicAPI() {
     const results = await (new patientController).viewDoctors()
-    console.log(results)
     listDoctor.innerHTML = ''
     results.forEach( (result) => {
         const ulItem = document.createElement('ul')

@@ -19,6 +19,8 @@ const clickLogout = document.querySelector('.js-logout') // thoat all chưa xong
 
 const clickContact = document.querySelector('.js-contact')
 const jsContact = document.querySelector('#sent-info')
+
+const formAddMed = document.querySelector('.info-cus')
 const clickSent = document.querySelector('.js-sent')
 
 const clickForgetMK = document.querySelector('.js-forgetmk')
@@ -98,6 +100,7 @@ jsContact.addEventListener('click', function(event){
     event.stopPropagation()
 })
 clickSent.addEventListener('click', function(){
+    
     alert("Đã gửi thành công")
 })
 

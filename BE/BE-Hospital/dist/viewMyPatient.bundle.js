@@ -70,13 +70,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/forFEjs/login-account.js":
+/***/ "./src/forFEjs/viewMyPatient.js":
 /*!**************************************!*\
-  !*** ./src/forFEjs/login-account.js ***!
+  !*** ./src/forFEjs/viewMyPatient.js ***!
   \**************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   uid: () => (/* binding */ uid)\n/* harmony export */ });\n/* harmony import */ var _controllers_doctorController_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../controllers/doctorController.js */ \"./src/controllers/doctorController.js\");\n/* harmony import */ var firebase_firestore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/firestore */ \"./node_modules/firebase/firestore/dist/esm/index.esm.js\");\n/* harmony import */ var _startApp_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../startApp.js */ \"./src/startApp.js\");\n/* harmony import */ var firebase_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! firebase/auth */ \"./node_modules/firebase/auth/dist/esm/index.esm.js\");\n\r\n\r\n\r\n\r\n\r\n\r\nconst auth = (0,firebase_auth__WEBPACK_IMPORTED_MODULE_3__.getAuth)();\r\nlet uid;\r\n\r\n\r\nconst formLogin = document.getElementsByClassName('log-in')[0];\r\nconst enterLogin = document.getElementsByClassName('enter')[0];\r\n\r\nasync function handleLogin() {\r\n    var username = document.getElementById('User-name').value\r\n    var password = document.getElementById('Password').value\r\n    await (0,firebase_auth__WEBPACK_IMPORTED_MODULE_3__.signInWithEmailAndPassword)(auth, username, password)\r\n    .then((cred) => {console.log('signInWithEmailAndPassword', cred.user.uid);\r\n     uid = cred.user.uid;\r\n     localStorage.setItem(\"uid\", uid);\r\n    })\r\n    .then( async () => {\r\n        const allUsers = [];\r\n          try {\r\n              const subcolrefMana = (0,firebase_firestore__WEBPACK_IMPORTED_MODULE_1__.collection)(_startApp_js__WEBPACK_IMPORTED_MODULE_2__.db, 'Users', 'Manager', 'Data');\r\n        \r\n              const subsnapshot = await (0,firebase_firestore__WEBPACK_IMPORTED_MODULE_1__.getDocs)(subcolrefMana);\r\n              subsnapshot.forEach((doc) => {\r\n                 if (doc.id === uid) {\r\n                    allUsers.push({\r\n                        id: doc.id,\r\n                       ...doc.data(),\r\n                    });\r\n                }\r\n              })\r\n              if (allUsers.length > 0) {\r\n                window.location.href = '../Kim/index.html'\r\n              } \r\n              else {\r\n                window.location.href = '../thinh/btl-ltnc/bs.html'\r\n              }\r\n          } catch (error) {\r\n              console.error(\"Error fetching data:\", error);\r\n              // Handle errors appropriately (consider rejecting the Promise)\r\n          }\r\n    })\r\n    .catch((error) => {\r\n        console.log('error: ' + error)\r\n        alert('Tài khoản hoặc mật khẩu không chính xác')\r\n    })\r\n    return;\r\n}\r\n\r\nenterLogin.addEventListener('click', () => {\r\n    handleLogin()\r\n    .then(() => console.log(uid))\r\n \r\n}) \r\n\r\n\n\n//# sourceURL=webpack://be-hospital/./src/forFEjs/login-account.js?");
+eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _controllers_doctorController__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../controllers/doctorController */ \"./src/controllers/doctorController.js\");\n/* harmony import */ var firebase_auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/auth */ \"./node_modules/firebase/auth/dist/esm/index.esm.js\");\n\r\n\r\nconst auth = (0,firebase_auth__WEBPACK_IMPORTED_MODULE_1__.getAuth)();\r\nlet uid = localStorage.getItem(\"uid\");\r\n// console.log(uid);\r\nfunction formatDate(date) {\r\n    var year = date.getFullYear().toString();\r\n    var month = (date.getMonth() + 101).toString().substring(1);\r\n    var day = (date.getDate() + 100).toString().substring(1);\r\n    return month + '/' + day + '/' + year;\r\n}\r\n// Dữ liệu mẫu\r\n// var data = [\r\n//     {\r\n//         idCard: \"123456789\",\r\n//         ho: \"Nguyễn\",\r\n//         ten: \"Văn A\",\r\n//         gioiTinh: \"Nam\",\r\n//         ngaySinh: \"01/01/1990\",\r\n//         dienThoai: \"0987654321\",\r\n//         email: \"nguyenvana@example.com\"\r\n//     },\r\n//     {\r\n//         idCard: \"987654321\",\r\n//         ho: \"Trần\",\r\n//         ten: \"Thị B\",\r\n//         gioiTinh: \"Nữ\",\r\n//         ngaySinh: \"15/05/1995\",\r\n//         dienThoai: \"0123456789\",\r\n//         email: \"tranthib@example.com\"\r\n//     },\r\n//     {\r\n//         idCard: \"246813579\",\r\n//         ho: \"Lê\",\r\n//         ten: \"Đức C\",\r\n//         gioiTinh: \"Nam\",\r\n//         ngaySinh: \"10/10/1985\",\r\n//         dienThoai: \"0976543210\",\r\n//         email: \"leducc@example.com\"\r\n//     },\r\n//     {\r\n//         idCard: \"555555555\",\r\n//         ho: \"Phạm\",\r\n//         ten: \"Thị D\",\r\n//         gioiTinh: \"Nữ\",\r\n//         ngaySinh: \"20/02/2000\",\r\n//         dienThoai: \"0909090909\",\r\n//         email: \"phamthid@example.com\"\r\n//     },\r\n//     {\r\n//         idCard: \"777777777\",\r\n//         ho: \"Hoàng\",\r\n//         ten: \"Văn E\",\r\n//         gioiTinh: \"Nam\",\r\n//         ngaySinh: \"05/05/1998\",\r\n//         dienThoai: \"0666666666\",\r\n//         email: \"hoangvane@example.com\"\r\n//     },\r\n//     {\r\n//         idCard: \"999999999\",\r\n//         ho: \"Trần\",\r\n//         ten: \"Văn F\",\r\n//         gioiTinh: \"Nam\",\r\n//         ngaySinh: \"30/09/1993\",\r\n//         dienThoai: \"0555555555\",\r\n//         email: \"tranvanf@example.com\"\r\n//     },\r\n//     {\r\n//         idCard: \"123456789\",\r\n//         ho: \"Nguyễn\",\r\n//         ten: \"Văn A\",\r\n//         gioiTinh: \"Nam\",\r\n//         ngaySinh: \"01/01/1990\",\r\n//         dienThoai: \"0987654321\",\r\n//         email: \"nguyenvana@example.com\"\r\n//     },\r\n//     {\r\n//         idCard: \"987654321\",\r\n//         ho: \"Trần\",\r\n//         ten: \"Thị B\",\r\n//         gioiTinh: \"Nữ\",\r\n//         ngaySinh: \"15/05/1995\",\r\n//         dienThoai: \"0123456789\",\r\n//         email: \"tranthib@example.com\"\r\n//     },\r\n//     {\r\n//         idCard: \"246813579\",\r\n//         ho: \"Lê\",\r\n//         ten: \"Đức C\",\r\n//         gioiTinh: \"Nam\",\r\n//         ngaySinh: \"10/10/1985\",\r\n//         dienThoai: \"0976543210\",\r\n//         email: \"leducc@example.com\"\r\n//     },\r\n//     {\r\n//         idCard: \"555555555\",\r\n//         ho: \"Phạm\",\r\n//         ten: \"Thị D\",\r\n//         gioiTinh: \"Nữ\",\r\n//         ngaySinh: \"20/02/2000\",\r\n//         dienThoai: \"0909090909\",\r\n//         email: \"phamthid@example.com\"\r\n//     },\r\n//     {\r\n//         idCard: \"777777777\",\r\n//         ho: \"Hoàng\",\r\n//         ten: \"Văn E\",\r\n//         gioiTinh: \"Nam\",\r\n//         ngaySinh: \"05/05/1998\",\r\n//         dienThoai: \"0666666666\",\r\n//         email: \"hoangvane@example.com\"\r\n//     },\r\n//     {\r\n//         idCard: \"999999999\",\r\n//         ho: \"Trần\",\r\n//         ten: \"Văn F\",\r\n//         gioiTinh: \"Nam\",\r\n//         ngaySinh: \"30/09/1993\",\r\n//         dienThoai: \"0555555555\",\r\n//         email: \"tranvanf@example.com\"\r\n//     },\r\n//     {\r\n//         idCard: \"135792468\",\r\n//         ho: \"Đinh\",\r\n//         ten: \"Thị G\",\r\n//         gioiTinh: \"Nữ\",\r\n//         ngaySinh: \"12/12/1988\",\r\n//         dienThoai: \"0333333333\",\r\n//         email: \"dinhthig@example.com\"\r\n//     },\r\n//     {\r\n//         idCard: \"246824680\",\r\n//         ho: \"Vũ\",\r\n//         ten: \"Đức H\",\r\n//         gioiTinh: \"Nam\",\r\n//         ngaySinh: \"08/08/1996\",\r\n//         dienThoai: \"0444444444\",\r\n//         email: \"vuduch@example.com\"\r\n//     },\r\n//     {\r\n//         idCard: \"777777888\",\r\n//         ho: \"Trần\",\r\n//         ten: \"Thị K\",\r\n//         gioiTinh: \"Nữ\",\r\n//         ngaySinh: \"25/04/1994\",\r\n//         dienThoai: \"0777777777\",\r\n//         email: \"tranthik@example.com\"\r\n//     },\r\n//     {\r\n//         idCard: \"999888777\",\r\n//         ho: \"Lý\",\r\n//         ten: \"Văn M\",\r\n//         gioiTinh: \"Nam\",\r\n//         ngaySinh: \"18/06/1992\",\r\n//         dienThoai: \"0888888888\",\r\n//         email: \"lyvanm@example.com\"\r\n//     },\r\n//     {\r\n//         idCard: \"555555777\",\r\n//         ho: \"Phan\",\r\n//         ten: \"Thị N\",\r\n//         gioiTinh: \"Nữ\",\r\n//         ngaySinh: \"07/03/1997\",\r\n//         dienThoai: \"0999999999\",\r\n//         email: \"phanthin@example.com\"\r\n//     },\r\n//     {\r\n//         idCard: \"123123123\",\r\n//         ho: \"Nguyễn\",\r\n//         ten: \"Văn P\",\r\n//         gioiTinh: \"Nam\",\r\n//         ngaySinh: \"29/11/1987\",\r\n//         dienThoai: \"0111111111\",\r\n//         email: \"nguyenvanp@example.com\"\r\n//     }\r\n// ];\r\nconst data = await (new _controllers_doctorController__WEBPACK_IMPORTED_MODULE_0__.doctorController).getPatient();\r\n\r\n\r\n// Lấy tham chiếu đến tbody của bảng và container chứa bảng\r\nvar tbody = document.querySelector(\"#ttcn tbody\");\r\nvar tableContainer = document.getElementById(\"tableContainer\");\r\n\r\n// Hàm thêm dữ liệu vào bảng\r\nfunction addDataToTable() {\r\n    // Lặp qua mỗi đối tượng trong mảng data và thêm vào bảng\r\n    data.forEach(function(item) {\r\n        // Tạo một hàng mới\r\n        var row = document.createElement(\"tr\");\r\n        var date = new Date(item.DateOfBirth.seconds * 1000);\r\n\r\n        // Tạo các ô trong hàng\r\n        var idCell = document.createElement(\"td\");\r\n        idCell.textContent = item.id;\r\n        idCell.classList.add(\"h1\");\r\n        var hoTenCell = document.createElement(\"td\");\r\n        hoTenCell.classList.add(\"h2\");\r\n        hoTenCell.textContent = item.LastName;\r\n        var gioiCell = document.createElement(\"td\");\r\n        gioiCell.textContent = item.FirstName;\r\n        gioiCell.classList.add(\"h3\");\r\n        var namSinhCell = document.createElement(\"td\");\r\n        namSinhCell.textContent = item.Gender;\r\n        namSinhCell.classList.add(\"h4\");\r\n        var diaChiCell = document.createElement(\"td\");\r\n        diaChiCell.textContent = formatDate(date);\r\n        diaChiCell.classList.add(\"h5\");\r\n        var dienThoaiCell = document.createElement(\"td\");\r\n        dienThoaiCell.textContent = item.Phone;\r\n        dienThoaiCell.classList.add(\"h6\");\r\n        var emailCell = document.createElement(\"td\");\r\n        emailCell.textContent = item.Email;\r\n        emailCell.classList.add(\"h7\");\r\n\r\n        // Thêm các ô vào hàng\r\n        row.appendChild(idCell);\r\n        row.appendChild(hoTenCell);\r\n        row.appendChild(gioiCell);\r\n        row.appendChild(namSinhCell);\r\n        row.appendChild(diaChiCell);\r\n        row.appendChild(dienThoaiCell);\r\n        row.appendChild(emailCell);\r\n\r\n        // Thêm hàng vào tbody của bảng\r\n        tbody.appendChild(row);\r\n\r\n        // Tăng chiều cao của container chứa bảng lên 50px sau mỗi lần thêm dữ liệu\r\n    });\r\n}\r\n\r\n// Thêm dữ liệu vào bảng khi trang được tải\r\naddDataToTable();\r\n\r\n\r\n// Lấy tham chiếu đến ô nhập liệu\r\nvar searchInput = document.getElementById(\"searchInput\");\r\n\r\n// Hàm tìm kiếm trong bảng\r\nfunction searchTable() {\r\n    var input, filter, table, tbody, tr, td, i, txtValue;\r\n    input = searchInput.value.toUpperCase();\r\n    table = document.getElementById(\"ttcn\");\r\n    tbody = table.getElementsByTagName(\"tbody\");\r\n    tr = tbody[0].getElementsByTagName(\"tr\");\r\n    for (i = 0; i < tr.length; i++) {\r\n        td = tr[i].getElementsByTagName(\"td\");\r\n        for (var j = 0; j < td.length; j++) {\r\n            if (td[j]) {\r\n                txtValue = td[j].textContent || td[j].innerText;\r\n                if (txtValue.toUpperCase().indexOf(input) > -1) {\r\n                    tr[i].style.display = \"\";\r\n                    break;\r\n                } else {\r\n                    tr[i].style.display = \"none\";\r\n                }\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function() {\r\n    var myButton = document.getElementById(\"mybutton\");\r\n    var myLink = document.getElementById(\"info\");\r\n\r\n    myButton.addEventListener(\"click\", function(event) {\r\n        event.stopPropagation(); // Ngăn chặn sự kiện click trên nút button lan truyền đến body hoặc document\r\n        if (myLink.style.display === \"none\") {\r\n            myLink.style.display = \"block\"; // Hiển thị link nếu đang bị ẩn\r\n        } else {\r\n            myLink.style.display = \"none\"; // Ẩn link nếu đang hiển thị\r\n        }\r\n    });\r\n\r\n    document.addEventListener(\"click\", function(event) {\r\n        if (event.target !== myButton && myLink.style.display !== \"none\") {\r\n            myLink.style.display = \"none\"; // Ẩn link khi click vào bất kỳ nơi nào ngoài nút button\r\n        }\r\n    });\r\n});\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } }, 1);\n\n//# sourceURL=webpack://be-hospital/./src/forFEjs/viewMyPatient.js?");
 
 /***/ }),
 
@@ -207,6 +207,75 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/async module */
+/******/ 	(() => {
+/******/ 		var webpackQueues = typeof Symbol === "function" ? Symbol("webpack queues") : "__webpack_queues__";
+/******/ 		var webpackExports = typeof Symbol === "function" ? Symbol("webpack exports") : "__webpack_exports__";
+/******/ 		var webpackError = typeof Symbol === "function" ? Symbol("webpack error") : "__webpack_error__";
+/******/ 		var resolveQueue = (queue) => {
+/******/ 			if(queue && queue.d < 1) {
+/******/ 				queue.d = 1;
+/******/ 				queue.forEach((fn) => (fn.r--));
+/******/ 				queue.forEach((fn) => (fn.r-- ? fn.r++ : fn()));
+/******/ 			}
+/******/ 		}
+/******/ 		var wrapDeps = (deps) => (deps.map((dep) => {
+/******/ 			if(dep !== null && typeof dep === "object") {
+/******/ 				if(dep[webpackQueues]) return dep;
+/******/ 				if(dep.then) {
+/******/ 					var queue = [];
+/******/ 					queue.d = 0;
+/******/ 					dep.then((r) => {
+/******/ 						obj[webpackExports] = r;
+/******/ 						resolveQueue(queue);
+/******/ 					}, (e) => {
+/******/ 						obj[webpackError] = e;
+/******/ 						resolveQueue(queue);
+/******/ 					});
+/******/ 					var obj = {};
+/******/ 					obj[webpackQueues] = (fn) => (fn(queue));
+/******/ 					return obj;
+/******/ 				}
+/******/ 			}
+/******/ 			var ret = {};
+/******/ 			ret[webpackQueues] = x => {};
+/******/ 			ret[webpackExports] = dep;
+/******/ 			return ret;
+/******/ 		}));
+/******/ 		__webpack_require__.a = (module, body, hasAwait) => {
+/******/ 			var queue;
+/******/ 			hasAwait && ((queue = []).d = -1);
+/******/ 			var depQueues = new Set();
+/******/ 			var exports = module.exports;
+/******/ 			var currentDeps;
+/******/ 			var outerResolve;
+/******/ 			var reject;
+/******/ 			var promise = new Promise((resolve, rej) => {
+/******/ 				reject = rej;
+/******/ 				outerResolve = resolve;
+/******/ 			});
+/******/ 			promise[webpackExports] = exports;
+/******/ 			promise[webpackQueues] = (fn) => (queue && fn(queue), depQueues.forEach(fn), promise["catch"](x => {}));
+/******/ 			module.exports = promise;
+/******/ 			body((deps) => {
+/******/ 				currentDeps = wrapDeps(deps);
+/******/ 				var fn;
+/******/ 				var getResult = () => (currentDeps.map((d) => {
+/******/ 					if(d[webpackError]) throw d[webpackError];
+/******/ 					return d[webpackExports];
+/******/ 				}))
+/******/ 				var promise = new Promise((resolve) => {
+/******/ 					fn = () => (resolve(getResult));
+/******/ 					fn.r = 0;
+/******/ 					var fnQueue = (q) => (q !== queue && !depQueues.has(q) && (depQueues.add(q), q && !q.d && (fn.r++, q.push(fn))));
+/******/ 					currentDeps.map((dep) => (dep[webpackQueues](fnQueue)));
+/******/ 				});
+/******/ 				return fn.r ? promise : getResult();
+/******/ 			}, (err) => ((err ? reject(promise[webpackError] = err) : outerResolve(exports)), resolveQueue(queue)));
+/******/ 			queue && queue.d < 0 && (queue.d = 0);
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -252,7 +321,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/forFEjs/login-account.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/forFEjs/viewMyPatient.js");
 /******/ 	
 /******/ })()
 ;

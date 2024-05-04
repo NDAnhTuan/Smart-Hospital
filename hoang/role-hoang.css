@@ -700,7 +700,7 @@ h1.js-after {
 }
 
 .info-cus .js-sent {
-    margin-top: 40px;
+    /* margin-top: 40px; */
     padding: 10px;
     text-transform: uppercase;
     background: #4696EB;

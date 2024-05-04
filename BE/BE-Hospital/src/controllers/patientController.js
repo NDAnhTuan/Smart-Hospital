@@ -28,10 +28,11 @@ class patientController {
         return allUsers;
     }
     async addMedExamSch(DescSymptoms,Diagnosis,ID_Doctor,ID, Email, FName, LName,Gen,Phone,dateOfBirth) {
-        const MedExamSch = collection(db, 'MedExamSch');
+        const MedExamSch = collection(db,'MedExamSch');
         const PatientList = collection(db,'Users','Patient','Data');
         const PatientID = query(PatientList, where("IDCard","==",ID));
         let Users = []
+        var memID;
         const PatientMem = await getDocs(PatientID) 
         PatientMem.forEach((doc) => {
             Users.push({
@@ -52,21 +53,23 @@ class patientController {
                 
                 
             })
-            .then (() => {
-                 console.log("Thêm thành công");
+            .then ((data) => {
                 
+                 console.log("Thêm thành công", data.id);
+                 memID = data.id;
             })
             .catch((error) => {
                 console.error("Error adding document:", error);
                 // Handle errors appropriately (consider rejecting the Promise)
             })
         }
-        else {
-            addDoc(MedExamSch, {
+        
+            await addDoc(MedExamSch, {
                 DescSymptoms: DescSymptoms,
                 Diagnosis: Diagnosis,
                 ID_Doctor: ID_Doctor,
-                ID_Patient: Users[0].id,
+                ID_Patient: Users.length ? Users[0].id : memID,
+                Date: new Date(dateOfBirth)
             })
             .then (() => {
                  console.log("Thêm thành công");
@@ -76,7 +79,7 @@ class patientController {
                  console.error("Error adding document:", error);
                  // Handle errors appropriately (consider rejecting the Promise)
              })
-        }
+        
     }
 
 }
