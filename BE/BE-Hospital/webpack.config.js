@@ -7,6 +7,7 @@ module.exports = {
         login: './src/forFEjs/login-account.js',
         listDoctor: './src/forFEjs/list-doctor.js',
         addMEH: './src/forFEjs/addMEH.js',
+        viewMyPatient: './src/forFEjs/viewMyPatient.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),

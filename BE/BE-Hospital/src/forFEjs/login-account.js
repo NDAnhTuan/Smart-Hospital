@@ -25,7 +25,10 @@ async function handleLogin() {
     var username = document.getElementById('User-name').value
     var password = document.getElementById('Password').value
     await signInWithEmailAndPassword(auth, username, password)
-    .then((cred) => {console.log('signInWithEmailAndPassword', cred.user.uid); uid = cred.user.uid})
+    .then((cred) => {console.log('signInWithEmailAndPassword', cred.user.uid);
+     uid = cred.user.uid;
+     localStorage.setItem("uid", uid);
+    })
     .then( async () => {
         const allUsers = [];
           try {

@@ -110,10 +110,10 @@ class doctorController {
     
 
 
-    viewMyPatientMedExamSch = async (id) => {
+    viewMyPatientMedExamSch = async (id) => { //ID bác sĩ đang đăng nhập
         try {
             const medExamSchCollectionRef = collection(db, 'MedExamSch');
-            const patientMedExamQuery = query(medExamSchCollectionRef, where("ID_Patient", "==", id));
+            const patientMedExamQuery = query(medExamSchCollectionRef, where("ID_Doctor", "==", id));
             const querySnapshot = await getDocs(patientMedExamQuery);
             const medicalHistory = [];
             querySnapshot.forEach((doc) => {
