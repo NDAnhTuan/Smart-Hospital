@@ -3,42 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biểu mẫu nhập thông tin thuốc</title>
+    <title>Danh sách bệnh nhân</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <link rel="stylesheet" href="kim.css">
+<script src = "./role-hoang.js"></script>
+  </head>
 
-<body>
+  <style>
+    .center {
+        display: flex;
+        flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Điều chỉnh theo nhu cầu */
+      }
 
-    <header class="header">
-        <h1>Trang chủ của quản lí nhân sự bệnh viện bách khoa</h1>
-    </header>
+    .table {
+        padding: 10px;
+        width: 80%; 
+        margin-top : auto ;
+        margin-left: auto;
+        margin-right: auto ;
+        margin-bottom: 2rem;
+        max-width: 1200px; 
+        border-collapse: collapse;  
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      /* Định dạng cho tiêu đề cột */
+      th {
+        background-color: #b9b9b9;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      
+      /* Định dạng cho dòng chẵn */
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      
+      /* Định dạng cho dòng lẻ */
+      tr:nth-child(odd) {
+        background-color: #ffffff;
+      }
+      
+      th {
+        padding: 20px;
+      }
+      
+      /* Định dạng cho nút hover */
+      tr:hover {
+        background-color: #cce5ff;
+      }
+  </style>
 
-    <div class="container1">
-        <h2>Biểu mẫu nhập thông tin thuốc</h2>
-        <form action="#" method="post">
-            <div class="form-group">
-                <label for="medicine-name">Tên thuốc:</label>
-                <input type="text" id="medicine-name" name="medicine-name">
+    <div id="main">
+        <div id="header">
+            <div id="logo">
+                <img src="../image/Benh vien Phu Yen logo-02 1.png" alt="">
             </div>
-            <div class="form-group">
-                <label for="quantity">Số lượng:</label>
-                <input type="number" id="quantity" name="quantity" min="1">
+            <div class="MXH js-right right">
+                <div class="js-login">
+                    <button class="icon-header js-hide" style="background-image: url(../image/login.png);"><i style="font-size: 0;">.</i></button>
+                    <div id = "info-summary">
+                        <div id="none">
+                            <div class="triangle"></div>
+                        </div>
+                        <div>
+                            <img src="../image/Image.png" alt="">
+                        </div>
+                        <div class = "text">
+                            <div>
+                                <p>TS - Bác sĩ: Lê Trần Thanh Phong</p>
+                            </div>
+                            <div class = "line"></div>
+                        </div>
+                        <div class = "text">
+                            <div>
+                                <p>Trưởng khoa khám bệnh, Phó giám đốc</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class = "logout js-info">
+                            <img src="../image/notebook.png" alt="login">
+                            <div>
+                                <a href="#">
+                                    <p>Trang cá nhân</p>
+                                </a>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="logout js-logout">
+                            <img src="../image/logout.png" alt="logout">
+                            <a href="#">
+                                <p>Đăng xuất</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="usage-date">Ngày sử dụng:</label>
-                <input type="date" id="usage-date" name="usage-date">
-            </div>
-            <div class="form-group">
-                <label for="dosage">Số liều:</label>
-                <input type="number" id="dosage" name="dosage" min="1">
-            </div>
-            <div class="form-group">
-                <label for="doctor-name">Tên bác sĩ kê đơn:</label>
-                <input type="text" id="doctor-name" name="doctor-name">
-            </div>
-            <input type="submit" value="Submit">
-        </form>
+
+            <div class="header-second js-show-search show">
+                <label for="ti-search" class="search-header">
+                    <i class="ti-search" style="padding-left: 10px;"></i>
+                    <input id="ti-search" type="text" placeholder="Tìm kiếm">
+                </label>
+            </div>        
+        </div>
+
     </div>
-</body>
+
+
+        <div id="center">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Nhập thông tin tìm kiếm...">
+            </div>
+    
+            <div id="table">
+                
+            <h2 class="text-center mb-4">Danh sách bệnh nhân</h2>
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Tên thuốc</th>
+                    <th>Hàm lượng</th>
+                    <th>Số lượng</th>
+                    <th>Tên bác sĩ</th>
+                    <th>Thời gian</th>
+                  </tr>
+                </thead>
+                <tbody id="patientRecords">
+                  <!-- Dữ liệu sẽ được thêm vào đây bằng JavaScript -->
+                </tbody>
+              </table>
+            </div>
+        </div>
+            </div>
+          </div>
+        </div>
+
+       
+        
+
+</body> 
+<script src = "./medicine.js"></script>
 </html>

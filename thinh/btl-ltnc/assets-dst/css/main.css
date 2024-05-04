@@ -67,11 +67,41 @@
     outline: none;
 }
 
+#head .mid {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+#head .mid .navigation {
+    height: 100%;
+    width: 80%;
+    display: flex;
+}
+
+#head .mid .navigation a {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    line-height: 100px;
+}
+
+.navigation .n:hover p {
+    background-color: #009ef7;
+}
+
 #head .right {
     width: 15%;
     margin-left: auto;
     display: flex;
     position: relative;
+}
+
+#login #mybutton {
+    height: 48px;
+    border-radius: 50%;
 }
 
 #head .right #login {
@@ -93,20 +123,13 @@
 }
 
 #head .right #info {
-    height: 368px;
-    width: 338px;
+    height: 80px;
+    width: 180px;
     position: absolute;
     right: 0;
     top: 50px;
-    background-color: #eee;
+    background-color: #009ef7;
     z-index: 110;
-}
-
-#info img {
-    width: 90px;
-    height: 100px;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 #info div {
@@ -129,7 +152,7 @@
 }
 
 #info .logout {
-    height: 78px;
+    height: 60px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -138,13 +161,14 @@
 }
 
 #info .logout p {
-    height: 78px;
     font-size: 16px;
-    line-height: 78px;
+    line-height: 60px;
+    height: 60px;
     color: #000;
     position: absolute;
-    top: 0;
-    left: 90px;
+    top: 0px;
+    left: 70px;
+    color: #fff;
 }
 
 #info .logout a {
@@ -155,7 +179,9 @@
     width: 30px;
     height: 30px;
     position: absolute;
-    left: 55px;
+    top: 15px;
+    left: 25px;
+    color: #fff;
 }
 
 #info .text div {
@@ -192,13 +218,13 @@
     height: 0;
     border-left: 14.14px solid transparent; 
     border-right: 14.14px solid transparent; 
-    border-bottom: 20px solid #eee;
+    border-bottom: 20px solid #009ef7;
     position: absolute;
     right: 13px;
 }
-#login:hover #info {
+/* #login:hover #info {
     display: block;
-}
+} */
 #info {
     display: none;
     z-index: 200;
@@ -271,7 +297,7 @@
     height: 600px;
     width: 100%;
     position: relative;
-    top: 150px;
+    top: 100px;
     left: 0px;
     display: flex;
     justify-content: center;
@@ -286,8 +312,8 @@
     z-index: 1;
 }
 #content #homep img {
-    height: 50px;
-    width: 40px;
+    height: 60px;
+    width: 55px;
     position: relative;
 }
 #content #homep .text {
@@ -310,13 +336,13 @@
 }
 #content #homep:hover p {
     display: block;
-    background-color: #0F58A0;
+    background-color: #009ef7;
     color: #fff;
     text-align: center;
 }
 #content .vien {
-    height: 700px;
-    width: 1250px;
+    height: 660px;
+    width: 1210px;
     background-color: #f5f8fa;
     position: absolute;
     top: 30px;
@@ -325,11 +351,16 @@
     justify-content: center;
     align-items: center;
 }
+#content .vien .hidden {
+    height: 600px;
+    width: 1150px;
+    overflow: hidden;
+    border-radius: 15px;
+}
 #content .vien .giua {
     height: 600px;
     width: 1150px;
     background-color: #fff;
-    border-radius: 20px;
     overflow-y: auto;
 }
 .vien .giua .con {

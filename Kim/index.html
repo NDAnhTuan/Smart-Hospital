@@ -5,38 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Healthcare Center</title>
 </head>
-
+<!-- ket noi voi file css, js-->
+    <link rel="stylesheet" href="../icons_font/themify-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="kim.css">
-
-    
-<body>
    
-        <header class="header">
-        <h1>Trang chủ của quản lí nhân sự bệnh viện bách khoa</h1>
-    </header>
-    <div id="main-interface">
-        <div class="stats">
-            <div class="stat">
-                <h2>3</h2>
-                <p>Số đơn khách đặt lịch khám</p>
+<body>   
+    <div id="main">
+        <div id="header">
+            <div id="logo">
+                <img src="../image/Benh vien Phu Yen logo-02 1.png" alt="">
             </div>
-            <div class="stat">
-                <h2>100</h2>
-                <p>Số đơn bác sĩ yêu cầu nhập thuốc</p>
+
+            <div class="MXH js-right right">
+                <div class="js-login">
+                    <button class="icon-header js-hide" style="background-image: url(../image/login.png);"><i style="font-size: 0;">.</i></button>
+                    <div id = "info-summary">
+                        <div id="none">
+                            <div class="triangle"></div>
+                        </div>
+                        <div>
+                            <img src="../image/Image.png" alt="">
+                        </div>
+                        <div class = "text">
+                            <div>
+                                <p>TS - Bác sĩ: Lê Trần Thanh Phong</p>
+                            </div>
+                            <div class = "line"></div>
+                        </div>
+                        <div class = "text">
+                            <div>
+                                <p>Trưởng khoa khám bệnh, Phó giám đốc</p>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class = "logout js-info">
+                            <img src="../image/notebook.png" alt="login">
+                            <div>
+                                <a href="#">
+                                    <p>Trang cá nhân</p>
+                                </a>
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="logout js-logout">
+                            
+                            <img src="../image/logout.png" alt="logout">
+                            <a href="#">
+                                <p>Đăng xuất</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-second js-show-search show">
+                <label for="ti-search" class="search-header">
+                    <i class="ti-search" style="padding-left: 10px;"></i>
+                    <input id="ti-search" type="text" placeholder="Tìm kiếm">
+                </label>
+            </div>        
+        </div>
+
+    </div>
+
+    <div id="info-personal" class="show">
+        <div class="container1">
+            <h1>Chức Năng</h1>
+            <table>
+                <tr>
+                    <th>Số đơn khách đặt lịch khám</th>
+                     <td>33</td> ></td>
+                </tr>
+                <tr>
+                    <th>Số đơn bác sĩ yêu cầu nhập thuốc</th>
+                    <td>12</td>
+                </tr>
+            </table>
+            <div class="container1" style="display: flex; justify-content: center;">
+                <div class="function-box" onclick="location.href='medicine.html';">
+                    <div class="image-container">
+                        <img src="../Kim/Newimg/drugs-128.png" alt="IMG">
+                      </div>
+                    <div class="function-name">Nhập Thuốc</div>
+                </div>
+                <div class="function-box" onclick="location.href='appointment.html';">
+                    <div class="image-container">
+                        <img src="../Kim/Newimg/lichkham.png" alt="IMG">
+                      </div>
+                  <div class="function-name">Duyệt lịch khám</div>
+                </div>
+                <div class="function-box" onclick="location.href='tracuu.html';">
+                    <div class="image-container">
+                        <img src="../Kim/Newimg/doctor.png" alt="IMG">
+                      </div>
+                    <div class="function-name">Tra cứu nhân sự</div>
+                </div>
             </div>
         </div>
-        <!-- <button class="function-button">Nhập Thuốc</button>
-        <button class="function-button">Duyệt lịch khám</button>
-        <button class="function-button">Tra Cứu Nhân Sự</button> -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Trang chủ</a></li>
-                <li><a href="appointment.html">Duyệt yêu cầu đặt lịch</a></li>
-                <li><a href="medicine.html">Yêu cầu nhập thuốc</a></li>
-                <li><a href="tracuu.html"> <i class="fas fa-search"></i> Tra Cứu </a></li>
-            </ul>
-        </nav>
     </div>
+
+    
 </body>
+<script src = "./role-hoang.js"></script>
+<script src ="kim.js"></script>
 </html>

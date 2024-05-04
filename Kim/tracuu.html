@@ -8,59 +8,118 @@
 
 <link rel="stylesheet" href="kim.css">
 <script src = "./kim.js"></script>
+<script src="./tracuu.js" ></script>
 
-<body>
-    <header class="header">
-        <h1>BỆNH VIỆN BÁCH KHOA</h1>
-        <a href="#"> &nbsp; Kính lúp &nbsp;</a>
-    </header>
+  <div id="main">
+    <div id="header">
+        <div id="logo">
+            <img src="../image/Benh vien Phu Yen logo-02 1.png" alt="">
+        </div>
+        <div class="MXH js-right right">
+            <div class="js-login">
+                <button class="icon-header js-hide" style="background-image: url(../image/login.png);"><i style="font-size: 0;">.</i></button>
+                <div id = "info-summary">
+                    <div id="none">
+                        <div class="triangle"></div>
+                    </div>
+                    <div>
+                        <img src="../image/Image.png" alt="">
+                    </div>
+                    <div class = "text">
+                        <div>
+                            <p>TS - Bác sĩ: Lê Trần Thanh Phong</p>
+                        </div>
+                        <div class = "line"></div>
+                    </div>
+                    <div class = "text">
+                        <div>
+                            <p>Trưởng khoa khám bệnh, Phó giám đốc</p>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <div class = "logout js-info">
+                        <img src="../image/notebook.png" alt="login">
+                        <div>
+                            <a href="#">
+                                <p>Trang cá nhân</p>
+                            </a>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="logout js-logout">
+                        <img src="../image/logout.png" alt="logout">
+                        <a href="#">
+                            <p>Đăng xuất</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <div class="form-group">
-        <label for="chuyenkhoa">Chuyên Khoa:</label>
-        <select id="chuyenkhoa">
-          <option value="khoa-noi">Khoa Nội</option>
-          <option value="khoa-ngoai">Khoa Ngoại</option>
-          <option value="khoa-nhi">Khoa Nhi</option>
-          <option value="khoa-phu-san">Khoa Phụ Sản</option>
-          <option value="khoa-truyen-nhiem">Khoa Truyền Nhiễm</option>
-          <option value="khoa-cap-cuu">Khoa Cấp Cứu/Hồi Sức Tích Cực</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="chucvu">Chức Vụ:</label>
-        <select id="chucvu">
-          <option value="PGD">Phó Giám Đốc</option>
-          <option value="GD">Giám Đốc</option>
-          <option value="bacsi">Bác Sĩ</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="tenbacsi">Tìm theo tên Bác Sĩ:</label>
-        <input type="text" id="tenbacsi">
-      </div>
-      <button onclick="timBacSi()">Tìm</button>
-      <div id="ketqua"></div>
+        <div class="header-second js-show-search show">
+            <label for="ti-search" class="search-header">
+                <i class="ti-search" style="padding-left: 10px;"></i>
+                <input id="ti-search" type="text" placeholder="Tìm kiếm">
+            </label>
+        </div>        
     </div>
+</div>
+
+
+
+    <div class="container10">
+        <div class="form-group10">
+            <label for="chuyenkhoa">Chuyên Khoa:</label>
+             <select id="chuyenkhoa">
+                <option value="">Chọn chuyên khoa</option>
+                <option value="Nhi Khoa">Nhi Khoa</option>
+                <option value="Răng Hàm Mặt">Răng Hàm Mặt</option>
+                <option value="Da Liễu">Da Liễu</option>
+                <option value="Tim Mạch">Tim Mạch</option>
+                <option value="Tai Mũi Họng">Tai Mũi Họng</option>
+                <option value="Nội Tiết">Nội Tiết</option>
+                <option value="Chấn Thương Chỉnh Hình">Chấn Thương Chỉnh Hình</option>
+                <option value="Phụ Khoa">Phụ Khoa</option>
+                <option value="Hô Hấp">Hô Hấp</option>
+                <option value="Thần Kinh">Thần Kinh</option>
+                <!-- them o day -->
+                </select>
+
+            <label for="chucvu">Chức Vụ:</label>
+            <select id="chucvu">
+                <option value="">Chọn chức vụ</option>
+                <option value="Bác sĩ chuyên khoa">Bác sĩ chuyên khoa</option>
+                <option value="Trưởng khoa">Trưởng khoa</option>
+                <option value="Bác sĩ cơ bản">Bác sĩ cơ bản</option>
+                <option value="Giám Đốc">Giám Đốc</option>
+                <option value="Phó Giám Đốc">Phó Giám Đốc</option>
+                <option value="Trưởng Phòng">Trưởng Phòng</option>
+                <!-- them o day -->
+              </select>
+             <label for="tenbacsi">Tên Bác sĩ:</label>
+             <input type="text" id="tenbacsi">
+        </div>
+
+      <button onclick="timBacSi()">Tìm Bác Sĩ</button>
+    </div>
+
+      <div id="ketqua" class="container10"></div>
+   
   
-    <!-- <nav class="main-nav">
-        <a href="#">Chuyên khoa</a>
-        <a href="#">Chức vụ</a>
-        <a href="#">Tim tên bác sĩ</a>
-    </nav> -->
     <section>
-        <h2>DANH SÁCH NHÂN SỰ</h2>
+        <div class="container6">
         <div class="doctors-list">
             <div class="doctor-item">
-                <img src="D:\Photos\giai tri\FB_IMG_1616733881470.jpg" alt="Hình ảnh của Bác sĩ A" width="20" height="10">
-                <h3>NGUYỄN VĂN A</h3>
+                <img src="../Kim/Newimg/images.jpg" alt="Hình ảnh của Bác sĩ A" >
+                <h3>Vi Về Nhùa</h3>
                 <p>Chuyên Khoa Răng Hàm Mặt</p>
                 <p>Trưởng khoa khám bệnh</p>
                 <button>Đặt lịch</button>
                 <p>Phú Yên</p>
             </div>
             <div class="doctor-item">
-                <img src="D:\Photos\giai tri\FB_IMG_1616733881470.jpg" alt="Hình ảnh của Bác sĩ B">
-                <h3>NGUYỄN THỊ B</h3>
+                <img src="../Kim/Newimg/6.jpeg" alt="Hình ảnh của Bác sĩ B">
+                <h3>Nguyễn Văn Vinh</h3>
                 <p>Chuyên Khoa Ngoại</p>
                 <p>Thạc sĩ, Bác sĩ</p>
                 <button>Đặt lịch</button>
@@ -68,11 +127,23 @@
             </div>
 
             <div class="doctor-item">
-                <img src="D:\Photos\giai tri\FB_IMG_1616733881470.jpg" alt="Hình ảnh của Bác sĩ B">
-                <h3>NGUYỄN THỊ K</h3>
+                <img src="../Newimg/4.png" alt="Hình ảnh của Bác sĩ B">
+                <h3>Bó Đạt Chách</h3>
                 <p>Chuyên Khoa Nội</p>
                 <p>Bác sĩ</p>
                 <button>Đặt lịch</button>
                 <p>Phú Yên</p>
             </div>
-            <div class="doctor-item
+        </div>
+        </div>  
+    </section>
+        
+            
+            
+                 
+
+ </body> 
+ </html>
+
+
+

@@ -90,10 +90,10 @@ newData.forEach(function(data) {
         row.appendChild(cell3);
 
         // Thêm cột cho "Chẩn đoán"
-        var cell4 = document.createElement("td");
-        cell4.textContent = data.k4;
-        cell4.classList.add("k4");
-        row.appendChild(cell4);
+        // var cell4 = document.createElement("td");
+        // cell4.textContent = data.k4;
+        // cell4.classList.add("k4");
+        // row.appendChild(cell4);
 
     // Thêm nút button cho cột k5
     var buttonCell = document.createElement("td");
@@ -278,5 +278,51 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
         });
+    });
+});
+
+function showXuatDon(button) {
+    var patientId = button.closest("tr").querySelector(".k3").textContent;
+    sessionStorage.setItem("selectedPatientId", patientId); // Save patient ID to session storage
+}
+
+function xoaHang_xd() {
+    var selectedPatientId = sessionStorage.getItem("selectedPatientId");
+    var rows = document.querySelectorAll("#table-body tr");
+    rows.forEach(function(row) {
+        var patientId = row.querySelector(".k3").textContent;
+        if (patientId === selectedPatientId) {
+            row.remove();
+            sessionStorage.removeItem("selectedPatientId"); // Remove saved patient ID from session storage
+            document.getElementById("bgr").style.display = "none"; // Hide the "Xuất đơn" container
+        }
+    });
+}
+
+// Add onclick event to "Kê đơn" buttons
+var keDonButtons = document.querySelectorAll(".k5");
+keDonButtons.forEach(function(button) {
+    button.onclick = function() {
+        showXuatDon(this);
+    };
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    var myButton = document.getElementById("mybutton");
+    var myLink = document.getElementById("info");
+
+    myButton.addEventListener("click", function(event) {
+        event.stopPropagation(); // Ngăn chặn sự kiện click trên nút button lan truyền đến body hoặc document
+        if (myLink.style.display === "none") {
+            myLink.style.display = "block"; // Hiển thị link nếu đang bị ẩn
+        } else {
+            myLink.style.display = "none"; // Ẩn link nếu đang hiển thị
+        }
+    });
+
+    document.addEventListener("click", function(event) {
+        if (event.target !== myButton && myLink.style.display !== "none") {
+            myLink.style.display = "none"; // Ẩn link khi click vào bất kỳ nơi nào ngoài nút button
+        }
     });
 });

@@ -11,23 +11,47 @@
             <div class = "img">
                 <img src="./assets-hsbn/img/Benh vien Phu Yen logo-02 1.png" alt="">
             </div>
-            <div class="search">
+            <!-- <div class="search">
                 <a href="">
                     <span class = "img-icon ti-search"></span>
                 </a>
                 <input class = "no-border" type="text" placeholder="Tìm kiếm">
+            </div> -->
+            <div class="mid">
+                <div class="navigation">
+                    <div class="n">
+                        <a href="./hsbn.html">
+                            <p>Hồ sơ bệnh nhân</p>
+                        </a>
+                    </div>
+                    <div class="n">
+                        <a href="./kham.html">
+                            <p>Ca khám của tôi</p>
+                        </a>
+                    </div>
+                    <div class="n">
+                        <a href="./dst.html">
+                            <p>Danh sách thuốc</p>
+                        </a>
+                    </div>
+                    <div class="n">
+                        <a href="./lich.html">
+                            <p>Lịch làm việc</p>
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class = "right">
                 <div id = "login">
-                    <a href="#">
+                    <button id="mybutton">
                         <img src="./assets-hsbn/img/user 1.png" id = "hv" alt="">
-                    </a>
-                    
+                    </button>
+                        
                     <div id = "info">
                         <div id="none">
                             <div class="triangle"></div>
                         </div>
-                        <div>
+                        <!-- <div>
                             <img src="./assets-hsbn/img/Image.png" alt="">
                         </div>
                         <div class = "text">
@@ -50,10 +74,10 @@
                                 </a>
                             </div>
                             <div class="line"></div>
-                        </div>
+                        </div> -->
                         <div class="logout">
-                            <img src="./assets-hsbn/img/Vector.png" alt="">
                             <a href="">
+                                <img src="./assets-hsbn/img/Vector.png" alt="">
                                 <p>Đăng xuất</p>
                             </a>
                         </div>
@@ -61,7 +85,7 @@
                 </div>
             </div>
         </div>
-        <div id="nav">
+        <!-- <div id="nav">
             <div class="subnav">
                 <a href="hsbn.html"><p class = "out">Hồ sơ bệnh nhân</p></a>
             </div>
@@ -79,59 +103,50 @@
             </div>
             <div id = "sn2" class="subnav">
                 <div>
-                    <p class = "out">Lịch của bạn</p>
-                    <i id = "d2" class = "down ti-angle-down"></i>
-                </div>
-                <div id="pp2">
-                    <div id="p2">
-                        <div>
-                            <a href="./lich.html">
-                                <p>Lịch làm việc</p>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="./ycnp.html">
-                                <p>Yêu cầu nghỉ phép</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="content">
-            <div id="homep">
-                <img src="./assets-hsbn/img/Mini Button- 2.png" alt="">
-                <div class = "text" id = "hp2">
-                    <a href="./bs.html">
-                        <p>Về trang chủ</p>
+                    <a href="./lich.html">
+                        <p class = "out">Lịch của bạn</p>
                     </a>
                 </div>
             </div>
+        </div> -->
+        <div id="content">
+            <div id="homep">
+                <a href="./bs.html">
+                    <img src="./assets-hsbn/img/Mini Button- 2.png" alt="">
+                </a>
+                <!-- <div class = "text" id = "hp2">
+                    <a href="./bs.html">
+                        <p>Về trang chủ</p>
+                    </a>
+                </div> -->
+            </div>
             <div id="vien">
-                <div id="giua">
-                    <div id="h">
-                        <p>Lịch làm việc</p>
+                <div class="hidden">
+                    <div id="giua">
+                        <div id="h">
+                            <p>Lịch làm việc</p>
+                        </div>
+                        <div id="l"></div>
+                        <div id="currentday">
+                            <script src="./assets-lich/js/script.js"></script>
+                        </div>
+                        <table id = "lich">
+                            <thead>
+                                <tr>
+                                    <th class="h">Thứ 2</th>
+                                    <th class="h">Thứ 3</th>
+                                    <th class="h">Thứ 4</th>
+                                    <th class="h">Thứ 5</th>
+                                    <th class="h">Thứ 6</th>
+                                    <th class="h">Thứ 7</th>
+                                    <th class="h">Chủ nhật</th>
+                                </tr>
+                            </thead>
+                            <tbody id = "lich-body">
+    
+                            </tbody>
+                        </table>
                     </div>
-                    <div id="l"></div>
-                    <div id="currentday">
-                        <script src="./assets-lich/js/script.js"></script>
-                    </div>
-                    <table id = "lich">
-                        <thead>
-                            <tr>
-                                <th class="h">Thứ 2</th>
-                                <th class="h">Thứ 3</th>
-                                <th class="h">Thứ 4</th>
-                                <th class="h">Thứ 5</th>
-                                <th class="h">Thứ 6</th>
-                                <th class="h">Thứ 7</th>
-                                <th class="h">Chủ nhật</th>
-                            </tr>
-                        </thead>
-                        <tbody id = "lich-body">
-
-                        </tbody>
-                    </table>
                 </div>
             </div>
         </div>
