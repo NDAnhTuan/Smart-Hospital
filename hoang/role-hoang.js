@@ -35,11 +35,11 @@ function showSearch() {
     jsRight.classList.add('right')
 }
 function hideSearch() {
-    // jsSearch.classList.remove('show')
-    // for (const i of jsHides) {
-    //     i.classList.remove('hide')
-    // }
-    // jsRight.classList.remove('right')
+    jsSearch.classList.remove('show')
+    for (const i of jsHides) {
+        i.classList.remove('hide')
+    }
+    jsRight.classList.remove('right')
 }
 
 function saveInfo() {
