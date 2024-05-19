@@ -52,32 +52,25 @@ class doctorController {
 
 
 
-//////////////// Chưa xong
     decreaseQuantityMedicine = async (medicineName, quantityToDecrease) => {
         try {
-            const medicines = await this.getMedicine(); 
-            const foundMedicine = medicines.find(medicine => medicine.Name === medicineName); 
-            if (foundMedicine && foundMedicine.Name) {
-                const currentQuantity = foundMedicine.Quantity;
-    
+            const q = query(collection(db, 'Hospital', 'Medicine', 'Data'), where("Name", "==", medicineName));
+            const querySnapshot = await getDocs(q);
+            querySnapshot.forEach(async (doc) => {
+                const currentQuantity = doc.data().Quantity;
                 if (currentQuantity >= quantityToDecrease) {
                     const newQuantity = currentQuantity - quantityToDecrease;
-                    const medicineRef = doc(collection(db, 'Hospital', 'Medicine', 'Data'), foundMedicine.Name);
-                    
-                    await setDoc(medicineRef, { Quantity: newQuantity }, { merge: true });
-                    
+                    await updateDoc(doc.ref, { Quantity: newQuantity });
                     console.log(`Decreased quantity of medicine ${medicineName} successfully.`);
-                    return newQuantity;
                 } else {
-                    console.error("Not enough quantity available to decrease.");
+                    console.error("Not enough quantity available to decrease for", medicineName);
                 }
-            } else {
-                console.error("Medicine with name ", medicineName, " not found.");
-            }
+            });
         } catch (error) {
             console.error("Error:", error);
         }
     };
+
     
 
 
