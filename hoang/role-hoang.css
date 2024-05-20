@@ -885,6 +885,7 @@ h1.js-after {
 /* ******* info-personal ********* */
 #info-personal.show {
     display: flex;
+    z-index: 10;
 }
 
 #info-personal {
