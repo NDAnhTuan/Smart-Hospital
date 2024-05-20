@@ -577,7 +577,6 @@ h1.js-after {
 .Services.show {
     display: block;
 }
-
 .Services {
     display: none;
 }
@@ -614,8 +613,8 @@ h1.js-after {
 .Services li img {
     display: block;
     margin: auto;
-    width: 19% !important;
-    height: 10% !important;
+    width: 60px !important;
+    height: 60px !important;
 }
 
 .Services li h3 {
@@ -700,7 +699,7 @@ h1.js-after {
 }
 
 .info-cus .js-sent {
-    /* margin-top: 40px; */
+    margin-top: 20px;
     padding: 10px;
     text-transform: uppercase;
     background: #4696EB;
@@ -725,7 +724,7 @@ h1.js-after {
 
 
 #footer ul .img-footer {
-    background: no-repeat center url(../image/Benh\ vien\ Phu\ Yen\ logo-02\ 1.png);
+    background: no-repeat center url(../image/logo_bachkhoa.png);
     background-size: 70%;
     height: 200px;
 }
@@ -886,6 +885,7 @@ h1.js-after {
 /* ******* info-personal ********* */
 #info-personal.show {
     display: flex;
+    z-index: 10;
 }
 
 #info-personal {
