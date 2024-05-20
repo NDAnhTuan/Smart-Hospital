@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Document</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="./assets-hsbn/css/main.css">
+        <title>Document</title>
+        <link rel="stylesheet" href="./assets-info/css/main.css">
         <link rel="stylesheet" href="./assets-hsbn/font/themify-icons-font/themify-icons/themify-icons.css">
     </head>
+    
     <body>
         <div id="head">
             <div class = "img">
@@ -44,7 +45,7 @@
             <div class = "right">
                 <div id = "login">
                     <div class="img1">
-                        <a href="./info.html">
+                        <a href="">
                             <img src="../../image/login.png" alt="">
                         </a>
                     </div>
@@ -94,30 +95,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div id="nav">
-            <div class="subnav">
-                <a href="hsbn.html"><p class = "out">Hồ sơ bệnh nhân</p></a>
-            </div>
-            <div class="subnav">
-                <a href="./kham.html">
-                    <p class="out">Ca khám của tôi</p>
-                </a>
-            </div>
-            <div id = "sn1" class="subnav">
-                <div>
-                    <a href="./dst.html">
-                        <p class = "out">Danh sách thuốc</p>
-                    </a>
-                </div>
-            </div>
-            <div id = "sn2" class="subnav">
-                <div>
-                    <a href="./lich.html">
-                        <p class = "out">Lịch của bạn</p>
-                    </a>
-                </div>
-            </div>
-        </div> -->
         <div id="content">
             <div id="homep">
                 <a href="./bs.html">
@@ -129,40 +106,67 @@
                     </a>
                 </div> -->
             </div>
-            <div class="vien">
-                <div class="hidden">
-                    <div class="giua">
-                        <div class="hsbn">
-                            <p>Hồ sơ bệnh nhân</p>
-                        </div>
-                        <div class="tk" onclick="searchTable()">
-                            Tìm kiếm
-                        </div>
-                        <div class="ip">
-                            <input type="text" id="searchInput" onkeyup ="searchTable()" placeholder="Nhập từ khóa...">
-                        </div>
-                        <div class="line"></div>
-                        <table id = "ttcn">
-                            <thead>
-                                <tr>
-                                    <th class = "h1">ID CARD</th>
-                                    <th class = "h2">HỌ</th>
-                                    <th class = "h3">TÊN</th>
-                                    <th class = "h4">GIỚI TÍNH</th>
-                                    <th class = "h5">NGÀY SINH</th>
-                                    <th class = "h6">ĐIỆN THOẠI</th>
-                                    <th class="h7">EMAIL</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- Nội dung của bảng sẽ được thêm bằng JavaScript -->
-                            </tbody>
-                        </table>
+            <div id="vien">
+                <div id="giua">
+                    <div class="h">
+                        <p>Thông tin cá nhân</p>
                     </div>
+                    <div class="line"></div>
+                    <table class="info">
+                        <tbody>
+                            <tr>
+                                <th>Full name</th>
+                                <th>Identity number</th>
+                            </tr>
+                            <tr>
+                                <td id="fullname"></td>
+                                <td id="ID"></td>
+                            </tr>
+                            <tr>
+                                <th>Birthday</th>
+                                <th>National</th>
+                            </tr>
+                            <tr>
+                                <td id="birthday"></td>
+                                <td id="national"></td>
+                            </tr>
+                            <tr>
+                                <th>Sex</th>
+                                <th>Permanent address</th>
+                            </tr>
+                            <tr>
+                                <td id="sex"></td>
+                                <td id="address"></td>
+                            </tr>
+                            <tr>
+                                <th>Email</th>
+                                <th>Department - Specialized</td>
+                            </tr>
+                            <tr>
+                                <td id="email"></td>
+                                <td id="department"></td>
+                            </tr>
+                            <tr>
+                                <th>Phone number</th>
+                                <th>Position</th>
+                            </tr>
+                            <tr>
+                                <td id="phone"></td>
+                                <td id="position"></td>
+                            </tr>
+                            <tr>
+                                <th>Degree</th>
+                                <th>Working status</th>
+                            </tr>
+                            <tr>
+                                <td id="degree"></td>
+                                <td id="status"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </body>
-    <script src="../../BE/BE-Hospital/dist/viewMyPatient.bundle.js"></script>
-    <!-- <script src="assets-hsbn/js/script.js"></script> -->
 </html>
+<script src="./assets-info/js/script.js"></script>
