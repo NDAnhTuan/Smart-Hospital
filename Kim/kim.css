@@ -13,41 +13,60 @@
         }
 
         .container1 {
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            padding: 20px; /* Thêm khoảng cách bên trong container */
+            background-color: #f9f9f9; /* Màu nền nhẹ để làm nổi bật nội dung */
+            border-radius: 15px; /* Bo tròn các góc */
         }
-
+        
         h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
             color: #060606;
+            text-align: center; /* Căn giữa tiêu đề */
+            font-family: 'Arial', sans-serif; /* Chọn font chữ dễ đọc hơn */
         }
-
+        
         table {
             width: 100%;
             border-collapse: collapse;
+            margin-top: 20px; /* Thêm khoảng cách giữa bảng và các phần tử khác */
+            background-color: #fff; /* Màu nền trắng cho bảng */
+            border-radius: 10px; /* Bo tròn các góc bảng */
+            overflow: hidden; /* Để các góc bo tròn không bị che khuất */
         }
-
-        th {
+        
+        th, td {
             padding: 15px;
             text-align: left;
-            border-radius: 10px;
-
         }
-        /* Mau sac cua phan lich kham*/
+        
         th {
-            background-color: #c1c3c4;
+            background-color: #dddddd; /* Màu nền mới cho phần tiêu đề */
             color: #fff;
+            font-weight: bold; /* In đậm chữ */
         }
-
-      
-
+        
+        td {
+            border-bottom: 1px solid #ddd; /* Đường viền dưới cho mỗi ô */
+            background-color: #fafafa; /* Màu nền nhẹ cho các ô */
+        }
+        
+        tr:nth-child(even) td {
+            background-color: #f1f1f1; /* Màu nền xen kẽ cho các hàng */
+        }
+        
+        tr:hover td {
+            background-color: #e9e9e9; /* Màu nền khi hover */
+        }
+        
         .function-box {
             width: 250px;
             height: 150px;
-            background-color: #d0d0d0;
+            background-color: #dedede; /* Màu nền mới cho các hộp chức năng */
             color: #ffffff;
             display: flex;
             flex-direction: column;
@@ -55,26 +74,133 @@
             align-items: center;
             margin: 10px;
             cursor: pointer;
-            transition: transform 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s; /* Hiệu ứng mượt mà hơn khi hover */
             font-family: 'CONG', sans-serif;
             border-radius: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Thêm bóng để tạo chiều sâu */
         }
-
+        
         .function-box:hover {
             transform: translateY(-5px);
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Bóng đổ đậm hơn khi hover */
         }
-
+        
         .function-icon {
             font-size: 48px;
             margin-bottom: 10px;
+            color: #fff; /* Màu trắng cho biểu tượng */
         }
-
+        
         .function-name {
             font-size: 1.2em;
             margin-bottom: 0;
+            color: #fff; /* Màu trắng cho tên chức năng */
         }
-    
+        /* Container for info boxes */
+        .info-box-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+            gap: 20px; /* Khoảng cách giữa các hộp thông tin */
+        }
+        
+        .info-box {
+            flex: 1;
+            flex-basis: calc(50% - 10px); /* Đảm bảo mỗi hộp chiếm 50% trừ đi khoảng cách giữa chúng */
+            padding: 20px;
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            min-width: 200px; /* Đảm bảo độ rộng tối thiểu */
+        }
+        
+        .info-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .info-box-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333333;
+            margin-bottom: 10px;
+        }
+        
+        .info-box-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #000000;
+        }
+        
+        /* Function box container */
+        .function-box-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 20px; /* Khoảng cách giữa các hộp chức năng */
+        }
+        
+        .function-box {
+            width: 200px;
+            height: 150px;
+            background-color: #c7c7c7;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-family: 'CONG', sans-serif;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .function-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .function-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        
+        .function-name {
+            font-size: 1.2em;
+            margin-bottom: 0;
+            color: #fff;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .info-box-container {
+                flex-direction: column;
+                gap: 10px; /* Điều chỉnh khoảng cách giữa các hộp thông tin trên màn hình nhỏ */
+            }
+        
+            .info-box {
+                flex-basis: auto; /* Đặt lại flex-basis để các hộp chiếm toàn bộ chiều rộng */
+                margin: 10px 0;
+            }
+        
+            .function-box-container {
+                flex-direction: column;
+            }
+        
+            .function-box {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
 
    /* CSS cho thanh tìm kiếm */
 .search-container {
@@ -650,59 +776,97 @@ input[type="submit"]:hover {
     }
     
   /* ******* info-personal ********* */
-  #info-personal.show {
-      display: flex;
-  }
-  
-  #info-personal {
-      position: fixed;
-      top: var(--height-header);
-      bottom: 0;
-      left: 0;
-      right: 0;
-  
-      background-color: white;
-      display: none;
-      align-items: center;
-      justify-content: center;
-  }
-  
-  #info-personal .ti-home {
-      background-color: #4696EB;
-      border-radius: 50%;
-  
-      font-size: 20px;
-      text-decoration: none;
-      color: #fff;
-      text-align: center;
-      padding: 25px 20px 25px 70px;
-      width: 90px;
-  }
-  
-  
-  #back-home:hover {
-      height: 19px;
-      left: -810px !important;
-  }
-  #info-personal #back-home {
-      position: relative;
-      top: -270px;
-      left: -830px;
-      border: none;
-      font-size: 15px;
-  }
-  #info-personal #back-home:hover div {
-      display: block;
-  }
-  
-  #back-home div {
-      display: none;
-      position: relative;
-      top: -18px;
-      left: 100px;
-      right: 0;
-      bottom: 0;
-  }
+#info-personal.show {
+    display: flex;
+}
+
+#info-personal {
+    position: fixed;
+    top: var(--height-header);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Background with slight transparency */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for visibility */
+    z-index: 1000; /* Ensure it is on top of other elements */
+    backdrop-filter: blur(5px); /* Optional: Adds a blur effect for a modern look */
+}
+
+#info-personal .ti-home {
+    background-color: #4696EB;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    padding: 25px 20px;
+    width: 90px;
+    height: 90px; /* Ensure the circle is perfect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+#info-personal .ti-home:hover {
+    background-color: #357ABD; /* Slightly darker blue on hover */
+}
+
+#back-home {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    border: none;
+    font-size: 15px;
+    background: transparent; /* Remove any default button styles */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#back-home:hover {
+    transform: translateX(-10px); /* Smooth hover effect */
+}
+
+#back-home div {
+    display: none;
+    position: absolute;
+    top: -25px; /* Adjust as needed */
+    left: 35px; /* Adjust as needed */
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+#back-home:hover div {
+    display: block;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #info-personal {
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    #back-home {
+        top: 10px;
+        left: 10px;
+    }
+
+    #info-personal .ti-home {
+        font-size: 18px;
+        width: 70px;
+        height: 70px;
+    }
+}
 
 
 
