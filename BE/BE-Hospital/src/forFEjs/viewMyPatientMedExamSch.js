@@ -10,6 +10,7 @@ function formatDate(date) {
 
 // Lấy ra tbody của table
 var tbody = document.getElementById("table-body");
+var form = document.getElementsByClassName("form-kethuoc")[0];
 
 // Tạo một mảng chứa các dữ liệu mới
 const newData = await (new doctorController).viewMyPatientMedExamSch(uid);
@@ -113,6 +114,7 @@ newData.forEach(function(data) {
     buttonCell.classList.add("k5");
     var button = document.createElement("button");
     button.textContent = "Kê đơn";
+    button.setAttribute("value", data.ID_Patient)
     buttonCell.appendChild(button);
     row.appendChild(buttonCell);
     
@@ -135,8 +137,8 @@ document.getElementById("toggle-table-btn").addEventListener("click", function()
 
     // Thêm input vào các ô
     cell0.innerHTML = "<div class='deleteRow' onclick='xoaHang(this)'><span class='xoa ti-trash'></span></div>";
-    cell1.innerHTML = "<input type='text' placeholder='Nhập tên thuốc'>";
-    cell2.innerHTML = "<input type='text' placeholder='Nhập số lượng'>";
+    cell1.innerHTML = "<input type='text' class ='tenthuoc' placeholder='Nhập tên thuốc'>";
+    cell2.innerHTML = "<input type='text' class ='soluong' placeholder='Nhập số lượng'>";
 
     //tăng chiều cao
     var vien = document.getElementById("bgr");
@@ -159,26 +161,61 @@ var donDiv = document.getElementById("don");
 
 // Lấy tất cả các nút có class ".k5 button"
 var k5Buttons = document.querySelectorAll(".k5 button");
-var xuatDiv = document.querySelector(".xuat button");
+var xuatDiv = document.querySelector(".xuat p");
 
 
 
 // Lặp qua từng nút và thêm sự kiện click
 k5Buttons.forEach(function(button) {
-    button.addEventListener("click", function() {
+    button.addEventListener("click", async function() {
         // Lấy tham chiếu đến div có id "bgr"
         console.log('hêhhe',button.parentElement)
         var bgrDiv = document.getElementById("bgr");
+        const patientList = await (new doctorController).getPatient()
+        const patient = patientList.find(patientList => patientList.id === button.value); 
+        console.log(patient)
+        const firstNameForm = document.getElementById("fn")
+        firstNameForm.value = patient.FirstName + patient.LastName
+        const lastNameForm = document.getElementById("ln")
+        lastNameForm.value = patient.LastName
+        const seForm = document.getElementById("se")
+        seForm.value = patient.Gender
+        const idForm = document.getElementById("id")
+        idForm.value = patient.id
+        const emailForm = document.getElementById("em")
+        emailForm.value = patient.Email
+        const phoneForm = document.getElementById("ph")
+        phoneForm.value = patient.Phone
 
+        const cdForm = document.getElementById("cd")
         // Ẩn div có id "bgr
         bgrDiv.style.display = "block";
         
-        xuatDiv.addEventListener("click", function() {
-            bgrDiv.style.display = "none";
-            button.parentElement.parentElement.remove();
-        })
+        
     });
 });
+
+xuatDiv.addEventListener("click", async function() {
+    const idForm = document.getElementById("id")
+    const cdForm = document.getElementById("cd")
+    const tenThuoc = document.getElementsByClassName("tenthuoc");
+    const soLuong = document.getElementsByClassName("soluong");
+    try {
+        for (let i = 0; i < tenThuoc.length; i++) {
+            await (new doctorController).decreaseQuantityMedicine(tenThuoc[i].value, soLuong[i].value)
+        }
+        await (new doctorController).addDiagnosis(idForm.value.toString(), cdForm.value.toString()) 
+            bgrDiv.style.display = "none";
+            button.parentElement.parentElement.remove();
+        
+        
+        
+    }
+    
+    catch (error) {
+        console.log(error)
+    }
+})
 
 //tim kiem
 function timKiem() {
@@ -233,6 +270,8 @@ var bgrDiv = document.getElementById("bgr");
 // Thêm sự kiện click cho div "huy"
 huyDiv.addEventListener("click", function() {
     // Ẩn div có id "bgr"
+    
+    console.log(huyDiv.innerHTML);
     bgrDiv.style.display = "none";
 });
 
@@ -250,49 +289,6 @@ function xoaHang(btn) {
     giua.style.height = (currentH - 43) + "px";
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Lấy tất cả các nút có class "k5"
-    var buttons = document.querySelectorAll(".k5 button");
-
-    // Lặp qua từng nút và gán sự kiện click
-    buttons.forEach(function(button) {
-        button.addEventListener("click", function() {
-            // Lấy giá trị k3 tương ứng từ hàng chứa nút đã nhấn
-            var id = this.parentNode.parentNode.querySelector(".k3").textContent;
-            // In giá trị k3 tương ứng ra console
-            console.log("Giá trị k3 tương ứng:", id);
-            // Hoặc bạn có thể làm bất kỳ điều gì với giá trị id ở đây
-            for (var i = 0; i < data.length; i++) {
-                if (data[i].idCard === id) {
-                    document.getElementById("id").value = data[i].idCard;
-                    document.getElementById("id").readOnly = true;
-                    document.getElementById("fn").value = data[i].ho;
-                    document.getElementById("fn").readOnly = true;
-                    document.getElementById("ln").value = data[i].ten;
-                    document.getElementById("ln").readOnly = true;
-                    document.getElementById("se").value = data[i].gioiTinh;
-                    document.getElementById("se").readOnly = true;
-                    document.getElementById("em").value = data[i].email;
-                    document.getElementById("em").readOnly = true;
-                    document.getElementById("ph").value = data[i].dienThoai;
-                    document.getElementById("ph").readOnly = true;
-                    document.getElementById("ns").value = data[i].ngaySinh;
-                    document.getElementById("ns").readOnly = true;
-                    break;
-                }
-                else {
-                    document.getElementById("id").value = '';
-                    document.getElementById("fn").value = '';
-                    document.getElementById("ln").value = '';
-                    document.getElementById("se").value = '';
-                    document.getElementById("em").value = '';
-                    document.getElementById("ph").value = '';
-                    document.getElementById("ns").value = '';
-                }
-            }
-        });
-    });
-});
 
 function showXuatDon(button) {
     var patientId = button.closest("tr").querySelector(".k3").textContent;

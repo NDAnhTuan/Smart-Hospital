@@ -171,7 +171,26 @@ class managerController {
     }
 
     //Orther
-    addIDDoctorToMedExamSch = (idDoctor) => {};
+    async getMedExamSch() {
+        const allMeds = [];
+        try {
+            const subcolref = collection(db, 'MedExamSch');
+            
+            const subsnapshot = await getDocs(subcolref);
+            subsnapshot.forEach((doc) => {
+                allMeds.push({
+                    id: doc.id,
+                   ...doc.data(),
+                });
+            })
+        } catch (error) {
+            console.error("Error fetching data:", error);
+            // Handle errors appropriately (consider rejecting the Promise)
+        }
+        
+        return allMeds;
+    }
+    async addIDDoctorToMedExamSch (idDoctor){};
     
     async addOnCallSchedule(Date, ID) {
         try {
