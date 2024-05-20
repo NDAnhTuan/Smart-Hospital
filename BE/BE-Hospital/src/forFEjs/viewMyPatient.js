@@ -1,10 +1,4 @@
 import { doctorController } from "../controllers/doctorController";
-import {
-    getAuth, 
-    signOut,    
-    signInWithEmailAndPassword
-} from 'firebase/auth';
-const auth = getAuth();
 let uid = localStorage.getItem("uid");
 // console.log(uid);
 function formatDate(date) {

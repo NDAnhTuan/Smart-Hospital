@@ -22,6 +22,31 @@ const formLogin = document.getElementsByClassName('log-in')[0];
 const enterLogin = document.getElementsByClassName('enter')[0];
 
 async function handleLogin() {
+    if (localStorage.getItem("uid")) {
+        const allUsers = [];
+          try {
+              const subcolrefMana = collection(db, 'Users', 'Manager', 'Data');
+        
+              const subsnapshot = await getDocs(subcolrefMana);
+              subsnapshot.forEach((doc) => {
+                 if (doc.id === uid) {
+                    allUsers.push({
+                        id: doc.id,
+                       ...doc.data(),
+                    });
+                }
+              })
+              if (allUsers.length > 0) {
+                window.location.href = '../Kim/index.html'
+              } 
+              else {
+                window.location.href = '../thinh/btl-ltnc/bs.html'
+              }
+          } catch (error) {
+              console.error("Error fetching data:", error);
+              // Handle errors appropriately (consider rejecting the Promise)
+          }
+    }
     var username = document.getElementById('User-name').value
     var password = document.getElementById('Password').value
     await signInWithEmailAndPassword(auth, username, password)
@@ -66,5 +91,9 @@ enterLogin.addEventListener('click', () => {
     .then(() => console.log(uid))
  
 }) 
+
+document.addEventListener('DOMContentLoaded', () => {
+    handleLogin()
+})
 
 export {uid}
