@@ -1,17 +1,17 @@
 
 
 var doctors = [
-    { id: 1, specialty: 'Nhi Khoa', position: 'Giám Đốc', name: 'Minh Trương',image :'../Kim/Newimg/666.jpg',info:'ROT-BK' },
-    { id: 2, specialty: 'Răng Hàm Mặt', position: 'Phó Giám Đốc', name: 'Nguyễn Hoàng Nguyên' ,image:'../Kim/Newimg/222.jpg'},
-    { id: 3, specialty: 'Da Liễu', position: 'Bác sĩ cơ bản', name: 'Cristian Messi',image:'../Kim/Newimg/222.jpg' },
-    { id: 4, specialty: 'Tim Mạch', position: 'Bác sĩ cơ bản', name: 'Giải Tích 2',image:'../Kim/Newimg/222.jpg'},
-    { id: 5, specialty: 'Tai Mũi Họng', position: 'Bác sĩ chính', name: 'Giải Tích 1' ,image:'../Kim/Newimg/222.jpg'},
-    { id: 6, specialty: 'Nội Tiết', position: 'Bác sĩ trưởng', name: 'Lập trình nâng cao' ,image:'../Kim/Newimg/6.jpeg'},
-    { id: 7, specialty: 'Chấn Thương Chỉnh Hình', position: 'Bác sĩ cơ bản', name: 'Nguyễn Quang Huy',image:'../Kim/Newimg/4.jpg' },
-    { id: 8, specialty: 'Phụ Khoa', position: 'Bác sĩ chuyên khoa', name: 'Anh chịu thua em rồi',image:'../Kim/Newimg/333.jpg' },
-    { id: 9, specialty: 'Hô Hấp', position: 'Bác sĩ trưởng khoa', name: 'DCOD GANGZ',image:'../Kim/Newimg/222.jpg' },
-    { id: 10, specialty: 'Thần Kinh', position: 'Trưởng phòng', name: 'GLIMPSE OF US',image:'../Kim/Newimg/222.jpg' },
-   { id: 11, specialty: 'Nhi Khoa', position: 'Giám Đốc', name: 'Minh',image :'../Kim/Newimg/doctor.png', }
+    { id: 1, specialty: 'Nhi Khoa', position: 'Giám Đốc', name: 'Dương Ngọc Lam Điền',image :'../Kim/Newimg/womandr.png',info:'PGS - TS - Bác Sĩ' },
+    { id: 2, specialty: 'Răng Hàm Mặt', position: 'Phó Giám Đốc', name: 'Hà Văn Khởi' ,image:'../Kim/Newimg/mandr.png',info:'Thạc sĩ - Bác sĩ'},
+    { id: 3, specialty: 'Da Liễu', position: 'Bác sĩ cơ bản', name: 'Tống Phi Giang',image:'../Kim/Newimg/mandr.png',info:'Thạc sĩ - Bác sĩ' },
+    { id: 4, specialty: 'Tim Mạch', position: 'Bác sĩ cơ bản', name: 'Hà Khắc Nguyên',image:'../Kim/Newimg/mandr.png',info:' Bác sĩ'},
+    { id: 5, specialty: 'Tai Mũi Họng', position: 'Bác sĩ chính', name: 'Nguyễn Tuấn Vũ' ,image:'../Kim/Newimg/mandr.png',info:' Tiến sĩ - Bác sĩ'},
+    { id: 6, specialty: 'Nội Tiết', position: 'Bác sĩ trưởng khoa', name: 'Vũ Văn Giang' ,image:'../Kim/Newimg/mandr.png',info:' Bác sĩ'},
+    { id: 7, specialty: 'Chấn Thương Chỉnh Hình', position: 'Bác sĩ cơ bản', name: 'Nguyễn Quang Huy',image:'../Kim/Newimg/mandr.png',info:' Bác sĩ' },
+    { id: 8, specialty: 'Phụ Khoa', position: 'Bác sĩ chuyên khoa', name: 'Nguyễn Hoàng Nguyên',image:'../Kim/Newimg/mandr.png',info:' Bác sĩ' },
+    { id: 9, specialty: 'Hô Hấp', position: 'Bác sĩ trưởng khoa', name: 'Tô Ngọc Hân',image:'../Kim/Newimg/womandr.png',info:' Bác sĩ' },
+    { id: 10, specialty: 'Thần Kinh', position: 'Trưởng phòng', name: 'Hồ Tấn Phát',image:'../Kim/Newimg/mandr.png',info:' Bác sĩ' },
+   { id: 11, specialty: 'Nhi Khoa', position: 'Bác sĩ cơ bản', name: 'Nguyễn Thị Minh Giang',image :'../Kim/Newimg/womandr.png', info:' Bác sĩ'}
 ];
 
 
