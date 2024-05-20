@@ -608,7 +608,7 @@
     bottom: 30px;
     left: 390px;
 }
-#bgr #don .xuat button {
+#bgr #don .xuat p{
     outline: none;
     border: none;
     height: 40px;
@@ -618,6 +618,7 @@
     line-height: 40px;
     background-color: #009ef7;
     color: #fff;
+    text-align: center;
 }
 #bgr #don .xuat:hover button {
     background-color: #0058A0;

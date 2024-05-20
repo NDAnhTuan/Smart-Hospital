@@ -149,7 +149,7 @@
                                     <th class="k1">Ngày</th>
                                     <th class="k2">Triệu chứng</th>
                                     <th class="k3">ID bệnh nhân</th>
-                                    <!-- <th class="k4">Chẩn đoán</th> -->
+                                    <th class="k4">Chẩn đoán</th>
                                     <th class="k5">Kê đơn</th>
                                 </tr>
                             </thead>
@@ -191,10 +191,6 @@
                             <label for="phone">Điện thoại</label>
                             <input id="ph" type="text" placeholder="0909123456">
                         </div>
-                        <div class="f7">
-                            <label for="ns">Ngày sinh</label>
-                            <input id="ns" type="text" placeholder="01/01/2000">
-                        </div>
                         <div class="f8">
                             <label for="cd">Chẩn đoán</label>
                             <input id="cd" type="text" placeholder="Cao huyết áp">
@@ -225,13 +221,16 @@
                             <p>Hủy</p>
                         </div>
                         <div class="xuat">
-                            <button type="submit" onclick="xoaHang()">Xuất đơn</button>
+                            <p >Xuất đơn</p>
+                        </div>
+                        <div class="submit" style="display: none;">
+                            <button></button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </body>
+    <script src="../../BE/BE-Hospital/dist/viewMyPatient.bundle.js"></script>
     <script src="./assets-kham/js/script.js"></script>
-    <script src="./assets-hsbn/js/script.js"></script>
 </html>
