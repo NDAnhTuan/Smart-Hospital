@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Document</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="./assets-ttcn/css/main.css">
+        <title>Document</title>
+        <link rel="stylesheet" href="./assets-info/css/main.css">
         <link rel="stylesheet" href="./assets-hsbn/font/themify-icons-font/themify-icons/themify-icons.css">
     </head>
+    
     <body>
         <div id="head">
             <div class = "img">
-                <img src="./assets-hsbn/img/Benh vien Phu Yen logo-02 1.png" alt="">
+                <img src="../../image/logo_bachkhoa.png" alt="">
             </div>
             <!-- <div class="search">
                 <a href="">
@@ -44,12 +45,12 @@
             <div class = "right">
                 <div id = "login">
                     <div class="img1">
-                        <a href="./ttcn.html">
-                            <img src="./assets/img/user 1.png" alt="">
+                        <a href="">
+                            <img src="../../image/login.png" alt="">
                         </a>
                     </div>
                     <div class="img2">
-                        <a href="">
+                        <a href="../../hoang/file_main.html">
                             <img src="./assets-hsbn/img/out.png" alt="">
                         </a>
                     </div>
@@ -94,30 +95,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div id="nav">
-            <div class="subnav">
-                <a href="hsbn.html"><p class = "out">Hồ sơ bệnh nhân</p></a>
-            </div>
-            <div class="subnav">
-                <a href="./kham.html">
-                    <p class="out">Ca khám của tôi</p>
-                </a>
-            </div>
-            <div id = "sn1" class="subnav">
-                <div>
-                    <a href="./dst.html">
-                        <p class = "out">Danh sách thuốc</p>
-                    </a>
-                </div>
-            </div>
-            <div id = "sn2" class="subnav">
-                <div>
-                    <a href="./lich.html">
-                        <p class = "out">Lịch của bạn</p>
-                    </a>
-                </div>
-            </div>
-        </div> -->
         <div id="content">
             <div id="homep">
                 <a href="./bs.html">
@@ -129,60 +106,67 @@
                     </a>
                 </div> -->
             </div>
-            <div id="giua">
-                <div class="head">
-                    <p>THÔNG TIN CÁ NHÂN</p>
+            <div id="vien">
+                <div id="giua">
+                    <div class="h">
+                        <p>Thông tin cá nhân</p>
+                    </div>
+                    <div class="line"></div>
+                    <table class="info">
+                        <tbody>
+                            <tr>
+                                <th>Full name</th>
+                                <th>Identity number</th>
+                            </tr>
+                            <tr>
+                                <td id="fullname"></td>
+                                <td id="ID"></td>
+                            </tr>
+                            <tr>
+                                <th>Birthday</th>
+                                <th>National</th>
+                            </tr>
+                            <tr>
+                                <td id="birthday"></td>
+                                <td id="national"></td>
+                            </tr>
+                            <tr>
+                                <th>Sex</th>
+                                <th>Permanent address</th>
+                            </tr>
+                            <tr>
+                                <td id="sex"></td>
+                                <td id="address"></td>
+                            </tr>
+                            <tr>
+                                <th>Email</th>
+                                <th>Department - Specialized</td>
+                            </tr>
+                            <tr>
+                                <td id="email"></td>
+                                <td id="department"></td>
+                            </tr>
+                            <tr>
+                                <th>Phone number</th>
+                                <th>Position</th>
+                            </tr>
+                            <tr>
+                                <td id="phone"></td>
+                                <td id="position"></td>
+                            </tr>
+                            <tr>
+                                <th>Degree</th>
+                                <th>Working status</th>
+                            </tr>
+                            <tr>
+                                <td id="degree"></td>
+                                <td id="status"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="line">
-
-                </div>
-                <table class="info">
-                    <tbody>
-                        <tr>
-                            <th>Họ và tên</th>
-                            <th>CCCD</th>
-                        </tr>
-                        <tr>
-                            <td id="Name"></td>
-                            <td id="IDcard"></td>
-                        </tr>
-                        <tr>
-                            <th>Ngày sinh</th>
-                            <th>Bằng cấp</th>
-                        </tr>
-                        <tr>
-                            <td id="DayOfBirth"></td>
-                            <td id="Degree"></td>
-                        </tr>
-                        <tr>
-                            <th>Giới tính</th>
-                            <th>SĐT</th>
-                        </tr>
-                        <tr>
-                            <td id="Sex"></td>
-                            <td id="Phone"></td>
-                        </tr>
-                        <tr>
-                            <th>Địa chỉ (nơi cư trú tạm thời)</th>
-                            <th>Email</th>
-                        </tr>
-                        <tr>
-                            <td id="Address"></td>
-                            <td id="Email"></td>
-                        </tr>
-                        <tr>
-                            <th>Khoa - Chuyên ngành</th>
-                            <th>Tình trạng</th>
-                        </tr>
-                        <tr>
-                            <td id="Major"></td>
-                            <td id="State"></td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
     </body>
-    <script src="./assets-ttcn/js/script.js"></script>
-    <script src="../../BE/BE-Hospital/dist/logout.bundle.js"></script>
 </html>
+<script src="./assets-info/js/script.js"></script>

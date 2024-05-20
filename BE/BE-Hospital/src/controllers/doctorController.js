@@ -39,6 +39,7 @@ class doctorController {
             const subsnapshot = await getDocs(medicineCollection);
             subsnapshot.forEach((doc) => {
                 medicines.push({
+                    id: doc.id,
                     ...doc.data(),
                     });
             });
@@ -52,19 +53,19 @@ class doctorController {
 
 
 
-//////////////// Chưa xong
     decreaseQuantityMedicine = async (medicineName, quantityToDecrease) => {
         try {
             const medicines = await this.getMedicine(); 
             const foundMedicine = medicines.find(medicine => medicine.Name === medicineName); 
+            console.log(foundMedicine.id)
             if (foundMedicine && foundMedicine.Name) {
                 const currentQuantity = foundMedicine.Quantity;
     
                 if (currentQuantity >= quantityToDecrease) {
                     const newQuantity = currentQuantity - quantityToDecrease;
-                    const medicineRef = doc(collection(db, 'Hospital', 'Medicine', 'Data'), foundMedicine.Name);
+                    const medicineRef = doc(db, 'Hospital', 'Medicine', 'Data', foundMedicine.id);
                     
-                    await setDoc(medicineRef, { Quantity: newQuantity }, { merge: true });
+                    await updateDoc(medicineRef, { Quantity: newQuantity });
                     
                     console.log(`Decreased quantity of medicine ${medicineName} successfully.`);
                     return newQuantity;
@@ -80,26 +81,22 @@ class doctorController {
     };
     
 
-
-////////////// Chưa xong
     addDiagnosis = async (ID_Patient, Diagnosis) => {
         try {
-            const patientRef = doc(collection(db, 'Users', 'Patient', 'Data'), ID_Patient);
-            const patientDoc = await getDoc(patientRef);
-    
-            if (patientDoc.exists()) {
-                const MedExamSchRef = collection(db, 'MedExamSch');
-                await setDoc(MedExamSchRef, {
-                    ID_Patient: ID_Patient,
-                    Diagnosis: Diagnosis
-                });
-    
-                console.log("Diagnosis added successfully for patient with ID: ", ID_Patient);
-                return true; 
-            } else {
-                console.error("Patient with ID ", ID_Patient, "not found.");
-                return false; 
-            }
+            const patientRef = collection(db, 'MedExamSch');
+            const subsnapshot = await getDocs(patientRef);
+                subsnapshot.forEach(async (doci) => {
+                    console.log(doci.data())
+                    if (doci.data().ID_Patient === ID_Patient) {
+                        const MedRef = doc(db, 'MedExamSch', doci.id);
+
+                        await updateDoc(MedRef, { Diagnosis: Diagnosis });
+                        console.log("Diagnosis added successfully for patient with ID: ", ID_Patient);
+
+                    }
+                })
+                
+            
         } 
         catch (error) {
             console.error("Error:", error);
