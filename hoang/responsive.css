@@ -38,17 +38,34 @@
         height: auto;
     }
 
-    #footer ul,
-    #footer li {
-        float:initial !important;
-        width: 400px !important;
+
+    .Introduce .member {
+        float: none;
+        width: 100%;
+        margin-left: 10px;
+    }
+    #content-2 .member {
+        float: none;
+        width: 100%;
     }
 
     #content-3 iframe {
-        width: 350px;
+        width: 90%;
     }
 
+
+    #container .chi-nhanh {
+        float: none;
+        width: 100%;
+    }
     #container .chi-nhanh p {
         font-size: 16px;
+    }
+
+
+    #footer div li {
+        float: none;
+        width: 100%;
+        text-align: center;
     }
 }
